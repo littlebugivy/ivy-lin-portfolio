@@ -1,0 +1,44 @@
+<div class="ui top fixed borderless menu mobile only grid">
+    <div class="item">
+        Mengdie Lin
+    </div>
+    <div class="right floated item mobile-menu">
+        <i class="list layout large icon mobile-menu-icon"></i>
+        <div class="ui mini vertical menu sub-menu">
+            <a ng-href="#" class="item sub-menu-item">About</a>
+            <a ng-href="#" class="item sub-menu-item">Projects</a>
+            <a ng-href="#/contact" class="item sub-menu-item">Contact</a>
+        </div>
+    </div>
+</div>
+
+<div class="narrow-container contact-container">
+    <div class="ui form" name="portfolio-contact" action="mailto:ivylin@umich.edu">
+        Questions and interns are welcomed :)
+        <div class="fields">
+            <div class="ui form success">
+                <div class="field">
+                    <label for="email-address">Your E-mail Address</label>
+                    <input id="email-address" type="email" name="email" placeholder="joe@schmoe.com">
+
+                </div>
+                <div class="field">
+                    <label for="first-name">First name</label>
+                    <input id="first-name" type="text" placeholder="First Name">
+                </div>
+                <div class="field">
+                    <label for="last-name">Last name</label>
+                    <input id="last-name" type="text" placeholder="Last Name">
+                </div>
+
+                <div class="field">
+                    <label for="content">Text</label>
+                    <textarea id="content"></textarea>
+                </div>
+
+                <div class="ui error message"></div>
+                <div class="ui submit button" ng-click="validateEmail()">Submit</div>
+            </div>
+        </div>
+    </div>
+</div>
