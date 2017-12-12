@@ -10,12 +10,12 @@ angular.module('portfolio', [
   'portfolio.controllers'
 ]).
   config(['$routeProvider', function ($routeProvider) {
-    $routeProvider.when('/project-list', {
+    $routeProvider.when('/', {
       templateUrl: 'partials/projects.html', controller: 'projectListCtrl'
     });
-    $routeProvider.when('/core-war', { templateUrl: 'partials/core-war.html', controller: 'projectCtrl' });
+    $routeProvider.when('/corewar', { templateUrl: 'partials/core-war.html', controller: 'projectCtrl' });
     $routeProvider.when('/contact', { templateUrl: 'partials/contact.html', controller: 'contactCtrl' });
-    $routeProvider.otherwise({ redirectTo: '/project-list' });
+    $routeProvider.otherwise({ redirectTo: '/' });
   }])
 
 
