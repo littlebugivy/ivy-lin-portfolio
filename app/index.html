@@ -4,6 +4,7 @@
 <head>
   <meta charset="utf-8">
   <title>Mengdie Lin</title>
+  <base href='/'/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" type="text/css" href="/semantic-ui/dist/semantic.min.css">
   <link rel="stylesheet" href="/css/app.css" />
@@ -14,7 +15,7 @@
   <header class="main-menu narrow-container">
     <div class="ui items">
       <div class="item">
-        <a ng-href="#/projects.html" class="ui tiny image">
+        <a ng-href="/projects.html" class="ui tiny image">
       <img class="main-icon" src="img/profile.jpg" alt="profile-image" >
     </a>
         <div class="content intro">
@@ -30,13 +31,11 @@
 
     <nav class="ui secondary pointing menu borderless clean-borderless">
       <div class="right menu">
-        <a ng-href="#index" class="ui right floated item" tabindex="1">About</a>
-        <a class="ui right floated item active" tabindex="1">Projects</a>
-        <!-- <a target="_self" class="ui right floated item" href="https://drive.google.com/a/umich.edu/file/d/1tOQoj1XOvTB66WE_327U0Qs-NSoFsAia/view?usp=sharing"
-          download="Resume_Mengdie_Lin.pdf">Resume</a> -->
+        <a ng-href="/about" class="nav-btnn ui right floated item" tabindex="1" id="about">About</a>
+        <a class="nav-btnn ui right floated item" ng-href="/" tabindex="1" id="projects">Projects</a>
         <a ng-href="https://drive.google.com/a/umich.edu/file/d/1tOQoj1XOvTB66WE_327U0Qs-NSoFsAia/view?usp=sharing" class="ui right floated item"
         >Resume</a>
-        <a ng-href="#/contact" class="ui right floated item" >Contact</a>
+        <a ng-href="/contact" class="nav-btnn ui right floated item" id="contact">Contact</a>
       </div>
     </nav>
   </header>
@@ -62,6 +61,7 @@
   <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
     crossorigin="anonymous"></script>
   <script src="/js/semantic.min.js"></script>
+  <script src="js/instafeed.min.js"></script>
 </body>
 
 </html>

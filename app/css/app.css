@@ -389,3 +389,17 @@ for mobile: <768px */
       width: 60%;
     }
 }
+
+.error-container{
+  text-align: center;
+}
+
+#instafeed{
+  margin:10px auto;
+  text-align: center;
+  margin-left:5%;
+}
+
+.gallery{
+  margin:10px 0px;
+}
