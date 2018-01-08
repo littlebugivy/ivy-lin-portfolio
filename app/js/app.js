@@ -13,7 +13,7 @@ angular.module('portfolio', [
     $routeProvider.when('/', {
       templateUrl: 'partials/projects.html', controller: 'projectListCtrl'
     });
-    $routeProvider.when('/corewar', { templateUrl: 'partials/core-war.html', controller: 'projectCtrl' });
+    $routeProvider.when('/corewar', { templateUrl: 'partials/core-war.html', controller: 'projectCtrl' });$routeProvider.when('/easyfurniture', { templateUrl: 'partials/easyfurniture.html', controller: 'projectCtrl' });
     $routeProvider.when('/contact', { templateUrl: 'partials/contact.html', controller: 'contactCtrl' });
     $routeProvider.when('/about', { templateUrl: 'partials/about.html', controller: 'aboutCtrl' });
     $routeProvider.otherwise({ redirectTo: '/error', templateUrl: 'partials/error.html', });

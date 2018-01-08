@@ -99,31 +99,31 @@ angular.module('portfolio.controllers', []).
       $anchorScroll();
     }
 
-    // shrink nav bar when user scroll down
-    // angular.element($window).bind('scroll', function () {
-    //   if (this.pageYOffset >= 300) {
-    //     if ($scope.showSideNav === false) {
-    //       $('.side-menu')
-    //         .transition('fade right');
-    //       $scope.showSideNav = true;
-    //     }
-    //   } else {
-    //     if ($scope.showSideNav === true) {
-    //       $scope.showSideNav = false;
-    //       $('.side-menu')
-    //         .transition('fade left');
-    //     }
-    //   }
+    //shrink nav bar when user scroll down
+    angular.element($window).bind('scroll', function () {
+      if (this.pageYOffset >= 300) {
+        if ($scope.showSideNav === false) {
+          $('.side-menu')
+            .transition('fade right');
+          $scope.showSideNav = true;
+        }
+      } else {
+        if ($scope.showSideNav === true) {
+          $scope.showSideNav = false;
+          $('.side-menu')
+            .transition('fade left');
+        }
+      }
 
-    //   if (this.pageYOffset >= 150) {
-    //     if ($scope.hideMainMenu === false) {
-    //       $('.shrink-menu')
-    //         .transition('fade');
-    //       angular.element(document.querySelector(".main-menu")).addClass("invisible");
-    //       $scope.hideMainMenu = true
-    //     }
-    //   }
-    //   $scope.$apply()
-    // })
+      if (this.pageYOffset >= 150) {
+        if ($scope.hideMainMenu === false) {
+          $('.shrink-menu')
+            .transition('fade');
+          angular.element(document.querySelector(".main-menu")).addClass("invisible");
+          $scope.hideMainMenu = true
+        }
+      }
+      $scope.$apply()
+    })
   }])
 
