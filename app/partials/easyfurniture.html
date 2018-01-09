@@ -1,186 +1,173 @@
 <header>
     <nav ng-show="hideMainMenu" class="ui top fixed borderless menu shrink-menu computer only grid">
-      <div class="item menu-icon">
-        <img ng-click="goToMainPage()" alt='profile' src="img/profile.jpg">
-      </div>
-      <div class="right menu">
-        <a class="ui right floated item" ng-href="/about" tabindex="1">About</a>
-        <a class="ui right floated item" ng-href="/" tabindex="1">Projects</a>
-        <a class="ui right floated item" ng-href="https://drive.google.com/a/umich.edu/file/d/1tOQoj1XOvTB66WE_327U0Qs-NSoFsAia/view?usp=sharing"
-         >Resume</a>
-        <a ng-href="/contact" class="ui right floated item" >Contact</a>
-      </div>
+        <div class="item menu-icon">
+            <img ng-click="goToMainPage()" alt='profile' src="img/profile.jpg">
+        </div>
+        <div class="right menu">
+            <a class="ui right floated item" ng-href="/about" tabindex="1">About</a>
+            <a class="ui right floated item" ng-href="/" tabindex="1">Projects</a>
+            <a class="ui right floated item" ng-href="https://drive.google.com/a/umich.edu/file/d/1tOQoj1XOvTB66WE_327U0Qs-NSoFsAia/view?usp=sharing">Resume</a>
+            <a ng-href="/contact" class="ui right floated item">Contact</a>
+        </div>
     </nav>
-  
-     <nav ng-show="hideMainMenu" class="ui top fixed borderless menu shrink-menu tablet only grid">
-      <div class="item menu-icon">
-        <img ng-click="goToMainPage()" alt='profile' src="img/profile.jpg">
-      </div>
-      <div class="right menu">
-        <a class="ui right floated item" ng-href="/about" >About</a>
-        <a class="ui right floated item" ng-href="/">Projects</a>
-        <a class="ui right floated item" ng-href="https://drive.google.com/a/umich.edu/file/d/1tOQoj1XOvTB66WE_327U0Qs-NSoFsAia/view?usp=sharing"
-          >Resume</a>
-        <a ng-href="/contact" class="ui right floated item" >Contact</a>
-      </div>
+
+    <nav ng-show="hideMainMenu" class="ui top fixed borderless menu shrink-menu tablet only grid">
+        <div class="item menu-icon">
+            <img ng-click="goToMainPage()" alt='profile' src="img/profile.jpg">
+        </div>
+        <div class="right menu">
+            <a class="ui right floated item" ng-href="/about">About</a>
+            <a class="ui right floated item" ng-href="/">Projects</a>
+            <a class="ui right floated item" ng-href="https://drive.google.com/a/umich.edu/file/d/1tOQoj1XOvTB66WE_327U0Qs-NSoFsAia/view?usp=sharing">Resume</a>
+            <a ng-href="/contact" class="ui right floated item">Contact</a>
+        </div>
     </nav>
-  </header>
-  
-  <div ng-show="showSideNav" class="ui secondary vertical pointing menu side-menu computer only grid">
+</header>
+
+<div ng-show="showSideNav" class="ui secondary vertical pointing menu side-menu computer only grid">
     <a href="" ng-click="linkTo('/#overview')" class="item overview">
-      Overview
+        Overview
     </a>
     <a ng-click="scrollTo('needs')" class="item needs">
-      Needs Identification
+        Needs Identification
     </a>
     <a ng-click="scrollTo('prototyping')" class="item prototyping">
-      Prototyping
+        Prototyping
     </a>
     <a ng-click="scrollTo('presentation')" class="item presentation">
-      Presentation
+        Presentation
     </a>
-  </div>
-  
-  <div class="project-name-container">
-    <figure>
-      <img src="img/corewar-logo.png" alt="corewar-logo" class="project-img" />
+</div>
+
+<div class="project-name-container" style="background-color:#486A32">
+    <figure style="margin-top:5%;">
+        <img src="img/ef/easyfurniture-logo.png" alt="easyfurniture-logo" class="project-img" />
     </figure>
-    <figcaption>
-      <div class="project-intro">Facilitate local second-hand furniture trading</div>
+    <figcaption  style="margin-top:1%; color:white">
+        <div class="project-intro">Facilitate local second-hand furniture trading</div>
     </figcaption>
-  </div>
-  <div id='overview' class="project-main-container narrow-container">
-    <h1> OVERVIEW </h1>
-    <div>
-      <img class="small-icon" src="img/dots.png" alt="">
-      <div>Team Work : 5 people</div>
-      <div>Role : Team leader, game designer, front-end developer</div>
-      <div>Applied : User case study, Quick Prototyping, Keynote, Android Studio, Java, XML</div>
-      <img class="small-icon" src="img/dots.png" alt="">
-    </div>
-    <div class="justify-text">
-      <p>
-        Core War is a programming PC game firstly established in 1984. In the game, two or more battle programs (or we call them
-        "warriors") compete for control of one virtual computer. These warriors are written in an abstract assembly language
-        called Redcode, which is designed for Core War particularly. Therefore fundamental knowledge of assembly language programming
-        is required to play this game.
-      </p>
-      <p>
-        At the beginning of a game, each battle program is loaded into memory at a random location, after which each program executes
-        one instruction in turn. The objective of the game is to cause the processes of opposing programs to terminate (which
-        happens if they execute an invalid instruction), leaving the victorious program in sole possession of the machine.
-      </p>
-      <p>
-        Our mission is to bring the game into the mobile era, allowing broader access for knowing, studying and playing this game.
-      </p>
-    </div>
-  
-    <section id="needs">
-      <h1>Needs Identification</h1>
-      <h3>Step 1:Persona</h3>
-      <p class="justify-text"> To narrow down the software functionality, we considered various user cases and sketched out personas which represent
-        two typical categories of target users: Core War novice and veteran.
-      </p>
-      <figure>
-        <img src="img/man1.png" class="persona1" alt="persona1" />
-        <img src="img/man2.png" class="persona2" alt="persona2" />
-      </figure>
-      <img class="small-icon" src="img/dots.png" alt="">
-      <h3>Step 2: Competitive Analysis</h3>
-      <p class="justify-text"> As there are no mobile adaptations of the game on either Android or iOS platforms so far, we need to seek for our own
-        way for game development on the mobile end. The classic version of Core War contains considerable settings as well
-        as functionalities, which gives rise to great complexity and difficulty of development. Considering not all the funcationalities
-        are necessary for players normally, also due to the time limitation, we eventually decided to simplify the game while
-        kept essential game logics. To get a better understanding of the game and make a decision on which settings should
-        be remained or removed, we studied the previous software by trying them out and also investigated several experienced
-        Core War players for advice.
-      </p>
-      <figure>
-        <img src="img/corewin.png" class="previous-sof-img" alt="corewin" />
-        <img src="img/pmars.jpg" class="previous-sof-img" alt="pmars" />
-      </figure>
-      <figcaption class="center">
-        Selected previous versons: <a href="http://corewar.co.uk/wendell/">Core Win (Left)</a> and <a href="http://www.koth.org/pmars/">PMars (Right)</a>
-      </figcaption>
-      <br>
-      <br>
-      <img class="small-icon" src="img/dots.png" alt="">
-      <h3>Step 3: Specification</h3>
-      <p class="justify-text">We translated the user requirements into three aspects: instruction, functionality and gameplay. These three elements
-        guided subsequent game design and develpment.</p>
-  
-      <div class="image-slider-content">
-        <img class="slides" src="img/warriorInfo.jpg" alt="warrior infomation">
-        <img class="slides" src="img/TemplateWarrior.png" alt="template warriors">
-        <img class="slides" src="img/editing.png" alt="editing page">
-        <img class="slides" src="img/warriorslot.png" alt="warriorslot">
-        <img class="slides" src="img/Surface.png" alt="surface">
-        <img class="slides" src="img/warrior_gallery.png" alt="warrior_gallery">
-        <img class="slides" src="img/selfplay_mode.png" alt="selfplay_mode">
-  
-        <div class="ui seven column grid">
-          <div class="column">
-            <img class="image-slider w3-opacity w3-hover-opacity-off" src="img/warriorInfo.jpg" alt="warrior infomation" ng-click="currentDiv(1)">
-          </div>
-          <div class="column">
-            <img class="image-slider w3-opacity w3-hover-opacity-off" src="img/TemplateWarrior.png" alt="template warriors" ng-click="currentDiv(2)">
-          </div>
-          <div class="column">
-            <img class="image-slider w3-opacity w3-hover-opacity-off" src="img/editing.png" alt="editing page" ng-click="currentDiv(3)">
-          </div>
-          <div class="column">
-            <img class="image-slider w3-opacity w3-hover-opacity-off" src="img/warriorslot.png" alt="warriorslot" ng-click="currentDiv(4)">
-          </div>
-          <div class="column">
-            <img class="image-slider w3-opacity w3-hover-opacity-off" src="img/Surface.png" alt="surface" ng-click="currentDiv(5)">
-          </div>
-          <div class="column">
-            <img class="image-slider w3-opacity w3-hover-opacity-off" src="img/warrior_gallery.png" alt="warrior_gallery" ng-click="currentDiv(6)">
-          </div>
-          <div class="column">
-            <img class="image-slider w3-opacity w3-hover-opacity-off" src="img/selfplay_mode.png" alt="selfplay_mode" ng-click="currentDiv(7)">
-          </div>
+</div>
+
+<div id='overview' class="project-main-container narrow-container">
+    <h1> Overview </h1>
+    <div class="ui grid">
+        <div class="four wide column">
+           <b>Duration: </b><br>
+            Sep 10 2017 - Jan 7 2018 
         </div>
-    </section>
-    <br>
-    <br>
-  
-    <img class="small-icon" src="img/dots.png" alt="">
-    <section id="prototyping">
-      <h3>Step 4: Develop Low-fi and High-fi prototyping</h3>
-      <p class="justify-text"> The main features of the game was firstly determinated based on the suggestions from experienced corewar players as well
-        as the user cases above. We developed three versions of the prototyps in total. They evolved alongside with the development
-        process.
-      </p>
-      <div class="ui medium image prototyes">
-        <img src="img/prototype1.png" alt="prototype1">
-        <img src="img/prototype2.png" alt="prototype2">
-      </div>
-      <div class="ui big image prototypes">
-        <img src="img/prototype3.png" alt="prototype3">
-      </div>
-  
-    </section>
-  
-  
-    <img class="small-icon" src="img/dots.png" alt="">
-    <h3>Step 5: Design Game Flow</h3>
-    <p class="justify-text"> After several rounds of user testing, we improved the user interface, adjusted features and added new functions to meet
-      changing requirements. The following graph illustrates the final version of the game flow.
-    </p>
-    <div class="ui big image">
-      <img src="img/app_flow.png" alt="app flow">
+        <div class="four wide column">
+            <b> Role: </b><br>
+                Individual Work<br>
+                UI/UX Designer
+        </div>
+        <div class="four wide column">
+           <b> UX Methods:</b><br>
+            Competitive Analysis<br>
+            Ideation<br>
+            Storyboard<br>
+            QOC<br>
+            Wireframe<br>
+            Lo-fi & High-fi      
+        </div>
+        <div class="four wide column">
+            <b>Design Tools:</b><br>
+            Sketch <br>
+            Invision
+        </div>
     </div>
-    <br>
-    <br>
-  
-    <section id='presentation'>
-      <h1>Final Product</h1>
-      <div class="center-content"><img src="img/deliver_corewar.jpg" width="100%" alt="poster of corewar" /></div>
-      <div class="footer-nav">
-        <a class="left-button" href="index.html">Home</a>
-        <a class="right-button" href="recognition.html">Next</a>
-      </div>
-      </div>
-      <!-- 
-      <button class='ui button' ng-show="hideMainMenu" ng-click='scrollToTop()'><i class="huge angle double up  icon scroll-to-top"></i></button> -->
+
+ 
+    <h1>Problem Description</h1>
+
+    <div>
+        <p>
+            Buying a set of brand new furniture is not cost-effective particularly for students who regard the place as a temporary residency (i.e. short-term study, potentially move to better/cheaper places). Besides, dealing with furniture after finishing a short-term stay is also a headache, as it causes a huge waste to throw away furniture in good condition, or  another bill to move them around.   
+        </p>
+        <p>
+            Easy Furniture connects local second-hand furniture sellers and buyers in a more efficient way. 
+            
+            <!-- From a seller's perspective, the design <span class="highlight">minimizes manual input</span> by allowing searching for existing product information online, and <span class="highlight">facilitates the construction of item profile</span> by providing proper tips and recommendations. Furthermore, the system <span class="hightlight">supports instant conversations</span> to encourage inquiry from buyers, with the goal to ultimately increase the chance of selling.   -->
+        </p>
+
+    </div>
+
+    <h1>Design Process</h1>
+    <h3>1. Research on competitors (Competitive Analysis)</h3>
+    <p class="justify-text"> 
+        More explanation about competitive analysis
+    </p>
+    <figure>
+        [Figure of competitive analysis]
+    </figure>
+
+    <h3>2. Ideation (Storyboard)</h3>
+    <p>Initially I ......</p>
+    <img class="image" src="img/ef/sketch-alternatives.jpg" alt="warrior infomation">
+    <img class="image" src="img/ef/sketch-alternative2.jpg" alt="template warriors">
+
+    <h3>3. Understand users (Persona)</h3>
+    <p class="justify-text"> 
+        I built three personas and one anti persona to specify who will be target audiences of the design and who are not. In short, we are designing for people 
+    </p>
+    
+        <div class="image-slider-content">
+            <img class="slides" src="img/ef/ef_persona1.jpg" alt="warrior infomation">
+            <img class="slides" src="img/ef/ef_persona2.jpg" alt="template warriors">
+            <img class="slides" src="img/ef/ef_persona3.jpg" alt="editing page">
+            <img class="slides" src="img/ef/ef_persona4.jpg" alt="warriorslot">
+    
+            <div class="ui six column grid">
+                <div class="column"></div>
+                <div class="column">
+                    <img class="image-slider w3-opacity w3-hover-opacity-off" src="img/ef/ef_persona1.jpg" alt="persona" ng-click="currentDiv(1)">
+                </div>
+                <div class="column">
+                    <img class="image-slider w3-opacity w3-hover-opacity-off" src="img/ef/ef_persona2.jpg" alt="persona" ng-click="currentDiv(2)">
+                </div>
+                <div class="column">
+                    <img class="image-slider w3-opacity w3-hover-opacity-off" src="img/ef/ef_persona3.jpg" alt="persona" ng-click="currentDiv(3)">
+                </div>
+                <div class="column">
+                    <img class="image-slider w3-opacity w3-hover-opacity-off" src="img/ef/ef_persona4.jpg" alt="anti persona" ng-click="currentDiv(4)">
+                </div>
+                <div class="column"></div>
+            </div>
+        </div>
+
+    
+        <h3>4. Understand User Workflow (Storymap)</h3>
+        <p> [Description about storymap] 
+        </p>
+
+        <img class="image" src="img/ef/storymap.jpg" alt="prototype1">
+
+        <h3>5.Wireframe</h3>
+        <p class="justify-text"> [wireframe]
+        </p>
+
+        <h3>6.QOC</h3>
+        <p class="justify-text"> [QOC]
+        </p>
+
+        <h3>7.User Testing</h3>
+        <p class="justify-text"> [User Testing]
+        </p>
+
+        <h3>8.High-fi prototype</h3>
+        <p><a href="https://invis.io/G8EW72AC3#/268600704_login">View Hi-fi in Invision</a></p>
+
+
+    <h1>Reflection</h1>
+
+    <div class="bottom-arrows">
+        <div class="left-arrow">
+            <div><img class="arrow" src="img/left-arrow.png" alt="left arrow"></div>
+            <div class="bottom-text">Home</div>
+        </div>
+        <div class="right-arrow"> 
+           <div><img class="arrow" src="img/right-arrow.png" alt="right arrow"></div>
+            <div class="bottom-text">Next Project</div>
+        </div>
+    </div>
+
+</div>
