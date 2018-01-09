@@ -16,6 +16,26 @@ p{
   width: 56%; 
 }
 
+.ui.fluid.card{
+  border-radius:0px;
+}
+
+.ui.fluid.card:hover{
+  box-shadow:12px 12px 2px 1px rgba(0, 0, 255, .2);;
+}
+
+.ui.card>.image>img, .ui.cards>.card>.image>img{
+  border-radius: 0px;
+}
+
+.role-text{
+  font-size:14px;
+}
+
+.project-img{
+  width:100%;
+}
+
 .social-media{
   align-content: left;
   margin-top: 0em
