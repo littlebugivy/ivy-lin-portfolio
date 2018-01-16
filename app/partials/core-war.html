@@ -43,22 +43,42 @@
 
 <div class="project-name-container" style="background-color:#371A02">
   <figure>
-    <img src="img/corewar-logo.png" alt="corewar-logo" class="project-img" />
+    <img src="img/cw/corewar-logo.png" alt="corewar-logo" class="project-img" />
   </figure>
   <figcaption style="margin-top:1%; color:white">
     <div class="project-intro">Classic PC Programming Language Game In Mobile Era</div>
   </figcaption>
 </div>
 <div id='overview' class="project-main-container narrow-container">
-  <h1> OVERVIEW </h1>
-  <div>
-    <img class="small-icon" src="img/dots.png" alt="">
-    <div>Team Work : 5 people</div>
-    <div>Role : Team leader, game designer, front-end developer</div>
-    <div>Applied : User case study, Quick Prototyping, Keynote, Android Studio, Java, XML</div>
-    <img class="small-icon" src="img/dots.png" alt="">
-  </div>
-  <div class="justify-text">
+    <h1> Overview </h1>
+    <div class="ui grid">
+        <div class="four wide column">
+            <b>Duration: </b><br>
+            Sep 10 2016 - Jan 7 2016
+        </div>
+        <div class="four wide column">
+            <b> Role: </b><br>
+                UI/UX Designer<br>
+                Front-end developer<br>
+                Product Manager
+        </div>
+        <div class="four wide column">
+            <b> UX Methods:</b><br>
+            Competitive Analysis<br>
+            Ideation<br>
+            Persona<br>
+            Wireframe<br>
+            Lo-fi & High-fi      
+        </div>
+        <div class="four wide column">
+            <b>Tools:</b><br>
+            Keynote<br>
+            Android Studio
+        </div>
+    </div>
+
+    <h1>Problem Description</h1>
+    <div>
     <p>
       Core War is a programming PC game firstly established in 1984. In the game, two or more battle programs (or we call them
       "warriors") compete for control of one virtual computer. These warriors are written in an abstract assembly language
@@ -75,18 +95,18 @@
     </p>
   </div>
 
+  <h1>Design Process</h1>
   <section id="needs">
-    <h1>Needs Identification</h1>
-    <h3>Step 1:Persona</h3>
+    <h3>1:Understand users</h3>
     <p class="justify-text"> To narrow down the software functionality, we considered various user cases and sketched out personas which represent
       two typical categories of target users: Core War novice and veteran.
     </p>
-    <figure>
-      <img src="img/man1.png" class="persona1" alt="persona1" />
-      <img src="img/man2.png" class="persona2" alt="persona2" />
+    <figure class="center-content">
+      <img src="img/cw/man1.png" class="persona1" alt="persona1" />
+      <img src="img/cw/man2.png" class="persona2" alt="persona2" />
     </figure>
-    <img class="small-icon" src="img/dots.png" alt="">
-    <h3>Step 2: Competitive Analysis</h3>
+
+    <h3>2: Competitive Analysis</h3>
     <p class="justify-text"> As there are no mobile adaptations of the game on either Android or iOS platforms so far, we need to seek for our own
       way for game development on the mobile end. The classic version of Core War contains considerable settings as well
       as functionalities, which gives rise to great complexity and difficulty of development. Considering not all the funcationalities
@@ -96,90 +116,94 @@
       Core War players for advice.
     </p>
     <figure>
-      <img src="img/corewin.png" class="previous-sof-img" alt="corewin" />
-      <img src="img/pmars.jpg" class="previous-sof-img" alt="pmars" />
+      <img src="img/cw/corewin.png" class="previous-sof-img" alt="corewin" />
+      <img src="img/cw/pmars.jpg" class="previous-sof-img" alt="pmars" />
     </figure>
-    <figcaption class="center">
+    <figcaption class="center-content">
       Selected previous versons: <a href="http://corewar.co.uk/wendell/">Core Win (Left)</a> and <a href="http://www.koth.org/pmars/">PMars (Right)</a>
     </figcaption>
-    <br>
-    <br>
-    <img class="small-icon" src="img/dots.png" alt="">
-    <h3>Step 3: Specification</h3>
-    <p class="justify-text">We translated the user requirements into three aspects: instruction, functionality and gameplay. These three elements
-      guided subsequent game design and develpment.</p>
 
-    <div class="image-slider-content">
-      <img class="slides" src="img/warriorInfo.jpg" alt="warrior infomation">
-      <img class="slides" src="img/TemplateWarrior.png" alt="template warriors">
-      <img class="slides" src="img/editing.png" alt="editing page">
-      <img class="slides" src="img/warriorslot.png" alt="warriorslot">
-      <img class="slides" src="img/Surface.png" alt="surface">
-      <img class="slides" src="img/warrior_gallery.png" alt="warrior_gallery">
-      <img class="slides" src="img/selfplay_mode.png" alt="selfplay_mode">
 
-      <div class="ui seven column grid">
-        <div class="column">
-          <img class="image-slider w3-opacity w3-hover-opacity-off" src="img/warriorInfo.jpg" alt="warrior infomation" ng-click="currentDiv(1)">
-        </div>
-        <div class="column">
-          <img class="image-slider w3-opacity w3-hover-opacity-off" src="img/TemplateWarrior.png" alt="template warriors" ng-click="currentDiv(2)">
-        </div>
-        <div class="column">
-          <img class="image-slider w3-opacity w3-hover-opacity-off" src="img/editing.png" alt="editing page" ng-click="currentDiv(3)">
-        </div>
-        <div class="column">
-          <img class="image-slider w3-opacity w3-hover-opacity-off" src="img/warriorslot.png" alt="warriorslot" ng-click="currentDiv(4)">
-        </div>
-        <div class="column">
-          <img class="image-slider w3-opacity w3-hover-opacity-off" src="img/Surface.png" alt="surface" ng-click="currentDiv(5)">
-        </div>
-        <div class="column">
-          <img class="image-slider w3-opacity w3-hover-opacity-off" src="img/warrior_gallery.png" alt="warrior_gallery" ng-click="currentDiv(6)">
-        </div>
-        <div class="column">
-          <img class="image-slider w3-opacity w3-hover-opacity-off" src="img/selfplay_mode.png" alt="selfplay_mode" ng-click="currentDiv(7)">
-        </div>
-      </div>
-  </section>
-  <br>
-  <br>
 
-  <img class="small-icon" src="img/dots.png" alt="">
-  <section id="prototyping">
-    <h3>Step 4: Develop Low-fi and High-fi prototyping</h3>
+
+    <h3>3: Design game flow</h3>
+    <!-- <p class="justify-text">We translated the user requirements into three aspects: instruction, functionality and gameplay. These three elements
+      guided subsequent game design and develpment.</p> -->
+
+      <p class="justify-text"> After several rounds of user testing, we improved the user interface, adjusted features and added new functions to meet
+          changing requirements. The following graph illustrates the final version of the game flow.
+        </p>
+        <div class="center-content">
+          <img src="img/cw/app_flow.png" alt="app flow">
+        </div>
+
+    <h3>4: Wireframe & Low-fi prototyping</h3>
     <p class="justify-text"> The main features of the game was firstly determinated based on the suggestions from experienced corewar players as well
       as the user cases above. We developed three versions of the prototyps in total. They evolved alongside with the development
       process.
     </p>
-    <div class="ui medium image prototyes">
-      <img src="img/prototype1.png" alt="prototype1">
-      <img src="img/prototype2.png" alt="prototype2">
+
+    <div class="ui two column grid">
+        <div class="four wide column">
+          <img src="img/cw/prototype1.png" class="prototype">
+          <!-- <img src="img/prototype2.png" alt="prototype2"> -->
+        </div>
+        <div class="twelve wide column">
+            <img src="img/cw/prototype3.png" class="prototype">
+        </div>
     </div>
-    <div class="ui big image prototypes">
-      <img src="img/prototype3.png" alt="prototype3">
-    </div>
 
-  </section>
+    [keynote video/link to file]
+  
+    <h3>5. High-fi prototyping</h3>
+    Screens:
+    <div class="image-slider-content">
+        <img class="slides" src="img/cw/warriorInfo.jpg" alt="warrior infomation">
+        <img class="slides" src="img/cw/TemplateWarrior.png" alt="template warriors">
+        <img class="slides" src="img/cw/editing.png" alt="editing page">
+        <img class="slides" src="img/cw/warriorslot.png" alt="warriorslot">
+        <img class="slides" src="img/cw/Surface.png" alt="surface">
+        <img class="slides" src="img/cw/warrior_gallery.png" alt="warrior_gallery">
+        <img class="slides" src="img/cw/selfplay_mode.png" alt="selfplay_mode">
+  
+        <div class="ui seven column grid">
+          <div class="column">
+            <img class="image-slider w3-opacity w3-hover-opacity-off" src="img/warriorInfo.jpg" alt="warrior infomation" ng-click="currentDiv(1)">
+          </div>
+          <div class="column">
+            <img class="image-slider w3-opacity w3-hover-opacity-off" src="img/TemplateWarrior.png" alt="template warriors" ng-click="currentDiv(2)">
+          </div>
+          <div class="column">
+            <img class="image-slider w3-opacity w3-hover-opacity-off" src="img/cw/editing.png" alt="editing page" ng-click="currentDiv(3)">
+          </div>
+          <div class="column">
+            <img class="image-slider w3-opacity w3-hover-opacity-off" src="img/cw/warriorslot.png" alt="warriorslot" ng-click="currentDiv(4)">
+          </div>
+          <div class="column">
+            <img class="image-slider w3-opacity w3-hover-opacity-off" src="img/cw/Surface.png" alt="surface" ng-click="currentDiv(5)">
+          </div>
+          <div class="column">
+            <img class="image-slider w3-opacity w3-hover-opacity-off" src="img/cw/warrior_gallery.png" alt="warrior_gallery" ng-click="currentDiv(6)">
+          </div>
+          <div class="column">
+            <img class="image-slider w3-opacity w3-hover-opacity-off" src="img/cw/selfplay_mode.png" alt="selfplay_mode" ng-click="currentDiv(7)">
+          </div>
+        </div>
+
+        [video]
 
 
-  <img class="small-icon" src="img/dots.png" alt="">
-  <h3>Step 5: Design Game Flow</h3>
-  <p class="justify-text"> After several rounds of user testing, we improved the user interface, adjusted features and added new functions to meet
-    changing requirements. The following graph illustrates the final version of the game flow.
-  </p>
-  <div class="ui big image">
-    <img src="img/app_flow.png" alt="app flow">
-  </div>
-  <br>
-  <br>
-
-  <section id='presentation'>
-    <h1>Final Product</h1>
-    <div class="center-content"><img src="img/deliver_corewar.jpg" width="100%" alt="poster of corewar" /></div>
-    <div class="footer-nav">
-      <a class="left-button" href="index.html">Home</a>
-      <a class="right-button" href="recognition.html">Next</a>
+    <h1>Poster</h1>
+    <div class="center-content"><img src="img/cw/deliver_corewar.jpg" width="100%" alt="poster of corewar" /></div>
+    <div class="bottom-arrows">
+        <div class="left-arrow">
+            <a href="/easyfurniture"><img class="arrow" src="img/left-arrow.png" alt="left arrow"></a>
+            <div class="bottom-text">Easy Furniture</div>
+        </div>
+        <div class="right-arrow"> 
+           <div><img class="arrow" src="img/right-arrow.png" alt="right arrow"></div>
+            <div class="bottom-text">Next Project</div>
+        </div>
     </div>
     </div>
     <!-- 

@@ -114,16 +114,24 @@ p{
   margin-top:3em;
 }
 
-/* .center-content{
+img.prototype{
+  width: 100%;
+}
+
+.center{
   margin-left:auto;
   margin-right:auto;
-} */
+}
+
+.center-content{
+  text-align:center;
+}
 
 footer{
   width: 100%;
   text-align: left;
   align-content: left;
-  margin:8em 0px;
+  margin:3em 0px;
 }
 
 .ui.tiny.image{
