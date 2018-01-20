@@ -1,0 +1,240 @@
+<header>
+    <nav ng-show="hideMainMenu" class="ui top fixed borderless menu shrink-menu computer only grid">
+        <div class="item menu-icon">
+            <img ng-click="goToMainPage()" alt='profile' src="img/profile.jpg">
+        </div>
+        <div class="right menu">
+            <a class="ui right floated item" ng-href="/about" tabindex="1">About</a>
+            <a class="ui right floated item" ng-href="/" tabindex="1">Projects</a>
+            <a class="ui right floated item" ng-href="https://drive.google.com/file/d/1gaxk4nnOVf9eX0-udtmSYZzfoAVF7OjQ/view?usp=sharing">Resume</a>
+            <a ng-href="/contact" class="ui right floated item">Contact</a>
+        </div>
+    </nav>
+
+    <nav ng-show="hideMainMenu" class="ui top fixed borderless menu shrink-menu tablet only grid">
+        <div class="item menu-icon">
+            <img ng-click="goToMainPage()" alt='profile' src="img/profile.jpg">
+        </div>
+        <div class="right menu">
+            <a class="ui right floated item" ng-href="/about">About</a>
+            <a class="ui right floated item" ng-href="/">Projects</a>
+            <a class="ui right floated item" ng-href="https://drive.google.com/file/d/1gaxk4nnOVf9eX0-udtmSYZzfoAVF7OjQ/view?usp=sharing">Resume</a>
+            <a ng-href="/contact" class="ui right floated item">Contact</a>
+        </div>
+    </nav>
+</header>
+
+<div ng-show="showSideNav" class="ui secondary vertical pointing menu side-menu computer only grid">
+    <a href="" ng-click="linkTo('/#overview')" class="item overview">
+        Overview
+    </a>
+    <a ng-click="scrollTo('needs')" class="item needs">
+        Needs Identification
+    </a>
+    <a ng-click="scrollTo('prototyping')" class="item prototyping">
+        Prototyping
+    </a>
+    <a ng-click="scrollTo('presentation')" class="item presentation">
+        Presentation
+    </a>
+</div>
+
+<div class="project-name-container" style="background-color:#040821">
+    <figure>
+        <img src="img/climb/climb.png" alt="climb-logo" class="project-img" />
+    </figure>
+    <figcaption style="margin-top:1%; color:white">
+        <div class="project-intro">[Tagline]</div>
+    </figcaption>
+</div>
+<div id='overview' class="project-main-container narrow-container">
+    <h1> Overview </h1>
+    <div class="ui grid">
+        <div class="four wide column">
+            <b>Duration: </b>
+            <br> Nov 1 2016 - Aug 1 2017
+        </div>
+        <div class="four wide column">
+            <b> Role: </b>
+            <br> UI/UX Designer
+            <br> Full stack developer
+            <br> Co-authored the publication "xxxxx" [link]
+        </div>
+        <div class="four wide column">
+            <b> UX Methods:</b>
+            <br> Web Prototyping
+            <br> Competitive Analysis
+            <br> Ideation
+            <br> Persona
+            <br> Wireframe
+            <br> Lo-fi & Hi-fi
+        </div>
+        <div class="four wide column">
+            <b>Tools:</b>
+            <br> Sketch
+            <br> AngularJS
+            <br> D3JS
+        </div>
+    </div>
+    <br>
+    <p>
+        <b>*Note</b>: this work is part of the research project
+        <a href="http://www.semanticaudio.ac.uk/blog/maria-kallionpaa-climb-a-virtuoso-piece-for-live-pianist-disklavier-and-interactive-system-2017/"
+            class="underline">“Climb!”</a> carried out by composer and pianist
+        <a class="underline" href="https://www.linkedin.com/in/mariakallionpaa/">Maria Kallionpää</a> in collaboration with Mixed Reality Laboratory of Nottingham University and the Sound and Music
+        Knowledge Group of Aalborg University. Complete design and development processes are illustrated in a
+        <a href="https://drive.google.com/file/d/1jM9P67TNZJIjdYFGh7NJsYYAeXN2uaow/view?usp=sharing" class="underline">publication</a> which I co-authored and is accepted by CHI conference in 2018.</p>
+    <div class="center-content">
+        <figure>
+            <img width="100%" src="img/climb/intro.png"></img>
+        </figure>
+        <figcaption>
+            <i> Premiere of Climb!</i>
+        </figcaption>
+    </div>
+    <h1>Background Introduction</h1>
+    Musicians have continuously been exploring the possibilities of presenting innovative musical experiences to their audiences.
+    One of the pathways that they have gone done is the possibility of integration modern technologies, especially computational
+    technologies, into music performance and production. In this project, Dr. Kallionpää</a> introduced a game-like
+    musical composition, Climb!, with the intention to explore and understand the interaction between computer generated
+    and human-performed piano pieces, in which the interaction may bring new experiences and interpretation of music to the
+    audience.
+    <br>
+    <div class="center-content">
+        <figure>
+            <img width="60%" src="img/climb/Climb-structure.png"></img>
+        </figure>
+        <figcaption>
+            <i>The game stucture of Climb!</i>
+        </figcaption>
+    </div>
+    <p>
+        As the name of the composition, Climb!, indicates, the musician goes from basecamp to summit (Fig1). There are three paths
+        with mulitple events and paths on the way, each of which represents one micro piano composition. The arrowed lines
+        connecting stages are possible destinations of that stage. By performing differently, the musician determines the
+        path, or say, experience that audiences go through, which leads to various versions of performances as a whole. The
+        composition also involves a Disklavier piano, which performs automatically accompanying the musician as pre-defined.
+    </p>
+    <h1>Needs Identification</h1>
+    <div>
+        <p>
+            Through contexual inquiry with comprehensive field studies (attending three rehearsals), it is reliased that the performance
+            is difficult to be interpreted. What's more, it causes confusion to audiences due to its complex ‘magical’ interactions.
+            On the other hand, the innovative stucture of the composition is unpercivable to audiences. For example, different
+            stages are undistinguishable from each other and their stories are not presented, which, if being revealed, could
+            very likely raise more interests.
+        </p>
+        <p>
+            Therefore, at this stage the user needs are identified as:
+            <br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1. Need a better understanding of the entire performance setting.
+            <br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2. Need a better understanding of the hidden structure of the
+            composition.
+        </p>
+    </div>
+
+    <h1>Design Process</h1>
+    <h3>1. First Phase of Design</h3>
+    <p>
+        The assisted tool is developed to be a web-based mobile application. Different from building native mobile applications,
+        a web application allows rapid and flexible iterations, meanwhile, prevent users from downloading. Insipred by the
+        paper programme notes used in traditional music concerts, the first phase of design incorporated a dynamic map. (See
+        video below, in 3x speed) The appreance of the system adopts a mountain look to meet the leitmotiv of the performacne.
+        Each colored dot represent one micro-composition and they are revealed one by one as the performance progress up
+        the mountain. In each stage, a short narritive will be revealed to further introduce that context.
+    </p>
+    <p>
+        One thing worths noting is that the design aims at scaffold understanding and interpretation of the work rather than to unpick
+        audiences' specific interpretations.
+    </p>
+    <div class="center-content">
+        <iframe allowFullScreen frameborder="0" height="564" mozallowfullscreen src="https://player.vimeo.com/video/251899179" webkitAllowFullScreen
+            width="640"></iframe>
+    </div>
+
+    <h3>2. User Testing - Premiere</h3>
+    The premiere of Climb! took place in a classical recital hall as part of a regular series of contemporary music recitals
+    at the University of Nottingham. The composer performed the work herself and around 50 audiences attended. The audience
+    was a mixture of regular attendees for the event and those who had been invited by the research team. The regular attendees
+    had a specific interest in contemporary music. Other attendees had much more diverse (mainstream) musical preferences,
+    but most attendees reported at least “good” expertise in music.
+    <a href="vimeo.com/251903131" class="underline">Video</a>
+    <br>
+    <br>
+    <div class="image-slider-content">
+        <img class="slides" src="img/climb/premiere1.png" alt="premiere">
+        <img class="slides" src="img/climb/premiere5.png" alt="mobile app">
+        <img class="slides" src="img/climb/premiere6.png" alt="Disklavier">
+        <img class="slides" src="img/climb/premiere2.png" alt="Disklavier self-play">
+
+        <div class="ui six column grid">
+            <div class="column"></div>
+            <div class="column">
+                <img class="image-slider w3-opacity w3-hover-opacity-off" src="img/climb/premiere1.png" alt="persona" ng-click="currentDiv(1)">
+            </div>
+
+            <div class="column">
+                <img class="image-slider w3-opacity w3-hover-opacity-off" src="img/climb/premiere5.png" alt="persona" ng-click="currentDiv(3)">
+            </div>
+            <div class="column">
+                <img class="image-slider w3-opacity w3-hover-opacity-off" src="img/climb/premiere6.png" alt="anti persona" ng-click="currentDiv(4)">
+            </div>
+            <div class="column">
+                <img class="image-slider w3-opacity w3-hover-opacity-off" src="img/climb/premiere2.png" alt="persona" ng-click="currentDiv(2)">
+            </div>
+            <div class="column"></div>
+        </div>
+    </div>
+    <br>
+    <br>
+    <p>
+        The experiment was designed as two run in the premiere. In the first round, audiences were given minimized information about
+        the performance with the mobile application, while in the second round we offered a vocal introduction about the
+        performance including its unique structure and special settings, and introduce how the mobile application connected
+        to the performance. Paper questionnaires were given after each round of performance and interviews were conducted
+        on five selected audiences. In two performances the musician chose different paths.
+    </p>
+
+    <h3>3. Second Phase of Design</h3>
+    We analyzed data collected from questionnaires and interviews. [quotes from users] After reflecting on analysis results and
+    further discussions with Dr. Kallionpää, more needs are revealed regarding to the mobile application:
+    <br> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;1. Incorporate introduction about the performance and allows
+    customization
+    <br> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;2. Allow to compare and contrast performances to suit the repetitive
+    nature of the composition
+    <br> To meet these needs, the second phase of design was designed and developed.
+    <br>
+    <br>
+    <!-- <div class="center-content">
+        <iframe allowFullScreen frameborder="0" height="564" mozallowfullscreen src="https://player.vimeo.com/video/251909389" webkitAllowFullScreen
+            width="640"></iframe>
+    </div> -->
+
+    <div class="ui grid">
+        <div class="four wide column">
+            <img width="100%" src="img/climb/interface.png">
+            <figcaption>
+                <i>Customized Introduction</i>
+            </figcaption>
+        </div>
+        <div class="four wide column">
+            <img width="100%" src="img/climb/mapcomposition.png">
+            <figcaption>
+                <i>Composition Overview</i>
+            </figcaption>
+        </div>
+        <div class="four wide column">
+            <img width="100%" src="img/climb/narratives.png">
+            <figcaption>
+                <i>Narrative Summary</i>
+            </figcaption>
+        </div>
+        <div class="four wide column">
+            <img width="100%" src="img/climb/mapcompare.png">
+            <figcaption>
+                <i>Performance Compare and Contrast</i>
+            </figcaption>
+        </div>
+    </div>
+
+    The second phase of design was incorporated in the second performance in London in Augest after I leaving the lab. :(
+    <h3>4. Reflection on Design</h3>

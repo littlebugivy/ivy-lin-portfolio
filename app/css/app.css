@@ -271,7 +271,13 @@ table tr, th, td {
 }
 
 figcaption{
-	margin-top: 10px;
+  text-align: center;
+  margin-top: 5px;
+  margin-bottom: 20px;
+}
+
+.underline{
+  text-decoration: underline;
 }
 
 .solutions {
