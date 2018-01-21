@@ -16,6 +16,22 @@ p{
   width: 56%; 
 }
 
+.div-color1{
+  width:56%;
+  background: white;
+  margin: 4em 22%;
+}
+
+.narrow{
+  width:56%;
+}
+
+.div-color2{
+  background:#F8F8F8;
+  width:100%;
+  padding:4em 0px;
+}
+
 .ui.fluid.card{
   border-radius:0px;
 }
@@ -69,7 +85,6 @@ p{
 
 .image-slider{
   width:100%;
-  margin-top: 20%;
 }
 
 .prototype{
@@ -111,7 +126,8 @@ p{
 }
 
 .bottom-arrows{
-  margin-top:3em;
+  margin-top:2em;
+  margin-bottom:2em;
 }
 
 img.prototype{
@@ -124,6 +140,7 @@ img.prototype{
 }
 
 .center-content{
+  margin:30px 0px;
   text-align:center;
 }
 
@@ -276,6 +293,21 @@ figcaption{
   margin-bottom: 20px;
 }
 
+.ut-arrow1{
+  display: inline-block;
+  position:absolute;
+  width:25em;
+  right:8%;
+}
+
+
+.ut-arrow{
+  display: inline-block;
+  position:absolute;
+  width:20em;
+  right:12%;
+}
+
 .underline{
   text-decoration: underline;
 }
@@ -298,7 +330,11 @@ figcaption{
 
 .project-main-container{
   /* text-align: center; */
-  margin-top:5em;
+  margin-top:4em;
+}
+
+.slider-active{
+ border-bottom:2px solid black;
 }
 
 
@@ -328,11 +364,6 @@ figcaption{
   stroke:black;
   stroke-width:2; 
   fill:white;
-}
-
-
-.image{
-  width:100%;
 }
 
 .highlight{
@@ -443,6 +474,14 @@ for mobile: <768px */
     .project-img{
       height:12em;
       width: auto;
+    }
+
+    .w3-opacity, .image-slider,.w3-hover-opacity-off{
+      margin:0px;
+    }
+
+    .column>.image-slider:hover{
+      cursor:pointer
     }
 
     .project-intro{

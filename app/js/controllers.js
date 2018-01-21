@@ -1,16 +1,16 @@
 'use strict';
 
 /* Controllers */
-function activate(presentp){
+function activate(presentp) {
   angular.element(document.querySelector('#projects')).removeClass('active');
   angular.element(document.querySelector('#contact')).removeClass('active');
   angular.element(document.querySelector('#about')).removeClass('active');
-  angular.element(document.querySelector('#'+ presentp)).addClass('active');
+  angular.element(document.querySelector('#' + presentp)).addClass('active');
 }
 
 angular.module('portfolio.controllers', []).
   controller('projectListCtrl', ['$window', '$scope', function ($window, $scope) {
-   activate('projects');
+    activate('projects');
     console.log('here is the project controller')
     angular.element(document.querySelector(".main-menu")).removeClass("invisible");
   }]).
@@ -41,17 +41,19 @@ angular.module('portfolio.controllers', []).
       get: 'user',
       userId: '1178140746',
       accessToken: '1178140746.1677ed0.3e958d1dc8344e14b997d86016374ef5',
-      limit:12,
-      sortBy:'most-recent',
-      template:'<div class="gallery"><a href="{{image}}" title="{{caption}}"><img src="{{image}}" class="img-fluid"></a></div>'
-  });
-  feed.run();
+      limit: 12,
+      sortBy: 'most-recent',
+      template: '<div class="gallery"><a href="{{image}}" title="{{caption}}"><img src="{{image}}" class="img-fluid"></a></div>'
+    });
+    feed.run();
     console.log('here is the about controller')
   }]).
   controller('projectCtrl', ['$window', '$scope', '$location', '$anchorScroll', function ($window, $scope, $location, $anchorScroll) {
     activate('projects');
     $scope.hideMainMenu = false;
     $scope.showSideNav = false;
+    $scope.caption = "Premiere of Climb!"
+    $scope.slide = 1;
 
     console.log('here is the project list controller')
 
@@ -63,7 +65,38 @@ angular.module('portfolio.controllers', []).
 
     $scope.currentDiv = function (n) {
       $scope.showDivs(slideIndex = n);
+      $scope.slide = n;
+      if (n === 1) {
+        $scope.caption = "Premiere of Climb!"
+      } else if (n == 2) {
+        $scope.caption = "Mobile app for Climb!"
+      } else if (n == 3) {
+        $scope.caption = "Disklavier piano"
+      } else {
+        $scope.caption = "Disklavier piano autoplay"
+      }
     }
+
+    $scope.climbReplace = function (n) {
+      if (n == 1) {
+        $scope.programmenote = "img/climb/programmenote.png"
+      }else if(n==2){
+        $scope.mapoverview = "img/climb/mapoverview2.png"
+      }else if(n==3){
+        $scope.journey = "img/climb/journey2.png"
+      }else{
+        $scope.compare = "img/climb/compare2.png"
+      }
+    }
+
+    $scope.reset = function () {
+      $scope.programmenote = "img/climb/interface.png"
+      $scope.mapoverview = "img/climb/mapoverview1.png"
+      $scope.journey = "img/climb/journey1.png"
+      $scope.compare = "img/climb/compare1.png"
+    }
+
+    $scope.reset();
 
     // image slider
     // copied from w3 school 
