@@ -23,31 +23,41 @@
         </div>
     </nav>
 </header>
-
-<div ng-show="showSideNav" class="ui secondary vertical pointing menu side-menu computer only grid">
-    <a href="" ng-click="linkTo('/#overview')" class="item overview active">
-        Overview
+<!-- 
+side nav -->
+<div ng-show="showSideNav" class="ui secondary vertical text menu side-menu computer only grid" ng-mouseover="showNavTitle()"
+    ng-mouseleave="hideNavTitle()">
+    <a href="#overview" class="item overview active" du-smooth-scroll du-scrollspy>
+        <i class="circle icon"></i>
+        <span class="nav-title" ng-show="mouseover">Overview</span>
     </a>
-    <a ng-click="scrollTo('needs')" class="item needs">
-        Background Introduction
+    <a href="#backintr" class="item overview" du-smooth-scroll du-scrollspy>
+        <i class="circle icon"></i>
+        <span class="nav-title" ng-show="mouseover">Background Introduction</span>
     </a>
-    <a ng-click="scrollTo('prototyping')" class="item prototyping">
-        Needs Identification
+    <a href="#neediden" class="item overview" du-smooth-scroll du-scrollspy ng-click="checkActive(this)">
+        <i class="circle icon"></i>
+        <span class="nav-title" ng-show="mouseover"> Needs Identification</span>
     </a>
-    <a ng-click="scrollTo('presentation')" class="item presentation">
-        Phase One
+    <a href="#phaseone" class="item overview" du-smooth-scroll du-scrollspy>
+        <i class="circle icon"></i>
+        <span class="nav-title" ng-show="mouseover"> Phase One </span>
     </a>
-    <a ng-click="scrollTo('presentation')" class="item presentation">
-        User Testing - Premiere
+    <a href="#usertest" class="item overview" du-smooth-scroll du-scrollspy>
+        <i class="circle icon"></i>
+        <span class="nav-title" ng-show="mouseover"> User Testing - Premiere </span>
     </a>
-    <a ng-click="scrollTo('presentation')" class="item presentation">
-        Data Analysis
+    <a href="#dataanal" class="item overview" du-smooth-scroll du-scrollspy>
+        <i class="circle icon"></i>
+        <span class="nav-title" ng-show="mouseover"> Data Analysis</span>
     </a>
-    <a ng-click="scrollTo('presentation')" class="item presentation">
-        Phase Two
+    <a href="#phasetwo" class="item overview" du-smooth-scroll du-scrollspy>
+        <i class="circle icon"></i>
+        <span class="nav-title" ng-show="mouseover"> Phase Two</span>
     </a>
-    <a ng-click="scrollTo('presentation')" class="item presentation">
-        Reflection
+    <a href="#reflection" class="item overview" du-smooth-scroll du-scrollspy>
+        <i class="circle icon"></i>
+        <span class="nav-title"ap ng-show="mouseover"> Reflection</span>
     </a>
 </div>
 
@@ -59,6 +69,7 @@
         <div class="project-intro">Assist musicial interpretation through dynamic programme notes</div>
     </figcaption>
 </div>
+
 <div id='overview' class="project-main-container narrow-container">
     <h1> Overview </h1>
     <div class="ui grid">
@@ -108,7 +119,7 @@
     </div>
 </div>
 
-<div class="div-color2">
+<div id="backintr" class="div-color2">
     <div class="narrow-container">
         <h1>Background Introduction</h1>
         Musicians have continuously been exploring the possibilities of presenting innovative musical experiences to their audiences.
@@ -137,7 +148,7 @@
     </div>
 </div>
 
-<div class="project-main-container div-color1">
+<div id="neediden" class="project-main-container div-color1">
     <h1>Needs Identification</h1>
     <div>
         <p>
@@ -156,7 +167,7 @@
     </div>
 </div>
 
-<div class="div-color2">
+<div id="phaseone" class="div-color2">
     <div class="narrow-container">
         <h1> Phase One of Design</h1>
         <p>
@@ -201,7 +212,7 @@
         </div>
     </div>
 </div>
-<div class="project-main-container div-color1">
+<div id="usertest" class="project-main-container div-color1">
     <h1>User Testing - Premiere</h1>
     <p>The premiere of Climb! took place in a classical recital hall as part of a regular series of contemporary music recitals
         at the University of Nottingham. The composer performed the work herself and around 50 audiences attended. The audience
@@ -256,7 +267,7 @@
         on five selected audiences. In two performances the musician chose different paths.
     </p>
 </div>
-<div class="div-color2">
+<div id="dataanal" class="div-color2">
     <div class="narrow-container">
         <h1>Data Analysis</h1>
         <p> From questionnaires 34/41 (83%) people used the app during the first performance and 29/39 (74%) during the second.
@@ -278,7 +289,8 @@
 
     </div>
 </div>
-<div class="project-main-container div-color1">
+
+<div id="phasetwo" class="project-main-container div-color1">
     <h1>Phase Two of Design</h1>
     <br>
     <br>
@@ -314,7 +326,7 @@
 </div>
 </div>
 
-<div class="div-color2">
+<div id="reflection" class="div-color2">
     <div class="narrow-container">
         <h1>Reflection</h1>
         <p> The app was seen as useful and an enhancement as far as it went, although there were many suggestions for how it

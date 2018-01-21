@@ -48,7 +48,7 @@ angular.module('portfolio.controllers', []).
     feed.run();
     console.log('here is the about controller')
   }]).
-  controller('projectCtrl', ['$window', '$scope', '$location', '$anchorScroll', function ($window, $scope, $location, $anchorScroll) {
+  controller('projectCtrl', ['$window', '$scope', '$location', '$anchorScroll', '$rootScope', function ($window, $scope, $location, $anchorScroll, $rootScope) {
     activate('projects');
     $scope.hideMainMenu = false;
     $scope.showSideNav = false;
@@ -80,11 +80,11 @@ angular.module('portfolio.controllers', []).
     $scope.climbReplace = function (n) {
       if (n == 1) {
         $scope.programmenote = "img/climb/programmenote.png"
-      }else if(n==2){
+      } else if (n == 2) {
         $scope.mapoverview = "img/climb/mapoverview2.png"
-      }else if(n==3){
+      } else if (n == 3) {
         $scope.journey = "img/climb/journey2.png"
-      }else{
+      } else {
         $scope.compare = "img/climb/compare2.png"
       }
     }
@@ -117,19 +117,27 @@ angular.module('portfolio.controllers', []).
     }
 
     $scope.showDivs(slideIndex);
-
-    $scope.scrollToTop = function scrollToTop() {
-      $window.scrollTo(0, 0);
-    }
-
     $scope.goToMainPage = function () {
       $window.location.href = '#/projects.html';
     }
 
-    $scope.scrollTo = function (id) {
-      console.log(id);
-      $location.hash(id);
-      $anchorScroll();
+    var lock = 0;
+    $scope.showNavTitle = function () {
+      $scope.mouseover = true;
+      if (lock === 0) {
+        $('.nav-title')
+          .transition('fade');
+        lock = 1;
+      }
+    }
+
+    $scope.hideNavTitle = function () {
+      $scope.mouseover = false;
+      if (lock === 1) {
+        $('.nav-title')
+          .transition('fade');
+        lock = 0;
+      }
     }
 
     //shrink nav bar when user scroll down
