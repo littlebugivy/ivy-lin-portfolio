@@ -44,6 +44,10 @@ p{
   border-radius: 0px;
 }
 
+.w100{
+  width:100%
+}
+
 .role-text{
   font-size:14px;
 }

@@ -24,18 +24,29 @@
     </nav>
 </header>
 
-<div ng-show="showSideNav" class="ui secondary vertical pointing menu side-menu computer only grid">
-    <a href="" ng-click="linkTo('/#overview')" class="item overview">
-        Overview
+<!-- 
+side nav -->
+<div ng-show="showSideNav" class="ui secondary vertical text menu side-menu computer only grid" ng-mouseover="showNavTitle()"
+    ng-mouseleave="hideNavTitle()">
+    <a href="#overview" class="item overview active" du-smooth-scroll du-scrollspy>
+        <i class="circle icon"></i>
+        <span class="nav-title" ng-show="mouseover">Overview</span>
     </a>
-    <a ng-click="scrollTo('needs')" class="item needs">
-        Problem
+    <a href="#problems" class="item overview active" du-smooth-scroll du-scrollspy>
+        <i class="circle icon"></i>
+        <span class="nav-title" ng-show="mouseover">Problem Description</span>
     </a>
-    <a ng-click="scrollTo('prototyping')" class="item prototyping">
-        Prototyping
+    <a href="#concepts" class="item overview" du-smooth-scroll du-scrollspy>
+        <i class="circle icon"></i>
+        <span class="nav-title" ng-show="mouseover">Concepts Forming</span>
     </a>
-    <a ng-click="scrollTo('presentation')" class="item presentation">
-        Presentation
+    <a href="#prototypes" class="item overview" du-smooth-scroll du-scrollspy ng-click="checkActive(this)">
+        <i class="circle icon"></i>
+        <span class="nav-title" ng-show="mouseover">Prototypes</span>
+    </a>
+    <a href="#reflection" class="item overview" du-smooth-scroll du-scrollspy>
+        <i class="circle icon"></i>
+        <span class="nav-title" ng-show="mouseover"> Reflection</span>
     </a>
 </div>
 
@@ -43,58 +54,65 @@
     <figure style="margin-top:5%;">
         <img src="img/ef/easyfurniture-logo.png" alt="easyfurniture-logo" class="project-img" />
     </figure>
-    <figcaption  style="margin-top:1%; color:white">
+    <figcaption style="margin-top:1%; color:white">
         <div class="project-intro">Facilitate local second-hand furniture trading</div>
     </figcaption>
 </div>
 
-<div id='overview' class="project-main-container narrow-container">
+<div id='overview' class="project-main-container div-color1">
     <h1> Overview </h1>
     <div class="ui grid">
         <div class="four wide column">
-           <b>Duration: </b><br>
-            Sep 10 2017 - Jan 7 2018 
+            <b>Duration: </b>
+            <br> Sep 10 2017 - Jan 7 2018
         </div>
         <div class="four wide column">
-            <b> Role: </b><br>
-                Individual Work<br>
-                UI/UX Designer
+            <b> Role: </b>
+            <br> Individual Work
+            <br> UI/UX Designer
         </div>
         <div class="four wide column">
-           <b> UX Methods:</b><br>
-            Competitive Analysis<br>
-            Ideation<br>
-            Storyboard<br>
-            QOC<br>
-            Wireframe<br>
-            Lo-fi & Hi-fi      
+            <b> UX Methods:</b>
+            <br> Competitive Analysis
+            <br> Ideation
+            <br> Storyboard
+            <br> QOC
+            <br> Wireframe
+            <br> Lo-fi & Hi-fi
         </div>
         <div class="four wide column">
-            <b>Design Tools:</b><br>
-            Sketch <br>
-            Invision
+            <b>Design Tools:</b>
+            <br> Sketch
+            <br> Invision
         </div>
     </div>
+</div>
+
+<div class="div-color2" id="problems">
+    <div class="narrow-container">
+        <h1>Problem Description</h1>
+
+        <div>
+            <p>
+                Buying a set of brand new furniture is not cost-effective particularly for students who regard the place as a temporary residency
+                (i.e. short-term study, potentially move to better/cheaper places). Besides, dealing with furniture after
+                finishing a short-term stay is also a headache, as it causes a huge waste to throw away furniture in good
+                condition, or another bill to move them around.
+            </p>
+            <p>
+                Easy Furniture connects local second-hand furniture sellers and buyers in a more efficient way.
+
+                <!-- From a seller's perspective, the design <span class="highlight">minimizes manual input</span> by allowing searching for existing product information online, and <span class="highlight">facilitates the construction of item profile</span> by providing proper tips and recommendations. Furthermore, the system <span class="hightlight">supports instant conversations</span> to encourage inquiry from buyers, with the goal to ultimately increase the chance of selling.   -->
+            </p>
+
+        </div>
+
     </div>
-
- 
-    <h1>Problem Description</h1>
-
-    <div>
-        <p>
-            Buying a set of brand new furniture is not cost-effective particularly for students who regard the place as a temporary residency (i.e. short-term study, potentially move to better/cheaper places). Besides, dealing with furniture after finishing a short-term stay is also a headache, as it causes a huge waste to throw away furniture in good condition, or  another bill to move them around.   
-        </p>
-        <p>
-            Easy Furniture connects local second-hand furniture sellers and buyers in a more efficient way. 
-            
-            <!-- From a seller's perspective, the design <span class="highlight">minimizes manual input</span> by allowing searching for existing product information online, and <span class="highlight">facilitates the construction of item profile</span> by providing proper tips and recommendations. Furthermore, the system <span class="hightlight">supports instant conversations</span> to encourage inquiry from buyers, with the goal to ultimately increase the chance of selling.   -->
-        </p>
-
-    </div>
-
-    <h1>Design Process</h1>
+</div>
+<div class="project-main-container div-color1" id="concepts">
+    <h1>Concepts Forming</h1>
     <h3>1. Research on competitors (Competitive Analysis)</h3>
-    <p> 
+    <p>
         More explanation about competitive analysis
     </p>
     <figure>
@@ -103,73 +121,85 @@
 
     <h3>2. Ideation (Storyboard)</h3>
     <p>Initially I ......</p>
-    <img class="image" src="img/ef/sketch-alternatives.jpg" alt="warrior infomation">
-    <img class="image" src="img/ef/sketch-alternative2.jpg" alt="template warriors">
+    <img class="w100" src="img/ef/sketch-alternatives.jpg" alt="sketch">
+    <img class="w100"  src="img/ef/sketch-alternative2.jpg" alt="sketch">
 
     <h3>3. Understand users (Persona)</h3>
-    <p> 
-        I built three personas and one anti persona to specify who will be target audiences of the design and who are not. In short, we are designing for people 
+    <p>
+        I built three personas and one anti persona to specify who will be target audiences of the design and who are not. In short,
+        we are designing for people
     </p>
-    
-        <div class="image-slider-content">
-            <img class="slides" src="img/ef/ef_persona1.jpg" alt="warrior infomation">
-            <img class="slides" src="img/ef/ef_persona2.jpg" alt="template warriors">
-            <img class="slides" src="img/ef/ef_persona3.jpg" alt="editing page">
-            <img class="slides" src="img/ef/ef_persona4.jpg" alt="warriorslot">
-    
-            <div class="ui six column grid">
-                <div class="column"></div>
-                <div class="column">
-                    <img class="image-slider w3-opacity w3-hover-opacity-off" src="img/ef/ef_persona1.jpg" alt="persona" ng-click="currentDiv(1)">
-                </div>
-                <div class="column">
-                    <img class="image-slider w3-opacity w3-hover-opacity-off" src="img/ef/ef_persona2.jpg" alt="persona" ng-click="currentDiv(2)">
-                </div>
-                <div class="column">
-                    <img class="image-slider w3-opacity w3-hover-opacity-off" src="img/ef/ef_persona3.jpg" alt="persona" ng-click="currentDiv(3)">
-                </div>
-                <div class="column">
-                    <img class="image-slider w3-opacity w3-hover-opacity-off" src="img/ef/ef_persona4.jpg" alt="anti persona" ng-click="currentDiv(4)">
-                </div>
-                <div class="column"></div>
+
+    <div class="image-slider-content">
+        <img class="slides" src="img/ef/ef_persona1.jpg" alt="warrior infomation">
+        <img class="slides" src="img/ef/ef_persona2.jpg" alt="template warriors">
+        <img class="slides" src="img/ef/ef_persona3.jpg" alt="editing page">
+        <img class="slides" src="img/ef/ef_persona4.jpg" alt="warriorslot">
+
+        <div class="ui six column grid">
+            <div class="column"></div>
+            <div class="column">
+                <img class="image-slider w3-opacity w3-hover-opacity-off" src="img/ef/ef_persona1.jpg" alt="persona" ng-click="currentDiv(1)">
             </div>
+            <div class="column">
+                <img class="image-slider w3-opacity w3-hover-opacity-off" src="img/ef/ef_persona2.jpg" alt="persona" ng-click="currentDiv(2)">
+            </div>
+            <div class="column">
+                <img class="image-slider w3-opacity w3-hover-opacity-off" src="img/ef/ef_persona3.jpg" alt="persona" ng-click="currentDiv(3)">
+            </div>
+            <div class="column">
+                <img class="image-slider w3-opacity w3-hover-opacity-off" src="img/ef/ef_persona4.jpg" alt="anti persona" ng-click="currentDiv(4)">
+            </div>
+            <div class="column"></div>
         </div>
+    </div>
 
-    
-        <h3>4. Understand User Workflow (Storymap)</h3>
-        <p> [Description about storymap] 
-        </p>
 
-        <img class="image" src="img/ef/storymap.jpg" alt="prototype1">
+    <h3>4. Understand User Workflow (Storymap)</h3>
+    <p> [Description about storymap]
+    </p>
 
-        <h3>5.Wireframe</h3>
+    <img class="w100"  src="img/ef/storymap.jpg" alt="prototype1">
+
+</div>
+<div class="div-color2" id="prototypes">
+    <div class="narrow-container">
+        <h1>Prototypes</h1>
+        <h3>1. Wireframe</h3>
         <p> [wireframe]
         </p>
 
-        <h3>6.QOC</h3>
+        <h3>2.QOC</h3>
         <p> [QOC]
         </p>
 
-        <h3>7.User Testing</h3>
+        <h3>3.User Testing</h3>
         <p> [User Testing]
         </p>
 
-        <h3>8.Hi-fi prototype</h3>
-        <p><a href="https://invis.io/G8EW72AC3#/268600704_login">View Hi-fi in Invision</a></p>
+        <h3>4.Hi-fi prototype</h3>
+        <p>
+            <a href="https://invis.io/G8EW72AC3#/268600704_login">View Hi-fi in Invision</a>
+        </p>
+    </div>
+</div>
 
-
+<div class="project-main-container div-color1" id="reflection">
     <h1>Reflection</h1>
     [Reflection]
 
     <div class="bottom-arrows">
         <div class="left-arrow">
-            <a href="/"><img class="arrow" src="img/left-arrow.png" alt="left arrow"></a>
+            <a href="/">
+                <img class="arrow" src="img/left-arrow.png" alt="left arrow">
+            </a>
             <div class="bottom-text">Home</div>
         </div>
-        <div class="right-arrow"> 
-           <a href="/corewar"><img class="arrow" src="img/right-arrow.png" alt="right arrow"></a>
+        <div class="right-arrow">
+            <a href="/corewar">
+                <img class="arrow" src="img/right-arrow.png" alt="right arrow">
+            </a>
             <div class="bottom-text">CoreWar</div>
         </div>
     </div>
-
 </div>
