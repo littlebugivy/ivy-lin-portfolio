@@ -1,241 +1,250 @@
-<header>
-  <nav ng-show="hideMainMenu" class="ui top fixed borderless menu shrink-menu computer only grid">
-    <div class="item menu-icon">
-      <img ng-click="goToMainPage()" alt='profile' src="img/profile.jpg">
-    </div>
-    <div class="right menu">
-      <a class="ui right floated item" ng-href="/about" tabindex="1">About</a>
-      <a class="ui right floated item" ng-href="/" tabindex="1">Projects</a>
-      <a class="ui right floated item" ng-href="https://drive.google.com/file/d/1MOI0PXLJCp_cHd-qfXUGseUOHkzMSRiB/view?usp=sharing">Resume</a>
-      <a ng-href="/contact" class="ui right floated item">Contact</a>
-    </div>
-  </nav>
+<div class="loading" ng-show="loading">
+  <div class="spinner">
+    <div class="double-bounce1"></div>
+    <div class="double-bounce2"></div>
+  </div>
+</div>
+<div ng-show="!loading">
+  <header>
+    <nav ng-show="hideMainMenu" class="ui top fixed borderless menu shrink-menu computer only grid">
+      <div class="item menu-icon">
+        <img ng-click="goToMainPage()" alt='profile' src="img/profile.jpg">
+      </div>
+      <div class="right menu">
+        <a class="ui right floated item" ng-href="/about" tabindex="1">About</a>
+        <a class="ui right floated item" ng-href="/" tabindex="1">Projects</a>
+        <a class="ui right floated item" ng-href="https://drive.google.com/file/d/1MOI0PXLJCp_cHd-qfXUGseUOHkzMSRiB/view?usp=sharing">Resume</a>
+        <a ng-href="/contact" class="ui right floated item">Contact</a>
+      </div>
+    </nav>
 
-  <nav ng-show="hideMainMenu" class="ui top fixed borderless menu shrink-menu tablet only grid">
-    <div class="item menu-icon">
-      <img ng-click="goToMainPage()" alt='profile' src="img/profile.jpg">
-    </div>
-    <div class="right menu">
-      <a class="ui right floated item" ng-href="/about">About</a>
-      <a class="ui right floated item" ng-href="/">Projects</a>
-      <a class="ui right floated item" ng-href="https://drive.google.com/file/d/1MOI0PXLJCp_cHd-qfXUGseUOHkzMSRiB/view?usp=sharing">Resume</a>
-      <a ng-href="/contact" class="ui right floated item">Contact</a>
-    </div>
-  </nav>
-</header>
+    <nav ng-show="hideMainMenu" class="ui top fixed borderless menu shrink-menu tablet only grid">
+      <div class="item menu-icon">
+        <img ng-click="goToMainPage()" alt='profile' src="img/profile.jpg">
+      </div>
+      <div class="right menu">
+        <a class="ui right floated item" ng-href="/about">About</a>
+        <a class="ui right floated item" ng-href="/">Projects</a>
+        <a class="ui right floated item" ng-href="https://drive.google.com/file/d/1MOI0PXLJCp_cHd-qfXUGseUOHkzMSRiB/view?usp=sharing">Resume</a>
+        <a ng-href="/contact" class="ui right floated item">Contact</a>
+      </div>
+    </nav>
+  </header>
 
-<!-- 
+  <!-- 
 side nav -->
-<div ng-show="showSideNav" class="ui secondary vertical text menu side-menu computer only grid" ng-mouseover="showNavTitle()"
-  ng-mouseleave="hideNavTitle()">
-  <a href="#overview" class="item overview active" du-smooth-scroll du-scrollspy>
-    <i class="circle icon"></i>
-    <span class="nav-title" ng-show="mouseover">Overview</span>
-  </a>
-  <a href="#probdesp" class="item overview active" du-smooth-scroll du-scrollspy>
-    <i class="circle icon"></i>
-    <span class="nav-title" ng-show="mouseover">Problem Description</span>
-  </a>
-  <a href="#concepts" class="item overview active" du-smooth-scroll du-scrollspy>
-    <i class="circle icon"></i>
-    <span class="nav-title" ng-show="mouseover">Concepts Forming</span>
-  </a>
-  <a href="#prototypes" class="item overview" du-smooth-scroll du-scrollspy ng-click="checkActive(this)">
-    <i class="circle icon"></i>
-    <span class="nav-title" ng-show="mouseover">Prototypes</span>
-  </a>
-  <a href="#finaprod" class="item overview" du-smooth-scroll du-scrollspy>
-    <i class="circle icon"></i>
-    <span class="nav-title" ng-show="mouseover">Final Product</span>
-  </a>
-</div>
-
-
-<div class="project-name-container" style="background-color:#371A02">
-  <figure>
-    <img src="img/cw/corewar-logo.png" alt="corewar-logo" class="project-img" />
-  </figure>
-  <figcaption style="margin-top:1%; color:white">
-    <div class="project-intro">Classic PC Programming Language Game In Mobile Era</div>
-  </figcaption>
-</div>
-<div id='overview' class="project-main-container div-color1">
-  <h1> Overview </h1>
-  <div class="ui grid">
-    <div class="four wide column">
-      <b>Duration: </b>
-      <br> Sep 10 2016 - Jan 7 2016
-    </div>
-    <div class="four wide column">
-      <b> Role: </b>
-      <br> UI/UX Designer
-      <br> Front-end developer
-      <br> Product Manager
-    </div>
-    <div class="four wide column">
-      <b> UX Methods:</b>
-      <br> Competitive Analysis
-      <br> Ideation
-      <br> Persona
-      <br> Wireframe
-      <br> Lo-fi & Hi-fi
-    </div>
-    <div class="four wide column">
-      <b>Tools:</b>
-      <br> Keynote
-      <br> Android Studio
-    </div>
+  <div ng-show="showSideNav" class="ui secondary vertical text menu side-menu computer only grid" ng-mouseover="showNavTitle()"
+    ng-mouseleave="hideNavTitle()">
+    <a href="#overview" class="item overview active" du-smooth-scroll du-scrollspy>
+      <i class="circle icon"></i>
+      <span class="nav-title" ng-show="mouseover">Overview</span>
+    </a>
+    <a href="#probdesp" class="item overview active" du-smooth-scroll du-scrollspy>
+      <i class="circle icon"></i>
+      <span class="nav-title" ng-show="mouseover">Problem Description</span>
+    </a>
+    <a href="#concepts" class="item overview active" du-smooth-scroll du-scrollspy>
+      <i class="circle icon"></i>
+      <span class="nav-title" ng-show="mouseover">Concepts Forming</span>
+    </a>
+    <a href="#prototypes" class="item overview" du-smooth-scroll du-scrollspy ng-click="checkActive(this)">
+      <i class="circle icon"></i>
+      <span class="nav-title" ng-show="mouseover">Prototypes</span>
+    </a>
+    <a href="#finaprod" class="item overview" du-smooth-scroll du-scrollspy>
+      <i class="circle icon"></i>
+      <span class="nav-title" ng-show="mouseover">Final Product</span>
+    </a>
   </div>
-</div>
 
-<div class="div-color2" id="probdesp">
-  <div class="narrow-container">
-    <h1>Problem Description</h1>
-    <div>
-      <p>
-        Core War is a programming PC game firstly introduced in 1984. In the game, two or more battle programs (or we call them "warriors")
-        compete for control of one virtual computer. These warriors are written in an abstract assembly language called Redcode,
-        which is designed for Core War particularly. Therefore fundamental knowledge of assembly language programming is
-        required to play this game.
-      </p>
-      <p>
-        At the beginning of a game, each battle program is loaded into memory at a random location, after which each program executes
-        one instruction in turn. The objective of the game is to cause the processes of opposing programs to terminate (which
-        happens if they execute an invalid instruction), leaving the victorious program in sole possession of the machine.
-      </p>
-      <p>
-        Our mission is to bring the game into the mobile era, allowing broader access for knowing, studying and playing this game.
-      </p>
-    </div>
+
+  <div class="project-name-container" style="background-color:#371A02">
+    <figure>
+      <img src="img/cw/corewar-logo.png" alt="corewar-logo" class="project-img" />
+    </figure>
+    <figcaption style="margin-top:1%; color:white">
+      <div class="project-intro">Classic PC Programming Language Game In Mobile Era</div>
+    </figcaption>
   </div>
-</div>
-
-<div class="project-main-container div-color1" id="concepts">
-  <h1>Concepts Forming</h1>
-  <h3>Understand users</h3>
-  <p> To narrow down the software functionality, we considered various user cases and sketched out personas which represent two
-    typical categories of target users: Core War novice and veteran.
-  </p>
-  <figure class="center-content">
-    <img src="img/cw/man1.png" class="persona1" alt="persona1" />
-    <img src="img/cw/man2.png" class="persona2" alt="persona2" />
-  </figure>
-
-  <h3>Competitive Analysis</h3>
-  <p> As there are no mobile adaptations of the game on either Android or iOS platforms so far, we need to seek our own way for
-    game to develop on the mobile end. The classic version of Core War contains considerable settings as well as functionalities,
-    which give rise to great development complexity and difficulty. Considering the fact that not all the functionalities
-    are necessary for all players, and that we have a time constraint, we decided to simplify the game while keeping its
-    essential logics. To get a better understanding of the game and make a decision on which settings should be remained
-    or removed, we studied the previous software by exmaining and investigating Core War players for advice. Following are
-    two programs of Core War on PC.
-  </p>
-  <figure>
-    <img src="img/cw/corewin.png" class="previous-sof-img" alt="corewin" />
-    <img src="img/cw/pmars.jpg" class="previous-sof-img" alt="pmars" />
-  </figure>
-  <figcaption class="center-content">
-    Selected PC version of Core War:
-    <a href="http://corewar.co.uk/wendell/">Core Win (Left)</a> and
-    <a href="http://www.koth.org/pmars/">PMars (Right)</a>
-  </figcaption>
-
-
-  <h3>Design game flow</h3>
-  <p> By going through the processes of playing Core War, we came up with the user story map.
-  </p>
-  <div class="center-content">
-    <img src="img/cw/app_flow.png" alt="app flow">
-  </div>
-</div>
-
-<div class="div-color2" id="prototypes">
-  <div class="narrow-container">
-    <h1>Prototype</h1>
-    <h3>Wireframe & Low-fi prototyping</h3>
-    <p> The main features of the game was first determinted based on the suggestions from experienced Core War players as well
-      as the user cases above. We developed three versions of the prototype in total. They evolved alongside with the development
-      process.
-    </p>
-
-    <div class="ui two column grid">
+  <div id='overview' class="project-main-container div-color1">
+    <h1> Overview </h1>
+    <div class="ui grid">
       <div class="four wide column">
-        <img src="img/cw/prototype1.png" class="prototype">
-        <!-- <img src="img/prototype2.png" alt="prototype2"> -->
+        <b>Duration: </b>
+        <br> Sep 10 2016 - Jan 7 2016
       </div>
-      <div class="twelve wide column">
-        <img src="img/cw/prototype3.png" class="prototype">
+      <div class="four wide column">
+        <b> Role: </b>
+        <br> UI/UX Designer
+        <br> Front-end developer
+        <br> Product Manager
       </div>
-    </div>
-
-    [keynote video/link to file]
-
-    <h3>Hi-fi prototyping</h3>
-    Screens:
-    <div class="image-slider-content">
-      <img class="slides" src="img/cw/warriorInfo.jpg" alt="warrior infomation">
-      <img class="slides" src="img/cw/TemplateWarrior.png" alt="template warriors">
-      <img class="slides" src="img/cw/editing.png" alt="editing page">
-      <img class="slides" src="img/cw/warriorslot.png" alt="warriorslot">
-      <img class="slides" src="img/cw/Surface.png" alt="surface">
-      <img class="slides" src="img/cw/warrior_gallery.png" alt="warrior_gallery">
-      <img class="slides" src="img/cw/selfplay_mode.png" alt="selfplay_mode">
-
-      <br>
-      <br>
-
-      <div class="ui seven column grid">
-        <div class="column">
-          <img class="image-slider w3-opacity w3-hover-opacity-off" src="img/cw/warriorInfo.jpg" alt="warrior infomation" ng-mouseover="currentDiv(1)">
-          <div ng-show="slide==1" class="slider-active"></div>
-        </div>
-        <div class="column">
-          <img class="image-slider w3-opacity w3-hover-opacity-off" src="img/cw/TemplateWarrior.png" alt="template warriors" ng-mouseover="currentDiv(2)">
-          <div ng-show="slide==2" class="slider-active"></div>
-        </div>
-        <div class="column">
-          <img class="image-slider w3-opacity w3-hover-opacity-off" src="img/cw/editing.png" alt="editing page" ng-mouseover="currentDiv(3)">
-          <div ng-show="slide==3" class="slider-active"></div>
-        </div>
-        <div class="column">
-          <img class="image-slider w3-opacity w3-hover-opacity-off" src="img/cw/warriorslot.png" alt="warriorslot" ng-mouseover="currentDiv(4)">
-          <div ng-show="slide==4" class="slider-active"></div>
-        </div>
-        <div class="column">
-          <img class="image-slider w3-opacity w3-hover-opacity-off" src="img/cw/Surface.png" alt="surface" ng-mouseover="currentDiv(5)">
-          <div ng-show="slide==5" class="slider-active"></div>
-        </div>
-        <div class="column">
-          <img class="image-slider w3-opacity w3-hover-opacity-off" src="img/cw/warrior_gallery.png" alt="warrior_gallery" ng-mouseover="currentDiv(6)">
-          <div ng-show="slide==6" class="slider-active"></div>
-        </div>
-        <div class="column">
-          <img class="image-slider w3-opacity w3-hover-opacity-off" src="img/cw/selfplay_mode.png" alt="selfplay_mode" ng-mouseover="currentDiv(7)">
-          <div ng-show="slide==7" class="slider-active"></div>
-        </div>
+      <div class="four wide column">
+        <b> UX Methods:</b>
+        <br> Competitive Analysis
+        <br> Ideation
+        <br> Persona
+        <br> Wireframe
+        <br> Lo-fi & Hi-fi
+      </div>
+      <div class="four wide column">
+        <b>Tools:</b>
+        <br> Keynote
+        <br> Android Studio
       </div>
     </div>
   </div>
-</div>
 
-<div class="project-main-container div-color1" id="finaprod">
-  <h1>Final Product</h1>
-  <div style="text-align:center">
-    <iframe allowFullScreen frameborder="0" height="564" mozallowfullscreen src="https://player.vimeo.com/video/251970512" webkitAllowFullScreen
-      width="640"></iframe>
-  </div>
-  <div class="bottom-arrows">
-    <div class="left-arrow">
-      <a href="/easyfurniture">
-        <img class="arrow" src="img/left-arrow.png" alt="left arrow">
-      </a>
-      <div class="bottom-text">Easy Furniture</div>
-    </div>
-    <div class="right-arrow">
+  <div class="div-color2" id="probdesp">
+    <div class="narrow-container">
+      <h1>Problem Description</h1>
       <div>
-        <img class="arrow" src="img/right-arrow.png" alt="right arrow">
+        <p>
+          Core War is a programming PC game firstly introduced in 1984. In the game, two or more battle programs (or we call them "warriors")
+          compete for control of one virtual computer. These warriors are written in an abstract assembly language called
+          Redcode, which is designed for Core War particularly. Therefore fundamental knowledge of assembly language programming
+          is required to play this game.
+        </p>
+        <p>
+          At the beginning of a game, each battle program is loaded into memory at a random location, after which each program executes
+          one instruction in turn. The objective of the game is to cause the processes of opposing programs to terminate
+          (which happens if they execute an invalid instruction), leaving the victorious program in sole possession of the
+          machine.
+        </p>
+        <p>
+          Our mission is to bring the game into the mobile era, allowing broader access for knowing, studying and playing this game.
+        </p>
       </div>
-      <div class="bottom-text">Next Project</div>
+    </div>
+  </div>
+
+  <div class="project-main-container div-color1" id="concepts">
+    <h1>Concepts Forming</h1>
+    <h3>Understand users</h3>
+    <p> To narrow down the software functionality, we considered various user cases and sketched out personas which represent
+      two typical categories of target users: Core War novice and veteran.
+    </p>
+    <figure class="center-content">
+      <img src="img/cw/man1.png" class="persona1" alt="persona1" />
+      <img src="img/cw/man2.png" class="persona2" alt="persona2" />
+    </figure>
+
+    <h3>Competitive Analysis</h3>
+    <p> As there are no mobile adaptations of the game on either Android or iOS platforms so far, we need to seek our own way
+      for game to develop on the mobile end. The classic version of Core War contains considerable settings as well as functionalities,
+      which give rise to great development complexity and difficulty. Considering the fact that not all the functionalities
+      are necessary for all players, and that we have a time constraint, we decided to simplify the game while keeping its
+      essential logics. To get a better understanding of the game and make a decision on which settings should be remained
+      or removed, we studied the previous software by exmaining and investigating Core War players for advice. Following
+      are two programs of Core War on PC.
+    </p>
+    <figure>
+      <img src="img/cw/corewin.png" class="previous-sof-img" alt="corewin" />
+      <img src="img/cw/pmars.jpg" class="previous-sof-img" alt="pmars" />
+    </figure>
+    <figcaption class="center-content">
+      Selected PC version of Core War:
+      <a href="http://corewar.co.uk/wendell/">Core Win (Left)</a> and
+      <a href="http://www.koth.org/pmars/">PMars (Right)</a>
+    </figcaption>
+
+
+    <h3>Design game flow</h3>
+    <p> By going through the processes of playing Core War, we came up with the user story map.
+    </p>
+    <div class="center-content">
+      <img src="img/cw/app_flow.png" alt="app flow">
+    </div>
+  </div>
+
+  <div class="div-color2" id="prototypes">
+    <div class="narrow-container">
+      <h1>Prototype</h1>
+      <h3>Wireframe & Low-fi prototyping</h3>
+      <p> The main features of the game was first determinted based on the suggestions from experienced Core War players as well
+        as the user cases above. We developed three versions of the prototype in total. They evolved alongside with the development
+        process.
+      </p>
+
+      <div class="ui two column grid">
+        <div class="four wide column">
+          <img src="img/cw/prototype1.png" class="prototype">
+          <!-- <img src="img/prototype2.png" alt="prototype2"> -->
+        </div>
+        <div class="twelve wide column">
+          <img src="img/cw/prototype3.png" class="prototype">
+        </div>
+      </div>
+
+      [keynote video/link to file]
+
+      <h3>Hi-fi prototyping</h3>
+      Screens:
+      <div class="image-slider-content">
+        <img class="slides" src="img/cw/warriorInfo.jpg" alt="warrior infomation">
+        <img class="slides" src="img/cw/TemplateWarrior.png" alt="template warriors">
+        <img class="slides" src="img/cw/editing.png" alt="editing page">
+        <img class="slides" src="img/cw/warriorslot.png" alt="warriorslot">
+        <img class="slides" src="img/cw/Surface.png" alt="surface">
+        <img class="slides" src="img/cw/warrior_gallery.png" alt="warrior_gallery">
+        <img class="slides" src="img/cw/selfplay_mode.png" alt="selfplay_mode">
+
+        <br>
+        <br>
+
+        <div class="ui seven column grid">
+          <div class="column">
+            <img class="image-slider w3-opacity w3-hover-opacity-off" src="img/cw/warriorInfo.jpg" alt="warrior infomation" ng-mouseover="currentDiv(1)">
+            <div ng-show="slide==1" class="slider-active"></div>
+          </div>
+          <div class="column">
+            <img class="image-slider w3-opacity w3-hover-opacity-off" src="img/cw/TemplateWarrior.png" alt="template warriors" ng-mouseover="currentDiv(2)">
+            <div ng-show="slide==2" class="slider-active"></div>
+          </div>
+          <div class="column">
+            <img class="image-slider w3-opacity w3-hover-opacity-off" src="img/cw/editing.png" alt="editing page" ng-mouseover="currentDiv(3)">
+            <div ng-show="slide==3" class="slider-active"></div>
+          </div>
+          <div class="column">
+            <img class="image-slider w3-opacity w3-hover-opacity-off" src="img/cw/warriorslot.png" alt="warriorslot" ng-mouseover="currentDiv(4)">
+            <div ng-show="slide==4" class="slider-active"></div>
+          </div>
+          <div class="column">
+            <img class="image-slider w3-opacity w3-hover-opacity-off" src="img/cw/Surface.png" alt="surface" ng-mouseover="currentDiv(5)">
+            <div ng-show="slide==5" class="slider-active"></div>
+          </div>
+          <div class="column">
+            <img class="image-slider w3-opacity w3-hover-opacity-off" src="img/cw/warrior_gallery.png" alt="warrior_gallery" ng-mouseover="currentDiv(6)">
+            <div ng-show="slide==6" class="slider-active"></div>
+          </div>
+          <div class="column">
+            <img class="image-slider w3-opacity w3-hover-opacity-off" src="img/cw/selfplay_mode.png" alt="selfplay_mode" ng-mouseover="currentDiv(7)">
+            <div ng-show="slide==7" class="slider-active"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="project-main-container div-color1" id="finaprod">
+    <h1>Final Product</h1>
+    <div style="text-align:center">
+      <iframe allowFullScreen frameborder="0" height="564" mozallowfullscreen src="https://player.vimeo.com/video/251970512" webkitAllowFullScreen
+        width="640"></iframe>
+    </div>
+    <div class="bottom-arrows">
+      <div class="left-arrow">
+        <a href="/easyfurniture">
+          <img class="arrow" src="img/left-arrow.png" alt="left arrow">
+        </a>
+        <div class="bottom-text">Easy Furniture</div>
+      </div>
+      <div class="right-arrow">
+        <div>
+          <img class="arrow" src="img/right-arrow.png" alt="right arrow">
+        </div>
+        <div class="bottom-text">Next Project</div>
+      </div>
     </div>
   </div>
 </div>

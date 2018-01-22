@@ -13,6 +13,7 @@ angular.module('portfolio.controllers', []).
     activate('projects');
     console.log('here is the project controller')
     angular.element(document.querySelector(".main-menu")).removeClass("invisible");
+
   }]).
   controller('contactCtrl', ['$window', '$scope', function ($window, $scope) {
     console.log('here is the contact controller')
@@ -50,17 +51,24 @@ angular.module('portfolio.controllers', []).
     angular.element(document.querySelector(".main-menu")).removeClass("invisible");
     console.log('here is the about controller')
   }]).
-  controller('projectCtrl', ['$window', '$scope', '$location', '$anchorScroll', '$rootScope', function ($window, $scope, $location, $anchorScroll, $rootScope) {
+  controller('projectCtrl', ['$window', '$scope', '$location', '$anchorScroll', '$rootScope', '$timeout', function ($window, $scope, $location, $anchorScroll, $rootScope, $timeout) {
     activate('projects');
     $scope.hideMainMenu = false;
     $scope.showSideNav = false;
     $scope.caption = "Premiere of Climb!"
     $scope.slide = 1;
+    $scope.loading = true;
 
     console.log('here is the project list controller')
 
     var slideIndex = 1;
 
+    $timeout(function () {
+      $scope.loading = false;
+      $scope.$apply();
+      console.log('ok')
+    }, 2400);
+    
     $scope.plusDivs = function (n) {
       $scope.showDivs(slideIndex += n);
     }
