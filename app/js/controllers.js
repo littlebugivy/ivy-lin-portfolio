@@ -38,15 +38,15 @@ angular.module('portfolio.controllers', []).
   }]).
   controller('aboutCtrl', ['$window', '$scope', function ($window, $scope) {
     activate('about');
-    var feed = new Instafeed({
-      get: 'user',
-      userId: '1178140746',
-      accessToken: '1178140746.1677ed0.3e958d1dc8344e14b997d86016374ef5',
-      limit: 12,
-      sortBy: 'most-recent',
-      template: '<div class="gallery"><a href="{{image}}" title="{{caption}}"><img src="{{image}}" class="img-fluid"></a></div>'
-    });
-    feed.run();
+    // var feed = new Instafeed({
+    //   get: 'user',
+    //   userId: '1178140746',
+    //   accessToken: '1178140746.1677ed0.3e958d1dc8344e14b997d86016374ef5',
+    //   limit: 12,
+    //   sortBy: 'most-recent',
+    //   template: '<div class="gallery"><a href="{{image}}" title="{{caption}}"><img src="{{image}}" class="img-fluid"></a></div>'
+    // });
+    // feed.run();
 
     angular.element(document.querySelector(".main-menu")).removeClass("invisible");
     console.log('here is the about controller')

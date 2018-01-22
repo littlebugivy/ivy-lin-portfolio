@@ -75,13 +75,14 @@ p{
 
 .slides{
   display: none;
-  width: 80%;
+  width: 100%;
   margin-left:auto;
   margin-right:auto;
 }
 
 .image-slider-content{
-  max-width: 900px;
+  /* max-width: 900px; */
+  width: 100%;
 }
 
 .image-slider{
