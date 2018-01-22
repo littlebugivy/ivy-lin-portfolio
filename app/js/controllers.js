@@ -46,6 +46,8 @@ angular.module('portfolio.controllers', []).
       template: '<div class="gallery"><a href="{{image}}" title="{{caption}}"><img src="{{image}}" class="img-fluid"></a></div>'
     });
     feed.run();
+
+    angular.element(document.querySelector(".main-menu")).removeClass("invisible");
     console.log('here is the about controller')
   }]).
   controller('projectCtrl', ['$window', '$scope', '$location', '$anchorScroll', '$rootScope', function ($window, $scope, $location, $anchorScroll, $rootScope) {

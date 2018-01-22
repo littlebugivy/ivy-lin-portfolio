@@ -1,0 +1,38 @@
+<header>
+    <!-- 
+side nav -->
+    <div ng-show="showSideNav" class="ui secondary vertical text menu side-menu computer only grid" ng-mouseover="showNavTitle()"
+        ng-mouseleave="hideNavTitle()">
+        <a href="#overview" class="item overview active" du-smooth-scroll du-scrollspy>
+            <i class="circle icon"></i>
+            <span class="nav-title" ng-show="mouseover">Overview</span>
+        </a>
+        <a href="#probdesp" class="item overview active" du-smooth-scroll du-scrollspy>
+            <i class="circle icon"></i>
+            <span class="nav-title" ng-show="mouseover">Problem Description</span>
+        </a>
+        <a href="#concepts" class="item overview active" du-smooth-scroll du-scrollspy>
+            <i class="circle icon"></i>
+            <span class="nav-title" ng-show="mouseover">Concepts Forming</span>
+        </a>
+        <a href="#prototypes" class="item overview" du-smooth-scroll du-scrollspy ng-click="checkActive(this)">
+            <i class="circle icon"></i>
+            <span class="nav-title" ng-show="mouseover">Prototypes</span>
+        </a>
+        <a href="#finaprod" class="item overview" du-smooth-scroll du-scrollspy>
+            <i class="circle icon"></i>
+            <span class="nav-title" ng-show="mouseover">Final Product</span>
+        </a>
+    </div>
+
+
+    <div class="project-name-container" style="background-color:#F8F8F8">
+        <figure>
+            <img src="img/climb/climb-banner.png" alt="climb-logo" class="project-img" />
+        </figure>
+        <figcaption style="margin-top:1%; color:black">
+            <div class="project-intro">Assist musicial interpretation through dynamic programme notes</div>
+        </figcaption>
+    </div>
+
+</header>
