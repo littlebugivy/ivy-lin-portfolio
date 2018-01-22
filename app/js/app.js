@@ -8,10 +8,11 @@ angular.module('portfolio', [
   'portfolio.services',
   'portfolio.directives',
   'portfolio.controllers',
-  'duScroll'
+  'duScroll',
+  'angular-google-analytics'
 ]).value('duScrollOffset', 80)
   .value('duScrollBottomSpy', true)
-  .config(['$routeProvider', '$locationProvider', '$httpProvider', function ($routeProvider, $locationProvider, $httpProvider) {
+  .config(['$routeProvider', '$locationProvider', '$httpProvider', 'AnalyticsProvider', function ($routeProvider, $locationProvider, $httpProvider, AnalyticsProvider) {
     $routeProvider.when('/', {
       templateUrl: 'partials/projects.html', controller: 'projectListCtrl'
     });
@@ -24,5 +25,7 @@ angular.module('portfolio', [
 
     $locationProvider.html5Mode(true);
     $httpProvider.defaults.headers.common["X-Requested-With"] = 'XMLHttpRequest';
-  }])
+
+    AnalyticsProvider.setAccount('UA-112843212-1');
+  }]).run(['Analytics', function (Analytics) { }]);
 

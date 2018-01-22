@@ -70,6 +70,7 @@
     "run-sequence": "^2.2.0",
     "semantic-ui": "^2.2.13",
     "yamljs": "^0.3.0",
-    "duScroll":"^1.0.2"
+    "duScroll":"^1.0.2",
+    "angular-google-analytics":"^1.1.8"
   }
 }
