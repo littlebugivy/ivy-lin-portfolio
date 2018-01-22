@@ -146,16 +146,20 @@ side nav -->
             <div class="ui six column grid">
                 <div class="column"></div>
                 <div class="column">
-                    <img class="image-slider w3-opacity w3-hover-opacity-off" src="img/ef/ef_persona1.jpg" alt="persona" ng-click="currentDiv(1)">
+                    <img class="image-slider w3-opacity w3-hover-opacity-off" src="img/ef/ef_persona1.jpg" alt="persona" ng-mouseover="currentDiv(1)">
+                    <div ng-show="slide==1" class="slider-active"></div>
                 </div>
                 <div class="column">
-                    <img class="image-slider w3-opacity w3-hover-opacity-off" src="img/ef/ef_persona2.jpg" alt="persona" ng-click="currentDiv(2)">
+                    <img class="image-slider w3-opacity w3-hover-opacity-off" src="img/ef/ef_persona2.jpg" alt="persona" ng-mouseover="currentDiv(2)">
+                    <div ng-show="slide==2" class="slider-active"></div>
                 </div>
                 <div class="column">
-                    <img class="image-slider w3-opacity w3-hover-opacity-off" src="img/ef/ef_persona3.jpg" alt="persona" ng-click="currentDiv(3)">
+                    <img class="image-slider w3-opacity w3-hover-opacity-off" src="img/ef/ef_persona3.jpg" alt="persona" ng-mouseover="currentDiv(3)">
+                    <div ng-show="slide==3" class="slider-active"></div>
                 </div>
                 <div class="column">
-                    <img class="image-slider w3-opacity w3-hover-opacity-off" src="img/ef/ef_persona4.jpg" alt="anti persona" ng-click="currentDiv(4)">
+                    <img class="image-slider w3-opacity w3-hover-opacity-off" src="img/ef/ef_persona4.jpg" alt="anti persona" ng-mouseover="currentDiv(4)">
+                    <div ng-show="slide==4" class="slider-active"></div>
                 </div>
                 <div class="column"></div>
             </div>

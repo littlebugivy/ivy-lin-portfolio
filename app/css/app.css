@@ -22,9 +22,6 @@ p{
   margin: 4em 22%;
 }
 
-.narrow{
-  width:56%;
-}
 
 .div-color2{
   background:#F8F8F8;
@@ -302,7 +299,7 @@ figcaption{
   display: inline-block;
   position:absolute;
   width:20em;
-  right:12%;
+  right:10%;
 }
 
 .underline{
@@ -373,6 +370,41 @@ figcaption{
 .ui.fixed.menu+.ui.grid{
   padding:0px;
   margin:0px;
+}
+
+
+
+
+/* for tablet */
+@media only screen and (max-width: 1024px) {
+  .ut-arrow{
+    display: inline-block;
+    position:absolute;
+    width:18em;
+    right:5%;
+  }
+
+
+  .ut-arrow1{
+    display: inline-block;
+    position:absolute;
+    width:22em;
+    right:4%;
+  }
+
+
+.narrow-container{
+  margin-left:15%;
+  margin-right:15%;
+  width: 70%; 
+}
+
+.div-color1{
+  width:70%;
+  background: white;
+  margin: 4em 15%;
+}
+
 }
 
 /* 
