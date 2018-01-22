@@ -67,8 +67,17 @@ angular.module('portfolio.controllers', []).
       $scope.loading = false;
       $scope.$apply();
       console.log('ok')
-    }, 2400);
-    
+    }, 1400);
+
+    // $scope.openModal = function (a) {
+    //   console.log(a)
+    //   // console.log(a.attr())
+    //   $('.ui.modal').append("<img src='img/climb/prototype0.png' width='100%'>")
+    //   $('.ui.modal')
+    //     .modal('show')
+    //     ;
+    // }
+
     $scope.plusDivs = function (n) {
       $scope.showDivs(slideIndex += n);
     }
