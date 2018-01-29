@@ -29,12 +29,18 @@ p{
   padding:4em 0px;
 }
 
+
 .ui.fluid.card{
   border-radius:0px;
 }
 
+
 .ui.fluid.card:hover{
-  box-shadow:12px 12px 2px 1px rgba(0, 0, 255, .2);;
+  box-shadow: 0 0 20px rgba(33,33,33,.4); 
+}
+
+.ui.fluid.card{
+  height: 24em;
 }
 
 .ui.card>.image>img, .ui.cards>.card>.image>img{
