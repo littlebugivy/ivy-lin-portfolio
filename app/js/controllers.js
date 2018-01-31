@@ -69,14 +69,10 @@ angular.module('portfolio.controllers', []).
       console.log('ok')
     }, 1400);
 
-    // $scope.openModal = function (a) {
-    //   console.log(a)
-    //   // console.log(a.attr())
-    //   $('.ui.modal').append("<img src='img/climb/prototype0.png' width='100%'>")
-    //   $('.ui.modal')
-    //     .modal('show')
-    //     ;
-    // }
+    $scope.show = function(){
+      console.log("???")
+      angualr.getElementsByClassName('card-caption').display = block;
+    }
 
     $scope.plusDivs = function (n) {
       $scope.showDivs(slideIndex += n);

@@ -8,7 +8,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" type="text/css" href="/semantic-ui/dist/semantic.min.css">
   <link rel="stylesheet" href="/css/app.css" />
-  <link rel="icon" href="img/butterfly.png">
+  <link rel="icon" href="img/ivylin_black.png">
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-112843212-1"></script>
   <script>
@@ -20,38 +20,45 @@
   </script>
 </head>
 
-<body class="ng-cloak">
-  <header class="main-menu narrow-container">
-    <div class="ui items self-intro">
-      <div class="item">
-        <a ng-href="/projects.html" class="ui tiny image">
-          <img class="main-icon" src="img/profile.jpg" alt="profile-image">
-        </a>
-        <div class="content intro">
-          <h1 class="ui header">Ivy Lin</h1>
-          <div class="description">
-            UI/UX Designer & Researcher | Web Developer
-            <br>I am now looking for a
-            <b>UX-related summer internship</b> in 2018.</p>
+<body>
+
+
+  <header class="main-menu project-list">
+    <div class="ui two column divided grid">
+      <div class="ten wide column">
+        <div class="ui items self-intro">
+          <div class="item">
+            <a ng-href="/projects.html" class="ui tiny image">
+              <img class="main-icon" src="img/ivylin.png" alt="profile-image">
+            </a>
+            <div class="bottom aligned content intro">
+              UX Designer & Reseacher
+              <!-- <div class="description">
+                UI/UX Designer & Researcher | Web Developer
+                <br>I am now looking for a
+                <b>UX-related summer internship</b> in 2018.</p>
+              </div> -->
+            </div>
           </div>
         </div>
       </div>
-    </div>
 
-    <nav class="ui secondary pointing menu borderless clean-borderless">
-      <div class="right menu">
-        <a ng-href="/about" class="nav-btnn ui right floated item" tabindex="1" id="about">About</a>
-        <a class="nav-btnn ui right floated item" ng-href="/" tabindex="1" id="projects">Projects</a>
-        <a ng-href="https://drive.google.com/open?id=1MOI0PXLJCp_cHd-qfXUGseUOHkzMSRiB" class="ui right floated item">Resume</a>
-        <a ng-href="https://drive.google.com/open?id=1Pmfx72OKPL4M6Z1WTaM5YieU0ItTi88o" class="nav-btnn ui right floated item" id="contact">Fun</a>
+      <div class="bottom aligned six wide column">
+        <nav class="ui secondary pointing menu">
+          <div class="right menu">
+            <a ng-href="/about" class="nav-btnn ui right floated item" tabindex="1" id="about">About</a>
+            <a class="nav-btnn ui right floated item" ng-href="/" tabindex="1" id="projects">Projects</a>
+            <a ng-href="https://drive.google.com/open?id=1MOI0PXLJCp_cHd-qfXUGseUOHkzMSRiB" class="ui right floated item">Resume</a>
+            <a ng-href="https://drive.google.com/open?id=1Pmfx72OKPL4M6Z1WTaM5YieU0ItTi88o" class="nav-btnn ui right floated item" id="contact">Fun</a>
+          </div>
+        </nav>
       </div>
-    </nav>
+    </div>
   </header>
 
   <div ng-view></div>
 
-  <footer class="narrow-container center">
-    <div class="ui section divider"></div>
+  <footer class="project-list">
     <div class="social-media">
       <a href="mailto:ivylin@umich.edu">
         <img src="img/gmail.png" alt="email" />
@@ -76,9 +83,18 @@
   <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
     crossorigin="anonymous"></script>
   <script src="/js/semantic.min.js"></script>
-  <script src="js/instafeed.min.js"></script>
+  <!-- <script src="js/instafeed.min.js"></script> -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-scroll/1.0.2/angular-scroll.min.js"></script>
   <script src="js/angular-google-analytics.min.js"></script>
+  <!-- <script src="js/modernizr.custom.97074.js"></script>
+  <script type="text/javascript" src="js/jquery.hoverdir.js"></script>
+  <script type="text/javascript">
+    $(function () {
+
+      $(' .ui.fluid.card ').hoverdir();
+
+    });
+  </script> -->
 </body>
 
 </html>
