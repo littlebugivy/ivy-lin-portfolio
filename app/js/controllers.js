@@ -9,8 +9,9 @@ function activate(presentp) {
 }
 
 angular.module('portfolio.controllers', []).
-  controller('projectListCtrl', ['$window', '$scope', '$location', function ($window, $scope, $location) {
+  controller('projectListCtrl', ['$window', '$scope', '$location', '$route', function ($window, $scope, $location, $route) {
     activate('projects');
+    
     console.log('here is the project controller')
     angular.element(document.querySelector(".main-menu")).removeClass("invisible");
 
@@ -18,6 +19,12 @@ angular.module('portfolio.controllers', []).
       console.log('get direction', dir)
       $location.path(dir);
     }
+
+    $('.blurring.dimmable.image').dimmer({
+      on: 'hover'
+    });
+
+
 
   }]).
   controller('contactCtrl', ['$window', '$scope', function ($window, $scope) {

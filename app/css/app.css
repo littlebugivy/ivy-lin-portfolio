@@ -33,6 +33,7 @@ p{
 .ui.fluid.card{
   margin:0px!important;
   border-radius:0px;
+  cursor:pointer;
 }
 
 .ui.dimmer>.card-caption, .ui.dimmer>.card-small-caption {
@@ -45,15 +46,14 @@ p{
 
 .blurring.dimmable>.dimmer{
   background-color:rgba(0,0,0,0.6);
-  filter: grayscale(0%);
   cursor: pointer;
 }
-
 
 .card-caption>b {
   font-size:24px;
   color:white;
 }
+
 .card-caption>span, .card-small-caption>span {
   color:white;
 }
