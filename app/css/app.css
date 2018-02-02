@@ -10,6 +10,15 @@ p{
   line-height: 1.5em;
 }
 
+a{
+  text-decoration: none;
+  color:black;
+}
+
+a:hover{
+  color:black;
+}
+
 .narrow-container{
   margin-left:22%;
   margin-right:22%;
@@ -260,6 +269,7 @@ footer>div>a>img:hover{
 	text-align: center;
   padding: 3em;
   min-height:380px;
+  margin-top:4em;
 }
 
 .project-name-container figcaption{
@@ -356,6 +366,7 @@ figcaption{
 }
 
 .underline{
+  color: blue;
   text-decoration: underline;
 }
 
@@ -389,15 +400,18 @@ figcaption{
   opacity: 0.6;
   vertical-align: middle;
   float:left;
+  cursor: pointer;
 }
 
 .right-arrow{
+  cursor: pointer;
   opacity: 0.6;
   float:right;
   text-align:right;
 }
 
 .arrow{
+  display:inline;
   height:40px;
 }
 
@@ -641,7 +655,6 @@ for mobile: <768px */
   margin-left:10%;
   margin-right:10%;
   width: 80%; 
-  display: block
 }
 
 .project-list.content{
