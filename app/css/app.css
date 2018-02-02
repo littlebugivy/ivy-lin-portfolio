@@ -35,82 +35,49 @@ p{
   border-radius:0px;
 }
 
+.ui.dimmer>.card-caption, .ui.dimmer>.card-small-caption {
+  padding-left:8%;
+  padding-top:8%;
+  text-align: left!important;
+  text-transform: uppercase;
+  line-height: 1.3;
+}
 
-.ui.fluid.card>.card-caption {
+.blurring.dimmable>.dimmer{
+  background-color:rgba(0,0,0,0.6);
+  filter: grayscale(0%);
+  cursor: pointer;
+}
+
+
+.card-caption>b {
+  font-size:24px;
+  color:white;
+}
+.card-caption>span, .card-small-caption>span {
+  color:white;
+}
+
+.card-small-caption>b {
+  color:white;
+  font-size:18px;
+}
+
+.pjthumb{
   position: absolute;
-  display: none;
-	background: #333;
-	background: rgba(75,75,75,0.7);
-	width: 100%;
-	height: 100%;
-	text-transform: uppercase;
-	font-weight: normal;
-	color: rgba(255,255,255,0.9);
-	text-shadow: 1px 1px 1px rgba(0,0,0,0.2);
-	border-bottom: 1px solid rgba(255,255,255,0.5);
-  box-shadow: 0 1px 0 rgba(0,0,0,0.1), 0 -10px 0 rgba(255,255,255,0.3);
-  transition: all 0.5s ease-in-out;
 }
 
-
-
-/* 
-.da-thumbs li a div {
-	position: absolute;
-	background: #333;
-	background: rgba(75,75,75,0.7);
-	width: 100%;
-	height: 100%;
-} */
-/* .da-thumbs li a div.custom-hover-object {
-	position: absolute;
-	background: #333;
-	background: rgba(255,255,255,0.7);
-	width: 100%;
-	height: 100%;
-}
-.da-thumbs li a div span {
-	display: block;
-	padding: 10px 0;
-	margin: 40px 20px 20px 20px;
-	text-transform: uppercase;
-	font-weight: normal;
-	color: rgba(255,255,255,0.9);
-	text-shadow: 1px 1px 1px rgba(0,0,0,0.2);
-	border-bottom: 1px solid rgba(255,255,255,0.5);
-	box-shadow: 0 1px 0 rgba(0,0,0,0.1), 0 -10px 0 rgba(255,255,255,0.3);
-}
-.da-thumbs li a div.custom-hover-object span {
-	color: rgba(75,75,75,0.9);
-	text-shadow: 1px 1px 1px rgba(255,255,255,0.2);
-	border-bottom: 1px solid rgba(0,0,0,0.5);
-	box-shadow: 0 1px 0 rgba(255,255,255,255.1), 0 -10px 0 rgba(0,0,0,0.3);
-} */
-
-
-.ui.fluid.card:hover{
-  box-shadow: 0 0 20px rgba(33,33,33,.4); 
-}
-
-/* .ui.fluid.card{
-  height: 24em;
-} */
 
 .ui.divided.grid:not([class*="vertically divided"])>.column:not(.row), .ui.divided.grid:not([class*="vertically divided"])>.row>.column{
   box-shadow: none;
 }
 
-/* .ui.three.column.divided.grid{
-  margin:0;
-  padding:0;
-} */
-
-.eight.wide.column{
+.stretched.row>.eight.wide.column{
   padding:0px!important;
   margin:0px!important;
 }
 
-.four.wide.column{
+.stretched.row>.four.wide.column{
   padding:0px!important;
   margin:0px!important;
 }
@@ -657,14 +624,24 @@ for mobile: <768px */
   opacity: 1;
 }
 
+.image.visible.content, .hidden.content{
+  padding:0!important;
+}
+
 .ui.secondary.vertical.text.menu.item:hover{
   background:none;
+}
+
+.op04{
+  width: 100%;
+  opacity: 0.4
 }
 
 .project-list{
   margin-left:10%;
   margin-right:10%;
   width: 80%; 
+  display: block
 }
 
 .project-list.content{
@@ -672,9 +649,9 @@ for mobile: <768px */
 }
 
 
-.project-list>.column>.ui.fluid.card{
-  max-height:300px;
-}
+/* .project-list>.column>.ui.fluid.card{
+  height: 100%;
+} */
 
 .mgt2em{
   margin-top:2em;
@@ -725,4 +702,8 @@ for mobile: <768px */
     transform: scale(1.0);
     -webkit-transform: scale(1.0);
   }
+}
+
+.pj-thumbnail{
+    position:absolute
 }

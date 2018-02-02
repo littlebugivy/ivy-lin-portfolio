@@ -9,10 +9,15 @@ function activate(presentp) {
 }
 
 angular.module('portfolio.controllers', []).
-  controller('projectListCtrl', ['$window', '$scope', function ($window, $scope) {
+  controller('projectListCtrl', ['$window', '$scope', '$location', function ($window, $scope, $location) {
     activate('projects');
     console.log('here is the project controller')
     angular.element(document.querySelector(".main-menu")).removeClass("invisible");
+
+    $scope.go = function (dir) {
+      console.log('get direction', dir)
+      $location.path(dir);
+    }
 
   }]).
   controller('contactCtrl', ['$window', '$scope', function ($window, $scope) {
@@ -34,21 +39,22 @@ angular.module('portfolio.controllers', []).
         }
       });
     }
+
     angular.element(document.querySelector(".main-menu")).removeClass("invisible");
   }]).
   controller('aboutCtrl', ['$window', '$scope', function ($window, $scope) {
     activate('about');
-    // var feed = new Instafeed({
-    //   get: 'user',
-    //   userId: '1178140746',
-    //   accessToken: '1178140746.1677ed0.3e958d1dc8344e14b997d86016374ef5',
-    //   limit: 12,
-    //   sortBy: 'most-recent',
-    //   template: '<div class="gallery"><a href="{{image}}" title="{{caption}}"><img src="{{image}}" class="img-fluid"></a></div>'
-    // });
-    // feed.run();
+      // var feed = new Instafeed({
+      //   get: 'user',
+      //   userId: '1178140746',
+      //   accessToken: '1178140746.1677ed0.3e958d1dc8344e14b997d86016374ef5',
+      //   limit: 12,
+      //   sortBy: 'most-recent',
+      //   template: '<div class="gallery"><a href="{{image}}" title="{{caption}}"><img src="{{image}}" class="img-fluid"></a></div>'
+      // });
+      // feed.run();
 
-    angular.element(document.querySelector(".main-menu")).removeClass("invisible");
+      angular.element(document.querySelector(".main-menu")).removeClass("invisible");
     console.log('here is the about controller')
   }]).
   controller('projectCtrl', ['$window', '$scope', '$location', '$anchorScroll', '$rootScope', '$timeout', function ($window, $scope, $location, $anchorScroll, $rootScope, $timeout) {
@@ -68,11 +74,6 @@ angular.module('portfolio.controllers', []).
       $scope.$apply();
       console.log('ok')
     }, 1400);
-
-    $scope.show = function(){
-      console.log("???")
-      angualr.getElementsByClassName('card-caption').display = block;
-    }
 
     $scope.plusDivs = function (n) {
       $scope.showDivs(slideIndex += n);
