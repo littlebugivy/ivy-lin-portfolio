@@ -446,6 +446,13 @@ figcaption{
 
 
 
+.project-list.content{
+  margin-top:3em;
+  margin-bottom: 6em;
+}
+
+
+
 
 /* for tablet */
 @media only screen and (max-width: 1366px) {
@@ -664,7 +671,8 @@ for mobile: <768px */
 }
 
 .project-list.content{
-  margin-top:1em;
+  margin-top:4em;
+  margin-bottom:6em;
 }
 
 
@@ -678,7 +686,7 @@ for mobile: <768px */
 
 .about{
   margin-top:4em;
-  margin-bottom:8em;
+  margin-bottom:6em;
 }
 
 
