@@ -141,7 +141,7 @@ angular.module('portfolio.controllers', []).
 
     $scope.showDivs(slideIndex);
     $scope.goToMainPage = function () {
-      $window.location.href = '#/projects.html';
+      $window.location.href = '#/';
     }
 
     var lock = 0;
