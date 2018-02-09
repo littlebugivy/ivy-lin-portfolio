@@ -18,6 +18,7 @@ function returnPublicFile(req, res) {
   
   app.get('/*.html', returnPublicFile);
   app.get('/*.png', returnPublicFile);
+  app.get('/*.jpeg', returnPublicFile);
   app.get('/*.jpg', returnPublicFile);
   app.get('/*.gif', returnPublicFile);
   app.get('/css/*.css', returnPublicFile);

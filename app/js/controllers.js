@@ -3,8 +3,9 @@
 /* Controllers */
 function activate(presentp) {
   angular.element(document.querySelector('#projects')).removeClass('active');
-  angular.element(document.querySelector('#contact')).removeClass('active');
+  // angular.element(document.querySelector('#contact')).removeClass('active');
   angular.element(document.querySelector('#about')).removeClass('active');
+  angular.element(document.querySelector('#fun')).removeClass('active');
   angular.element(document.querySelector('#' + presentp)).addClass('active');
 }
 
@@ -23,9 +24,11 @@ angular.module('portfolio.controllers', []).
     $('.blurring.dimmable.image').dimmer({
       on: 'hover'
     });
-
-
-
+  }]).
+  controller('funCtrl', [function () {
+    activate('fun');
+    angular.element(document.querySelector(".main-menu")).removeClass("invisible");
+    console.log('fun ctrl')
   }]).
   controller('contactCtrl', ['$window', '$scope', function ($window, $scope) {
     console.log('here is the contact controller')

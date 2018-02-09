@@ -675,9 +675,25 @@ for mobile: <768px */
   margin-bottom:6em;
 }
 
-/* .user-experience{
+.user-experience:hover{
+  transform: rotate(2deg);
+  cursor: pointer;
+  text-decoration: underline;
+}
 
-} */
+
+.ivy-lin:hover{
+  transform: rotate(-2deg);
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.web-programmer:hover{
+  transform: rotate(-2deg);
+  cursor: pointer;
+  text-decoration: underline;
+}
+
 
 /* .project-list>.column>.ui.fluid.card{
   height: 100%;
