@@ -21,6 +21,7 @@ angular.module('portfolio', [
     $routeProvider.when('/', { templateUrl: 'partials/about.html', controller: 'aboutCtrl' });
     $routeProvider.when('/climb', { templateUrl: 'partials/climb.html', controller: 'projectCtrl' });
     $routeProvider.when('/ardriving', { templateUrl: 'partials/ardriving.html', controller: 'projectCtrl' });
+    $routeProvider.when('/uxconsulting', { templateUrl: 'partials/ux-consulting.html', controller: 'projectCtrl' });
     $routeProvider.when('/fun', { templateUrl: 'partials/fun.html', controller: 'funCtrl' });
     $routeProvider.otherwise({ redirectTo: '/error', templateUrl: 'partials/error.html', });
 

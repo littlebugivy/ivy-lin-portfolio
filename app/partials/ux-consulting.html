@@ -1,0 +1,319 @@
+<div class="loading" ng-show="loading">
+    <div class="spinner">
+        <div class="double-bounce1"></div>
+        <div class="double-bounce2"></div>
+    </div>
+</div>
+<div ng-show="!loading">
+    <header>
+        <nav ng-show="hideMainMenu" class="ui top fixed borderless menu shrink-menu computer only grid">
+            <div class="item menu-icon">
+                <img ng-click="goToMainPage()" alt='profile' src="img/profile.jpg">
+            </div>
+            <div class="right menu">
+                <a class="ui right floated item" ng-href="/" tabindex="1">About</a>
+                <a class="ui right floated item" ng-href="/projects" tabindex="1">Projects</a>
+                <a class="ui right floated item" ng-href="https://drive.google.com/file/d/1y9sF5By38tzlVeMxhMF3WPcVJHO78cCI/view?usp=sharing">Resume</a>
+                <a ng-href="/fun" class="ui right floated item">Fun</a>
+            </div>
+        </nav>
+
+        <nav ng-show="hideMainMenu" class="ui top fixed borderless menu shrink-menu tablet only grid">
+            <div class="item menu-icon">
+                <img ng-click="goToMainPage()" alt='profile' src="img/profile.jpg">
+            </div>
+            <div class="right menu">
+                <a class="ui right floated item" ng-href="/">About</a>
+                <a class="ui right floated item" ng-href="/projects">Projects</a>
+                <a class="ui right floated item" ng-href="https://drive.google.com/file/d/1y9sF5By38tzlVeMxhMF3WPcVJHO78cCI/view?usp=sharing">Resume</a>
+                <a ng-href="/fun" class="ui right floated item">Fun</a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- 
+      side nav -->
+    <div ng-show="showSideNav" class="ui secondary vertical text menu side-menu computer only grid" ng-mouseover="showNavTitle()"
+        ng-mouseleave="hideNavTitle()">
+        <a href="#overview" class="item overview active" du-smooth-scroll du-scrollspy>
+            <i class="circle icon"></i>
+            <span class="nav-title" ng-show="mouseover">Overview</span>
+        </a>
+        <a href="#intro" class="item overview active" du-smooth-scroll du-scrollspy>
+            <i class="circle icon"></i>
+            <span class="nav-title" ng-show="mouseover">Introduction</span>
+        </a>
+        <a href="#objoverview" class="item overview active" du-smooth-scroll du-scrollspy>
+            <i class="circle icon"></i>
+            <span class="nav-title" ng-show="mouseover">Objective Overview</span>
+        </a>
+        <a href="#bkresearch" class="item overview" du-smooth-scroll du-scrollspy ng-click="checkActive(this)">
+            <i class="circle icon"></i>
+            <span class="nav-title" ng-show="mouseover">Background Research</span>
+        </a>
+        <a href="#datainterp" class="item overview" du-smooth-scroll du-scrollspy>
+            <i class="circle icon"></i>
+            <span class="nav-title" ng-show="mouseover">Data Interpretation</span>
+        </a>
+        <a href="#findrecom" class="item overview" du-smooth-scroll du-scrollspy>
+            <i class="circle icon"></i>
+            <span class="nav-title" ng-show="mouseover">Findings&Solutions</span>
+        </a>
+        <a href="#reflection" class="item overview" du-smooth-scroll du-scrollspy>
+            <i class="circle icon"></i>
+            <span class="nav-title" ng-show="mouseover">Reflection</span>
+        </a>
+    </div>
+
+
+    <div class="project-name-container" style="background-color:#371A02; background-image:url('img/gh/resort.jpg'); background-repeat:no-repeat; background-size: 100%;">
+        <!-- <figure>
+            <img src="img/cw/corewar-logo.png" alt="corewar-logo" class="project-img" />
+          </figure> -->
+        <!-- <figcaption style="margin-top:10%; color:black">
+            <div class="project-intro">Classic PC Programming Language Game In Mobile Era</div>
+          </figcaption> -->
+    </div>
+    <div id='overview' class="project-main-container div-color1">
+
+        <div class="center-content">
+            <h3>Guest Experience Consulting for Wonder Resort</h3>
+        </div>
+        <h1> Overview </h1>
+        <div class="ui grid">
+            <div class="sixteen wide column">
+            </div>
+            <div class="four wide column">
+                <b>Duration: </b>
+                <br> Sep 10 2017 - Dec 15 2017
+            </div>
+            <div class="four wide column">
+                <b> Role: </b>
+                <br> UX Consultant
+                <br>
+                <br>
+                <b>Note:</b>
+                <br>Group Project of Four
+            </div>
+            <div class="four wide column">
+                <b> UX Methods:</b>
+                <br> Contextual Inquiry
+                <br> Interview
+                <br> Affinity Wall
+            </div>
+            <div class="four wide column">
+                <b>Tools:</b>
+                <br> 600+ Sticky Notes
+            </div>
+        </div>
+    </div>
+
+    <div class="div-color2" id="intro">
+        <div class="narrow-container">
+            <h1>Introduction</h1>
+            <div>
+                <p>
+                    <b>*To protect our client, the story will be told around a resort named Wonder Resort.</b>
+                </p>
+                <p>
+                    Wonder Resort is a historical resort with long-standing, personal relationships with guests and local communities and a strong
+                    commitment to preserving history and following tradition. It is dedicated to offering exceptional accommodations,
+                    excellent customer services and memorable guest experiences.
+                </p>
+                <p>
+                    Wonder Resort has overall been tremendously successful in terms of fulfilling their mission and their business goal. However,
+                    recently they received some complaints regarding reservation processes and requested us to access and
+                    make recommendations. The scope of the project is limited to those processes relating to guest experience,
+                    from the time a potential guest considers making a reservation at Wonder Resor through when they receive
+                    a post-stay survey.
+                </p>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="project-main-container div-color1" id="objoverview">
+        <h1>Objective Overview</h1>
+        <p>
+            Through our analysis and interpretation of data obtained through employee interviews and from guest reviews and survey responses,
+            we have identified two major areas of opportunity for Wonder Resort to improve their guest experience:
+            <b>Guest Data Management
+            </b> and
+            <b>Information Delivery</b>. We believe that streamlining processes in these two areas will enable Wonder Resort to
+            exceed guest expectations while also freeing up valuable organizational resources in the long-term.
+        </p>
+        <div class="ui grid">
+            <div class="eight wide column center-context">
+                <h3>Guest Data Management</h3>
+                <img src="img/gh/desire1.png" width="100%">
+            </div>
+            <div class="eight wide column center-context">
+                <h3>Information Delivery</h3>
+                <img src="img/gh/desire2.png" width="100%">
+            </div>
+        </div>
+
+    </div>
+
+
+    <div class="div-color2" id="bkresearch">
+        <div class="narrow-container">
+            <h1>Background Research</h1>
+            <h3>Secondary Research</h3>
+            <p> We first conducted background research on Wonder Resort to understand its history, style, target audiences through
+                multiple channels including their official websites, customer reviews online, travel agency review and presses.
+            </p>
+
+
+            <h3>Contextual Inquiry</h3>
+            <p>
+                To better understand the user experience, we interviewed six employees of Wonder Resort. The interviews took place at Wonder
+                Resort over two days (October 22 and 23, 2017), and the resulting analysis was conducted during November
+                2017. Prior to conducting interviews, we prepared semi-structured interview protocols relevant to each interviewee’s
+                expertise and role in the organization. We also had the unique opportunity to act as guests while conducting
+                this project, allowing us to experience and observe many relevant processes directly.
+            </p>
+        </div>
+    </div>
+
+    <div class="project-main-container div-color1" id="datainterp">
+        <h1>Data Interpretation</h1>
+        <h3>Data Collection</h3>
+        <p>
+            In addition to notes and audio recordings collected through our six employee interviews, Wonder Resort provided several additional
+            data sources, including guest survey responses, internal reports, brochures and email templates.
+        </p>
+
+        <h3>Data Synthesis</h3>
+        <p>
+            The information gathered from these sources was analyzed using
+            <b>‘affinity mapping’</b>. First, all the audios recordings were transcribed and statements were extracted to form
+            individual data points. Then, all data points were written on individual sticky notes, or affinity notes. Then,
+            the sticky notes were grouped into categories based on thematic similarities and each grouping was given a label
+            that synthesized its data points into a clear, specific finding. This process was repeated twice more until all
+            600+ sticky notes were incorporated into a few broad categories. These final groupings were then organized hierarchically
+            and relationally along a wall, resulting in a visual model. The affinity mapping process and its tangible output
+            provided us with a clearer understanding of the patterns and themes running through the data, highlighting areas
+            of opportunity.
+        </p>
+        <div class="ui grid">
+            <div class="six wide column">
+                <img src="img/gh/stickynotes.jpeg" width="100%">
+            </div>
+            <div class="ten wide column">
+                <img src="img/gh/affinitywall.jpg" width="100%">
+            </div>
+        </div>
+    </div>
+
+    <div class="div-color2" id="findrecom">
+        <div class="narrow-container">
+            <h1>Findings & Recommendations</h1>
+            Our analyses revealed two overarching areas of opportunity at Wonder Resort : Guest Data Management and Information Delivery.
+            The findings are started with
+            <i class="treatment icon"></i> and recommendations are with
+            <i class="hand peace icon"></i>. One thing worth noting is that our recommendations were made based on the context of Wonder Resort.
+
+            <p>*There are more detials in the final report, please
+                <a class="underline" href="mailto:ivylin@umich.edu" target="_top">email me to get access</a> if you are interesetd.</p>
+            <br>
+            <div class="ui grid">
+                <div class="seven wide column">
+                    <h3>Guest Data Management</h3>
+                    <p>
+                        <i class="treatment icon"></i> Guest data is being collected through various sources, however, there is no cohesive protocol
+                        or centralized location for storing and accessing
+                    </p>
+                    <p>
+                        <i class="treatment icon"></i>The current process for identifying and tracking VIP and repeat guests is problematic
+                    </p>
+                    <img src="img/gh/vip.png" width="100%">
+                    <p>
+                        <i class="hand peace icon"></i> Apply a centralized database
+                    </p>
+                    <img src="img/gh/central-location.png" width="100%">
+                    <div class="ui divider"></div>
+                    <p>
+                        <i class="treatment icon"></i>Physical paperwork causes burdens on document management
+                    </p>
+                    <p>
+                        <i class="hand peace icon"></i> Use of a file sharing program to manage data.
+                    </p>
+                </div>
+                <div class="two wide column">
+                    <div class="ui vertical divider">&</div>
+                </div>
+                <div class="seven wide column">
+                    <h3>Information Delivery</h3>
+                    <p>
+                        <i class="treatment icon"></i> Information on the website is not being communicated to guests in an accessible or intuitive
+                        way.
+                        <p>
+                            <i class="hand peace icon"></i>
+                            </span>
+                            Adjust informaiton structure to make important information more salient to users
+                        </p>
+                    </p>
+                    <div class="ui divider"></div>
+                    <p>
+                        <i class="treatment icon"></i>Phone calls are a drain on staff resources and often do not result in increased understanding
+                        or a sale
+                        <p>
+                            <i class="hand peace icon"></i>
+                            </span>
+                            Setting up a “Frequently Asked Questions” page
+                        </p>
+                        <div class="ui divider"></div>
+                    </p>
+                    <p>
+                        <i class="treatment icon"></i>
+                        Language barrier between guests and staff leads to miscommunication, negatively impacting guest experience
+                        <p>
+                            <i class="hand peace icon"></i> Having a short language training program
+                        </p>
+                    </p>
+                    <img src="img/gh/report2.png" width="100%">
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="project-main-container div-color1" id="reflection">
+        <h1>Reflection</h1>
+        <h3>The best recommendation is the one that fit the context the most. </h3>
+        <p>
+            While more and more advanced technologies are developed and the access to them becomes easier, we need to calm down and think
+            of whether they would bring real benefit to clients. Some qustions that should be considered:
+            <li>
+                What effort would be taken to adopt new tools (from pespectives of learning curve, deployment, budget, time constraint)?
+            </li>
+            <li>
+                What recommandations could lead to improvement in a short term? How about long term?
+            </li>
+            <li>
+                What criteria do we use to prioritize recommandations?
+            </li>
+        </p>
+        <br>
+        <br>
+        <br>
+        <div class="bottom-arrows">
+            <div class="left-arrow">
+                <a href="/easyfurniture">
+                    <img class="arrow" src="img/left-arrow.png" alt="left arrow">
+                </a>
+                <div class="bottom-text">Easy Furniture</div>
+            </div>
+            <div class="right-arrow">
+                <div>
+                    <img class="arrow" src="img/right-arrow.png" alt="right arrow">
+                </div>
+                <div class="bottom-text">Core War</div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- 
+          <button class='ui button' ng-show="hideMainMenu" ng-click='scrollToTop()'><i class="huge angle double up  icon scroll-to-top"></i></button> -->

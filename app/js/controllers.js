@@ -12,7 +12,7 @@ function activate(presentp) {
 angular.module('portfolio.controllers', []).
   controller('projectListCtrl', ['$window', '$scope', '$location', '$route', function ($window, $scope, $location, $route) {
     activate('projects');
-    
+
     console.log('here is the project controller')
     angular.element(document.querySelector(".main-menu")).removeClass("invisible");
 
@@ -54,17 +54,17 @@ angular.module('portfolio.controllers', []).
   }]).
   controller('aboutCtrl', ['$window', '$scope', function ($window, $scope) {
     activate('about');
-      // var feed = new Instafeed({
-      //   get: 'user',
-      //   userId: '1178140746',
-      //   accessToken: '1178140746.1677ed0.3e958d1dc8344e14b997d86016374ef5',
-      //   limit: 12,
-      //   sortBy: 'most-recent',
-      //   template: '<div class="gallery"><a href="{{image}}" title="{{caption}}"><img src="{{image}}" class="img-fluid"></a></div>'
-      // });
-      // feed.run();
+    // var feed = new Instafeed({
+    //   get: 'user',
+    //   userId: '1178140746',
+    //   accessToken: '1178140746.1677ed0.3e958d1dc8344e14b997d86016374ef5',
+    //   limit: 12,
+    //   sortBy: 'most-recent',
+    //   template: '<div class="gallery"><a href="{{image}}" title="{{caption}}"><img src="{{image}}" class="img-fluid"></a></div>'
+    // });
+    // feed.run();
 
-      angular.element(document.querySelector(".main-menu")).removeClass("invisible");
+    angular.element(document.querySelector(".main-menu")).removeClass("invisible");
     console.log('here is the about controller')
   }]).
   controller('projectCtrl', ['$window', '$scope', '$location', '$anchorScroll', '$rootScope', '$timeout', function ($window, $scope, $location, $anchorScroll, $rootScope, $timeout) {
@@ -130,19 +130,24 @@ angular.module('portfolio.controllers', []).
       var i;
       var x = document.getElementsByClassName("slides");
       var dots = document.getElementsByClassName("image-slider");
-      if (n > x.length) { slideIndex = 1 }
-      if (n < 1) { slideIndex = x.length }
-      for (i = 0; i < x.length; i++) {
-        x[i].style.display = "none";
+
+      if (x.length && dots.length) {
+        if (n > x.length) { slideIndex = 1 }
+        if (n < 1) { slideIndex = x.length }
+        for (i = 0; i < x.length; i++) {
+          x[i].style.display = "none";
+        }
+        for (i = 0; i < dots.length; i++) {
+          dots[i].className = dots[i].className.replace("w3-hover-opacity-off", "");
+        }
+        x[slideIndex - 1].style.display = "block";
+        dots[slideIndex - 1].className += "w3-opacity";
       }
-      for (i = 0; i < dots.length; i++) {
-        dots[i].className = dots[i].className.replace("w3-hover-opacity-off", "");
-      }
-      x[slideIndex - 1].style.display = "block";
-      dots[slideIndex - 1].className += "w3-opacity";
     }
 
+
     $scope.showDivs(slideIndex);
+
     $scope.goToMainPage = function () {
       $window.location.href = '#/';
     }
