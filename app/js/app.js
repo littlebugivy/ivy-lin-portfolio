@@ -13,12 +13,12 @@ angular.module('portfolio', [
 ]).value('duScrollOffset', 80)
   .value('duScrollBottomSpy', true)
   .config(['$routeProvider', '$locationProvider', '$httpProvider', 'AnalyticsProvider', function ($routeProvider, $locationProvider, $httpProvider, AnalyticsProvider) {
-    $routeProvider.when('/', {
+    $routeProvider.when('/projects', {
       templateUrl: 'partials/projects.html', controller: 'projectListCtrl'
     });
     $routeProvider.when('/corewar', { templateUrl: 'partials/core-war.html', controller: 'projectCtrl' }); $routeProvider.when('/easyfurniture', { templateUrl: 'partials/easyfurniture.html', controller: 'projectCtrl' });
     $routeProvider.when('/contact', { templateUrl: 'partials/contact.html', controller: 'contactCtrl' });
-    $routeProvider.when('/about', { templateUrl: 'partials/about.html', controller: 'aboutCtrl' });
+    $routeProvider.when('/', { templateUrl: 'partials/about.html', controller: 'aboutCtrl' });
     $routeProvider.when('/climb', { templateUrl: 'partials/climb.html', controller: 'projectCtrl' });
     $routeProvider.when('/ardriving', { templateUrl: 'partials/ardriving.html', controller: 'projectCtrl' });
     $routeProvider.when('/fun', { templateUrl: 'partials/fun.html', controller: 'funCtrl' });
