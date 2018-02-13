@@ -183,6 +183,146 @@ a:hover{
   text-align: left;
 }
 
+
+.funrow-pink{
+  border:#FECCC5 15px solid;
+  animation: color-me-in 5s;
+}
+
+@keyframes color-me-in {
+  /* You could think of as "step 1" */
+  0% {
+    border: #F7DA58 15px solid;
+  }
+  50% {
+    border: #D2E0E4 15px solid;
+  }
+  /* You could think of as "step 2" */
+  100% {
+    border: #FECCC5 15px solid;
+  }
+}
+
+
+#space-invader{
+  box-shadow:
+    0 0 0 1em #D2E0E4,
+    0 1em 0 1em #D2E0E4,
+    -2.5em 1.5em 0 .5em #D2E0E4,
+    2.5em 1.5em 0 .5em #D2E0E4,
+    -3em -3em 0 0 #D2E0E4,
+    3em -3em 0 0 #D2E0E4,
+    -2em -2em 0 0 #D2E0E4,
+    2em -2em 0 0 #D2E0E4,
+    -3em -1em 0 0 #D2E0E4,
+    -2em -1em 0 0 #D2E0E4,
+    2em -1em 0 0 #D2E0E4,
+    3em -1em 0 0 #D2E0E4,
+    -4em 0 0 0 #D2E0E4,
+    -3em 0 0 0 #D2E0E4,
+    3em 0 0 0 #D2E0E4,
+    4em 0 0 0 #D2E0E4,
+    -5em 1em 0 0 #D2E0E4,
+    -4em 1em 0 0 #D2E0E4,
+    4em 1em 0 0 #D2E0E4,
+    5em 1em 0 0 #D2E0E4,
+    -5em 2em 0 0 #D2E0E4ed,
+    5em 2em 0 0 #D2E0E4,
+    -5em 3em 0 0 #D2E0E4,
+    -3em 3em 0 0 #D2E0E4,
+    3em 3em 0 0 #D2E0E4,
+    5em 3em 0 0 #D2E0E4,
+    -2em 4em 0 0 #D2E0E4,
+    -1em 4em 0 0 #D2E0E4,
+    1em 4em 0 0 #D2E0E4,
+    2em 4em 0 0 #D2E0E4;
+
+    background: #D2E0E4;
+    width: 1em;
+    height: 1em;
+    overflow: hidden;
+
+    margin: 50px 0 70px 65px;
+    transition: transform 2s;
+  }
+
+  #space-invader:hover{
+    transform: translate(200px, 0px);
+    cursor: pointer;
+    /* transition-duration: 5s; */
+  }
+
+#pacman {
+  width: 0px;
+  height: 0px;
+  border-right: 60px solid transparent;
+  border-top: 60px solid #F7DA58;
+  border-left: 60px solid #F7DA58;
+  border-bottom: 60px solid #F7DA58;
+  border-top-left-radius: 60px;
+  border-top-right-radius: 60px;
+  border-bottom-left-radius: 60px;
+  border-bottom-right-radius: 60px;
+  transition:transform 0.2s;
+}
+
+#pacman:hover{
+  transform:rotate(30deg)
+}
+
+.catBox{
+  margin-top:2em;
+  margin-bottom:2em;
+  max-height: 600px;
+}
+
+#heart {
+  position: relative;
+  width: 100px;
+  height: 90px;
+  transition: transform .3s;
+}
+#heart:before,
+#heart:after {
+  position: absolute;
+  content: "";
+  left: 50px;
+  top: 0;
+  width: 50px;
+  height: 80px;
+  background: #FC483A;
+  -moz-border-radius: 50px 50px 0 0;
+  border-radius: 50px 50px 0 0;
+  -webkit-transform: rotate(-45deg);
+     -moz-transform: rotate(-45deg);
+      -ms-transform: rotate(-45deg);
+       -o-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+  -webkit-transform-origin: 0 100%;
+     -moz-transform-origin: 0 100%;
+      -ms-transform-origin: 0 100%;
+       -o-transform-origin: 0 100%;
+          transform-origin: 0 100%;
+}
+#heart:after {
+  left: 0;
+  -webkit-transform: rotate(45deg);
+     -moz-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+       -o-transform: rotate(45deg);
+          transform: rotate(45deg);
+  -webkit-transform-origin: 100% 100%;
+     -moz-transform-origin: 100% 100%;
+      -ms-transform-origin: 100% 100%;
+       -o-transform-origin: 100% 100%;
+          transform-origin :100% 100%;
+}
+
+#heart:hover{
+  transform: scale(2);
+}
+        
+	
 .persona1{
   width: 100%;
   margin-bottom:50px; 
@@ -617,8 +757,13 @@ for mobile: <768px */
     }
 }
 
+.ui.right.floated.item:hover{
+  border-bottom: black 2px solid;
+}
+
 .error-container{
   text-align: center;
+  margin-top:3em;
 }
 
 #instafeed{

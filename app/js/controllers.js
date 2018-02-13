@@ -13,8 +13,9 @@ angular.module('portfolio.controllers', []).
   controller('projectListCtrl', ['$window', '$scope', '$location', '$route', function ($window, $scope, $location, $route) {
     activate('projects');
 
-    console.log('here is the project controller')
+    console.log('here is the project list controller')
     angular.element(document.querySelector(".main-menu")).removeClass("invisible");
+
 
     $scope.go = function (dir) {
       console.log('get direction', dir)
@@ -67,6 +68,16 @@ angular.module('portfolio.controllers', []).
     angular.element(document.querySelector(".main-menu")).removeClass("invisible");
     console.log('here is the about controller')
   }]).
+
+  controller('errorCtrl', ['$window', '$scope', '$location', '$anchorScroll', '$rootScope', '$timeout', function ($window, $scope, $location, $anchorScroll, $rootScope, $timeout) {
+    $scope.catlink = "http://edgecats.net/" + Math.random();
+
+    $scope.showSomeCats = function (){
+      console.log('hahaha')
+      $scope.catlink = "http://edgecats.net/" + Math.random();
+    };
+
+  }]).
   controller('projectCtrl', ['$window', '$scope', '$location', '$anchorScroll', '$rootScope', '$timeout', function ($window, $scope, $location, $anchorScroll, $rootScope, $timeout) {
     activate('projects');
     $scope.hideMainMenu = false;
@@ -75,7 +86,7 @@ angular.module('portfolio.controllers', []).
     $scope.slide = 1;
     $scope.loading = true;
 
-    console.log('here is the project list controller')
+    console.log('here is the project controller')
 
     var slideIndex = 1;
 
@@ -149,7 +160,7 @@ angular.module('portfolio.controllers', []).
     $scope.showDivs(slideIndex);
 
     $scope.goToMainPage = function () {
-      $window.location.href = '#/';
+      $window.location.href = '#/projects';
     }
 
     var lock = 0;
@@ -176,7 +187,7 @@ angular.module('portfolio.controllers', []).
       var offset = this.pageYOffset;
       var showSideNav = $scope.showSideNav;
       var hideMainMenu = $scope.hideMainMenu;
-      if (offset >= 300) {
+      if (offset >= 200) {
         if (hideMainMenu === false) {
           $('.shrink-menu')
             .transition('fade');
