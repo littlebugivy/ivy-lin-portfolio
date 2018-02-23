@@ -21,56 +21,59 @@
   </script>
 </head>
 
-<body >
-  <header class="main-menu project-list">
-    <div class="ui two column divided grid">
-      <div class="ten wide column">
-        <div class="ui items self-intro">
-          <div class="item">
-            <a ng-href="/" class="ui tiny image">
-              <img class="main-icon" src="img/profile.jpg" alt="profile-image">
-            </a>
-            <div class="bottom aligned content intro">
-              Ivy Lin - UX Designer & Reseacher
-              <!-- <div class="description">
+<body class="desktop only ng-cloak">
+  <div class="mobiletext"> To maximize your user experience, please view my portfolio from a laptop. Thanks. </div>
+  <div class="opentovisit">
+    <header class="main-menu project-list">
+      <div class="ui two column divided grid">
+        <div class="ten wide column">
+          <div class="ui items self-intro">
+            <div class="item">
+              <a ng-href="/" class="ui tiny image">
+                <img class="main-icon" src="img/profile.jpg" alt="profile-image">
+              </a>
+              <div class="bottom aligned content intro">
+                Ivy Lin - UX Designer & Web Programmer
+                <!-- <div class="description">
                 UI/UX Designer & Researcher | Web Developer
                 <br>I am now looking for a
                 <b>UX-related summer internship</b> in 2018.</p>
               </div> -->
+              </div>
             </div>
           </div>
         </div>
+
+        <div class="bottom aligned six wide column">
+          <nav class="ui secondary pointing menu">
+            <div class="right menu">
+              <a ng-href="/" class="nav-btnn ui right floated item" tabindex="1" id="about">About</a>
+              <a class="nav-btnn ui right floated item" ng-href="/projects" tabindex="1" id="projects">Projects</a>
+              <a ng-href="https://drive.google.com/file/d/1Zd21oGArURhp-nsNk11xOIrX3erV4syN/view?usp=sharing" class="nav-btnn ui right floated item">Resume</a>
+              <a ng-href="/fun" class="nav-btnn ui right floated item" id="fun">Fun</a>
+            </div>
+          </nav>
+        </div>
       </div>
+    </header>
 
-      <div class="bottom aligned six wide column">
-        <nav class="ui secondary pointing menu">
-          <div class="right menu">
-            <a ng-href="/" class="nav-btnn ui right floated item" tabindex="1" id="about">About</a>
-            <a class="nav-btnn ui right floated item" ng-href="/projects" tabindex="1" id="projects">Projects</a>
-            <a ng-href="https://drive.google.com/file/d/1Zd21oGArURhp-nsNk11xOIrX3erV4syN/view?usp=sharing" class="nav-btnn ui right floated item">Resume</a>
-            <a ng-href="/fun" class="nav-btnn ui right floated item" id="fun">Fun</a>
-          </div>
-        </nav>
+    <div ng-view></div>
+
+    <footer class="project-list">
+      <div class="social-media">
+        <a href="mailto:ivylin@umich.edu">
+          <img src="img/gmail.png" alt="email" />
+        </a>
+        <a href="https://www.linkedin.com/in/mengdie-lin-719546111/">
+          <img src="img/linkedin.png" alt="linkedin" />
+        </a>
+        <a href="https://github.com/littlebugivy">
+          <img src="img/github.png" alt="github" />
+        </a>
       </div>
-    </div>
-  </header>
-
-  <div ng-view></div>
-
-  <footer class="project-list">
-    <div class="social-media">
-      <a href="mailto:ivylin@umich.edu">
-        <img src="img/gmail.png" alt="email" />
-      </a>
-      <a href="https://www.linkedin.com/in/mengdie-lin-719546111/">
-        <img src="img/linkedin.png" alt="linkedin" />
-      </a>
-      <a href="https://github.com/littlebugivy">
-        <img src="img/github.png" alt="github" />
-      </a>
-    </div>
-    Last Update 2018 &copy; Designed & coded by IvyLin
-  </footer>
+      Last Update 2018 &copy; Designed & coded by IvyLin
+    </footer>
+  </div>
 
   <script src="lib/angular/angular.js"></script>
   <script src="lib/angular/angular-route.js"></script>
@@ -95,4 +98,5 @@
     });
   </script> -->
 </body>
+
 </html>

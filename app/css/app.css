@@ -6,6 +6,10 @@ body{
   text-align: left;
 }
 
+.mobiletext{
+  display: none;
+}
+
 p{
   line-height: 1.5em;
 }
@@ -605,156 +609,25 @@ figcaption{
 
 /* for tablet */
 @media only screen and (max-width: 1366px) {
-  .ut-arrow{
-    display: inline-block;
-    position:absolute;
-    width:18em;
-    right:5%;
+  .opentovisit{
+    display: block;
   }
 
-
-  .ut-arrow1{
-    display: inline-block;
-    position:absolute;
-    width:22em;
-    right:4%;
+  .mobiletext{
+    display: none;
   }
-
-
-
-.narrow-container{
-  margin-left:15%;
-  margin-right:15%;
-  width: 70%; 
-}
-
-.div-color1{
-  width:70%;
-  background: white;
-  margin: 4em 15%;
-}
-
 }
 
 /* 
 for mobile: <768px */
 @media only screen and (max-width: 768px) {
-   body{
-     text-align: center;
-     align-content: center
-   }
+  .opentovisit{
+    display: none;
+  }
 
-   .narrow-container{
-     margin-left:20%;
-     margin-right:20%;
-     text-align: center;
-   }
-
-   /* Copied online for sub nav bar animation*/
-   .sub-menu{
-      opacity: 0;
-      visibility: hidden;
-      background: white;
-      position: absolute;  
-      top:3.8em;
-      right:-1.6em;
-      transform: translateY(-2em);
-      z-index: -1;
-      transition: all 0.3s ease-in-out 0s, visibility 0s linear 0.3s, z-index 0s linear 0.01s;
-   }
- 
-    .mobile-menu-icon{
-      -webkit-transition: all 0.5s;
-      -moz-transition: all 0.5s;
-      transition: all 0.5s;
-    }
-
-    .mobile-menu:hover .sub-menu {
-      visibility: visible; /* shows sub-menu */
-      opacity: 1;
-      z-index: 1;
-      transform: translateY(0%);
-      transition-delay: 0s, 0s, 0.3s; /* this removes the transition delay so the menu will be visible while the other styles transition */
-    }
-
-    /* copy end */
-
-   .mobile-menu-icon:hover{
-     transform: rotate(180deg);
-     -webkit-transition: all 0.5s;
-     -moz-transition: all 0.5s;
-     transition: all 0.5s;
-   }
-
-   footer{
-     text-align: center;
-     align-content: center;
-   }
-
-   .social-media{
-     align-content: center;
-   }
-
-   .social-media img{
-      width: 2em;
-      margin-right:0;
-      float: none
-    }
-
-    .i.dropdown.big.icon{
-      margin:0px;
-      padding:0px;
-    }
-
-    .mobile-intro{
-      text-align: center;
-      margin-top:2em;
-    }
-
-    .mobile-profile{
-      margin-bottom: 2em;
-    }
-
-    .main-menu{
-      display: none;
-    }
-
-    .side-menu{
-      visibility: hidden;
-    }
-
-    .shrink-menu{
-      visibility: hidden;
-      opacity: 0;
-    }
-
-    .project-img{
-      height:12em;
-      width: auto;
-    }
-
-    .w3-opacity, .image-slider,.w3-hover-opacity-off{
-      margin:0px;
-    }
-
-    .column>.image-slider:hover{
-      cursor:pointer
-    }
-
-    .project-intro{
-      margin-top:1.5em;
-      font-size:.8em;
-      line-height: 1.2em
-    }
-
-    .contact-container{
-      margin-top: 5em;
-      text-align: left;
-    }
-
-    .ui.prototypes{
-      width: 60%;
-    }
+  .mobiletext{
+    display: inline;
+  }
 }
 
 .ui.right.floated.item:hover{

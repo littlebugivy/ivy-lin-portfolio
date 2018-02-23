@@ -72,7 +72,7 @@ angular.module('portfolio.controllers', []).
   controller('errorCtrl', ['$window', '$scope', '$location', '$anchorScroll', '$rootScope', '$timeout', function ($window, $scope, $location, $anchorScroll, $rootScope, $timeout) {
     $scope.catlink = "http://edgecats.net/" + Math.random();
 
-    $scope.showSomeCats = function (){
+    $scope.showSomeCats = function () {
       console.log('hahaha')
       $scope.catlink = "http://edgecats.net/" + Math.random();
     };
@@ -90,11 +90,35 @@ angular.module('portfolio.controllers', []).
 
     var slideIndex = 1;
 
+
     $timeout(function () {
       $scope.loading = false;
       $scope.$apply();
-      console.log('ok')
-    }, 1400);
+      // console.log('ok')
+    }, 3000);
+
+
+    // $('img.testimg')
+    //   .visibility({
+    //     type: 'image',
+    //     onLoad: function () {
+    //       console.log('ok')
+    //       $scope.$apply();
+    //     }
+    //   })
+    //   ;
+
+    // angular.element(document.querySelector('html'))
+    //   .visibility({
+    //     onAllLoaded: function () {
+    //       $timeout(function () {
+    //         $scope.loading = false;
+    //         $scope.$apply();
+    //         // console.log('ok')
+    //       }, 1400);
+    //     }
+    //   })
+    //   ;
 
     $scope.plusDivs = function (n) {
       $scope.showDivs(slideIndex += n);
