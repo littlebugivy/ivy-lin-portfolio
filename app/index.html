@@ -75,6 +75,7 @@
     </footer>
   </div>
 
+  <script type="text/javascript" src="js/lightense.js"></script>
   <script src="lib/angular/angular.js"></script>
   <script src="lib/angular/angular-route.js"></script>
   <script src="js/app.js"></script>
@@ -88,15 +89,12 @@
   <!-- <script src="js/instafeed.min.js"></script> -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-scroll/1.0.2/angular-scroll.min.js"></script>
   <script src="js/angular-google-analytics.min.js"></script>
-  <!-- <script type="text/javascript">
-    $(function () {
-
-      $('.blurring.dimmable.image').dimmer({
-        on: 'hover'
-      });
-
-    });
-  </script> -->
+  <script type="text/javascript">
+    window.addEventListener('load', function () {
+      var el = document.querySelectorAll('img.lightense');
+      Lightense(el);
+    }, false);     
+  </script>
 </body>
 
 </html>
