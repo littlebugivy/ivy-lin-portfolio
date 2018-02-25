@@ -9,10 +9,11 @@ angular.module('portfolio', [
   'portfolio.directives',
   'portfolio.controllers',
   'duScroll',
-  'angular-google-analytics'
+  'angular-google-analytics',
+  'ngMaterial'
 ]).value('duScrollOffset', 80)
   .value('duScrollBottomSpy', true)
-  .config(['$routeProvider', '$locationProvider', '$httpProvider', 'AnalyticsProvider', function ($routeProvider, $locationProvider, $httpProvider, AnalyticsProvider) {
+  .config(['$routeProvider', '$locationProvider', '$httpProvider', 'AnalyticsProvider', '$mdThemingProvider', function ($routeProvider, $locationProvider, $httpProvider, AnalyticsProvider, $mdThemingProvider) {
     $routeProvider.when('/projects', {
       templateUrl: 'partials/projects.html', controller: 'projectListCtrl'
     });
@@ -27,6 +28,10 @@ angular.module('portfolio', [
 
     $locationProvider.html5Mode(true);
     $httpProvider.defaults.headers.common["X-Requested-With"] = 'XMLHttpRequest';
+
+    // $mdThemingProvider.theme('default')
+    // .primaryPalette('indigo')
+    // $mdThemingProvider.alwaysWatchTheme(true);
 
     AnalyticsProvider.setAccount('UA-112843212-1');
   }]).run(['Analytics', function (Analytics) { }]);

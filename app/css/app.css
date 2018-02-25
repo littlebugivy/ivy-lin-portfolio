@@ -10,6 +10,29 @@ body{
   display: none;
 }
 
+.icon_gray{
+  color:#757575;
+}
+
+.project_labels{
+  position: relative;
+  top:200px;
+}
+
+.project{
+  margin-bottom:2em;
+}
+
+
+.project:hover{
+  cursor: pointer;
+  box-shadow: 0 1px 3px 0 rgba(0,0,0,.2), 0 1px 7px 4px rgba(0,0,0,.14), 0 2px 1px -1px rgba(0,0,0,.12);
+}
+
+.material-icons{
+  display:inline
+}
+
 p{
   line-height: 1.5em;
 }
@@ -692,9 +715,9 @@ for mobile: <768px */
 }
 
 .project-list{
-  margin-left:10%;
-  margin-right:10%;
-  width: 80%; 
+  margin-left:20%;
+  margin-right:20%;
+  width: 60%; 
 }
 
 .redu{
