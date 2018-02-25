@@ -38,8 +38,11 @@
   "_resolved": "https://registry.npmjs.org/angularjs-seed/-/angularjs-seed-1.2.0.tgz",
   "homepage": "https://github.com/angular/angular-seed#readme",
   "dependencies": {
+    "@angular/animations": "^5.2.6",
+    "angular-google-analytics": "^1.1.8",
     "better-console": "^1.0.1",
     "del": "^3.0.0",
+    "duScroll": "^1.0.2",
     "express": "^4.16.2",
     "extend": "^3.0.1",
     "gulp": "^3.9.1",
@@ -69,8 +72,6 @@
     "require-dot-file": "^0.4.0",
     "run-sequence": "^2.2.0",
     "semantic-ui": "^2.2.13",
-    "yamljs": "^0.3.0",
-    "duScroll":"^1.0.2",
-    "angular-google-analytics":"^1.1.8"
+    "yamljs": "^0.3.0"
   }
 }
