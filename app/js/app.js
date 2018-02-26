@@ -11,15 +11,16 @@ angular.module('portfolio', [
   'duScroll',
   'angular-google-analytics',
   'ngMaterial'
+  // 'angular-carousel'
 ]).value('duScrollOffset', 80)
   .value('duScrollBottomSpy', true)
   .config(['$routeProvider', '$locationProvider', '$httpProvider', 'AnalyticsProvider', '$mdThemingProvider', function ($routeProvider, $locationProvider, $httpProvider, AnalyticsProvider, $mdThemingProvider) {
-    $routeProvider.when('/projects', {
+    $routeProvider.when('/', {
       templateUrl: 'partials/projects.html', controller: 'projectListCtrl'
     });
     $routeProvider.when('/corewar', { templateUrl: 'partials/core-war.html', controller: 'projectCtrl' }); $routeProvider.when('/easyfurniture', { templateUrl: 'partials/easyfurniture.html', controller: 'projectCtrl' });
     $routeProvider.when('/contact', { templateUrl: 'partials/contact.html', controller: 'contactCtrl' });
-    $routeProvider.when('/', { templateUrl: 'partials/about.html', controller: 'aboutCtrl' });
+    $routeProvider.when('/about', { templateUrl: 'partials/about.html', controller: 'aboutCtrl' });
     $routeProvider.when('/climb', { templateUrl: 'partials/climb.html', controller: 'projectCtrl' });
     $routeProvider.when('/ardriving', { templateUrl: 'partials/ardriving.html', controller: 'projectCtrl' });
     $routeProvider.when('/uxconsulting', { templateUrl: 'partials/ux-consulting.html', controller: 'projectCtrl' });

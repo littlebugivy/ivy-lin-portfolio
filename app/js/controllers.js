@@ -9,22 +9,23 @@ function activate(presentp) {
   angular.element(document.querySelector('#' + presentp)).addClass('active');
 }
 
-angular.module('portfolio.controllers', []).
-  controller('projectListCtrl', ['$window', '$scope', '$location', '$route', function ($window, $scope, $location, $route) {
-    activate('projects');
+angular.module('portfolio.controllers', ['ngMaterial']).
+  controller('projectListCtrl', ['$window', '$scope', '$location', '$route', '$rootScope', function ($window, $scope, $location, $route, $rootScope) {
+   // activate('projects');
 
     console.log('here is the project list controller')
     angular.element(document.querySelector(".main-menu")).removeClass("invisible");
 
+    $rootScope.currentNavItem = 'projects';
 
     $scope.go = function (dir) {
       console.log('get direction', dir)
       $location.path(dir);
     }
 
-    $('.blurring.dimmable.image').dimmer({
-      on: 'hover'
-    });
+    // $('.blurring.dimmable.image').dimmer({
+    //   on: 'hover'
+    // });
   }]).
   controller('funCtrl', [function () {
     activate('fun');
@@ -95,7 +96,7 @@ angular.module('portfolio.controllers', []).
       $scope.loading = false;
       $scope.$apply();
       // console.log('ok')
-    }, 3000);
+    }, 0);
 
 
     // $('img.testimg')
@@ -184,7 +185,7 @@ angular.module('portfolio.controllers', []).
     $scope.showDivs(slideIndex);
 
     $scope.goToMainPage = function () {
-      $window.location.href = '#/projects';
+      $window.location.href = '/';
     }
 
     var lock = 0;
@@ -208,23 +209,23 @@ angular.module('portfolio.controllers', []).
 
     // shrink nav bar when user scroll down
     angular.element($window).bind('scroll', function () {
-      var offset = this.pageYOffset;
-      var showSideNav = $scope.showSideNav;
-      var hideMainMenu = $scope.hideMainMenu;
-      if (offset >= 200) {
-        if (hideMainMenu === false) {
-          $('.shrink-menu')
-            .transition('fade');
-          angular.element(document.querySelector(".main-menu")).addClass("invisible");
-          $scope.hideMainMenu = true
-        }
-        if (showSideNav === false) {
-          $('.side-menu')
-            .transition('fade right');
-        }
-        $scope.showSideNav = true;
-      }
-      $scope.$apply()
+      // var offset = this.pageYOffset;
+      // var showSideNav = $scope.showSideNav;
+      // var hideMainMenu = $scope.hideMainMenu;
+      // if (offset >= 200) {
+      //   if (hideMainMenu === false) {
+      //     $('.shrink-menu')
+      //       .transition('fade');
+      //     angular.element(document.querySelector(".main-menu")).addClass("invisible");
+      //     $scope.hideMainMenu = true
+      //   }
+      //   if (showSideNav === false) {
+      //     $('.side-menu')
+      //       .transition('fade right');
+      //   }
+      //   $scope.showSideNav = true;
+      // }
+      // $scope.$apply()
     })
   }])
 

@@ -31,7 +31,7 @@ var Lightense = function () {
     var imageSource = element.getAttribute('data-image') || element.src;
     if (imageSource) {
 
-      element.classList.add('lightense-target');
+      element.classList.add('-target');
 
       element.addEventListener('click', function (event) {
 
@@ -48,7 +48,7 @@ var Lightense = function () {
   }
 
   function createStyle() {
-    var css = '\n      .lightense-backdrop {\n        box-sizing: border-box;\n        width: 100%;\n        height: 100%;\n        position: fixed;\n        top: 0;\n        left: 0;\n        overflow: hidden;\n        z-index: ' + (config.zIndex - 1) + ';\n        padding: 0;\n        margin: 0;\n        transition: opacity ' + config.time + 'ms ease;\n        cursor: zoom-out;\n        opacity: 0;\n        background-color: rgba(255, 255, 255, .98);\n        visibility: hidden;\n      }\n\n      @supports (-webkit-backdrop-filter: blur(30px)) {\n        .lightense-backdrop {\n          background-color: rgba(255, 255, 255, .6);\n          -webkit-backdrop-filter: blur(30px);\n          backdrop-filter: blur(30px);\n        }\n      }\n\n      .lightense-wrap {\n        position: relative;\n        transition: transform ' + config.time + 'ms ' + config.cubicBezier + ';\n        z-index: ' + config.zIndex + ';\n        -webkit-user-select: none;\n        user-select: none;\n      }\n\n      .lightense-target {\n        cursor: zoom-in;\n        transition: transform ' + config.time + 'ms ' + config.cubicBezier + ';\n      }\n\n      .lightense-open {\n        cursor: zoom-out;\n      }\n\n      .lightense-transitioning {\n        pointer-events: none;\n      }\n    ';
+    var css = '\n      .-backdrop {\n        box-sizing: border-box;\n        width: 100%;\n        height: 100%;\n        position: fixed;\n        top: 0;\n        left: 0;\n        overflow: hidden;\n        z-index: ' + (config.zIndex - 1) + ';\n        padding: 0;\n        margin: 0;\n        transition: opacity ' + config.time + 'ms ease;\n        cursor: zoom-out;\n        opacity: 0;\n        background-color: rgba(255, 255, 255, .98);\n        visibility: hidden;\n      }\n\n      @supports (-webkit-backdrop-filter: blur(30px)) {\n        .-backdrop {\n          background-color: rgba(255, 255, 255, .6);\n          -webkit-backdrop-filter: blur(30px);\n          backdrop-filter: blur(30px);\n        }\n      }\n\n      .-wrap {\n        position: relative;\n        transition: transform ' + config.time + 'ms ' + config.cubicBezier + ';\n        z-index: ' + config.zIndex + ';\n        -webkit-user-select: none;\n        user-select: none;\n      }\n\n      .-target {\n        cursor: zoom-in;\n        transition: transform ' + config.time + 'ms ' + config.cubicBezier + ';\n      }\n\n      .-open {\n        cursor: zoom-out;\n      }\n\n      .-transitioning {\n        pointer-events: none;\n      }\n    ';
 
     var head = d.head || d.getElementsByTagName('head')[0];
     var style = d.createElement('style');
@@ -62,7 +62,7 @@ var Lightense = function () {
 
   function createBackdrop() {
     config.container = d.createElement('div');
-    config.container.className = 'lightense-backdrop';
+    config.container.className = '-backdrop';
     d.body.appendChild(config.container);
   }
 
@@ -103,11 +103,11 @@ var Lightense = function () {
   }
 
   function createViewer() {
-    config.target.classList.add('lightense-open');
+    config.target.classList.add('-open');
 
     // create wrapper element
     config.wrap = d.createElement('div');
-    config.wrap.className = 'lightense-wrap';
+    config.wrap.className = '-wrap';
 
     // apply zoom ratio to target image
     setTimeout(function () {
@@ -132,12 +132,12 @@ var Lightense = function () {
   function removeViewer() {
     unbindEvents();
 
-    config.target.classList.remove('lightense-open');
+    config.target.classList.remove('-open');
 
     // remove transform styles
     config.wrap.style.transform = '';
     config.target.style.transform = '';
-    config.target.classList.add('lightense-transitioning');
+    config.target.classList.add('-transitioning');
 
     // fadeout backdrop
     config.container.style.opacity = '';
@@ -147,7 +147,7 @@ var Lightense = function () {
       config.container.style.visibility = '';
       config.container.style.backgroundColor = '';
       config.wrap.parentNode.replaceChild(config.target, config.wrap);
-      config.target.classList.remove('lightense-transitioning');
+      config.target.classList.remove('-transitioning');
     }, config.time);
   }
 
@@ -163,7 +163,7 @@ var Lightense = function () {
 
     // TODO: need refine
     // if element already openned, close it
-    if (config.target.classList.contains('lightense-open')) {
+    if (config.target.classList.contains('-open')) {
       return removeViewer();
     }
 

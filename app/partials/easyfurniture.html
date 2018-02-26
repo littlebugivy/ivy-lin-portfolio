@@ -1,42 +1,29 @@
-<!-- loading animation -->
-<div class="loading" ng-show="loading">
-    <div class="spinner">
-        <div class="double-bounce1"></div>
-        <div class="double-bounce2"></div>
-    </div>
+<div class="loading" ng-show="loading" layout="row" layout-sm="column" layout-align="space-around">
+    <md-progress-circular md-mode="indeterminate"></md-progress-circular>
 </div>
+
 <div ng-show="!loading">
     <header>
-        <nav ng-show="hideMainMenu" class="ui top fixed borderless menu shrink-menu computer only grid">
-            <div class="item menu-icon">
-                <img ng-click="goToMainPage()" alt='profile' src="img/profile.jpg">
-            </div>
-            <div class="right menu">
-                <a class="ui right floated item" ng-href="/" tabindex="1">About</a>
-                <a class="ui right floated item" ng-href="/projects" tabindex="1">Projects</a>
-                <a class="ui right floated item" ng-href="https://drive.google.com/file/d/1y9sF5By38tzlVeMxhMF3WPcVJHO78cCI/view?usp=sharing">Resume</a>
-                <!-- <a ng-href="/contact" class="ui right floated item">Contact</a> -->
-                <a ng-href="/fun" class="nav-btnn ui right floated item" id="contact">Fun</a>
-            </div>
-        </nav>
+        <div layout="column" layout-fill>
+            <md-toolbar>
+                <div class="md-toolbar-tools" style="background-color:#004D40">
+                    <div layout="row">
+                        <div class="toolbar-now">
+                            <a ng-href="/climb">Last: Climb</a>
+                        </div>
 
-        <nav ng-show="hideMainMenu" class="ui top fixed borderless menu shrink-menu tablet only grid">
-            <div class="item menu-icon">
-                <img ng-click="goToMainPage()" alt='profile' src="img/ivylin_white.png">
-            </div>
-            <div class="right menu">
-                <a class="ui right floated item" ng-href="/">About</a>
-                <a class="ui right floated item" ng-href="/projects">Projects</a>
-                <a class="ui right floated item" ng-href="https://drive.google.com/file/d/1y9sF5By38tzlVeMxhMF3WPcVJHO78cCI/view?usp=sharing">Resume</a>
-                <!-- <a ng-href="/contact" class="ui right floated item">Contact</a> -->
-                <a ng-href="/fun" class="nav-btnn ui right floated item" id="contact">Fun</a>
-            </div>
-        </nav>
+                        <div class="toolbar-next">
+                            <a ng-href="/uxconsulting">Next: UX Consulting</a>
+                        </div>
+                    </div>
+                </div>
+            </md-toolbar>
+        </div>
     </header>
 
     <!-- 
 side nav -->
-    <div ng-show="showSideNav" class="ui secondary vertical text menu side-menu computer only grid" ng-mouseover="showNavTitle()"
+    <!-- <div ng-show="showSideNav" class="ui secondary vertical text menu side-menu computer only grid" ng-mouseover="showNavTitle()"
         ng-mouseleave="hideNavTitle()">
         <a href="#overview" class="item overview active" du-smooth-scroll du-scrollspy>
             <i class="circle icon"></i>
@@ -58,7 +45,7 @@ side nav -->
             <i class="circle icon"></i>
             <span class="nav-title" ng-show="mouseover"> Final Deliverable</span>
         </a>
-    </div>
+    </div> -->
 
     <div class="project-name-container" style="background-color:#486A32">
         <figure style="margin-top:5%;">
@@ -69,36 +56,38 @@ side nav -->
         </figcaption>
     </div>
 
-    <div id='overview' class="project-main-container div-color1">
-        <h1> Overview </h1>
-        <div class="ui grid">
-            <div class="four wide column">
-                <b>Duration: </b>
-                <br> Sep 10 2017 - Jan 7 2018
-            </div>
-            <div class="four wide column">
-                <b> Role: </b>
-                <br> UI/UX Designer
-                <br>
-                <br>
-                <br>
-                <b>Note:</b>
-                <br>Individual Coursework
-            </div>
-            <div class="four wide column">
-                <b> UX Methods:</b>
-                <br> Competitive Analysis
-                <br> Ideation
-                <br> Storyboard
-                <br> QOC
-                <br> Wireframe
-                <br> Lo-fi & Hi-fi
-            </div>
-            <div class="four wide column">
-                <b>Design Tools:</b>
-                <br>Balsamiq
-                <br> Sketch
-                <br> Invision
+    <div id='overview' class="white-section">
+        <div class="narrow-container">
+            <h1> Overview </h1>
+            <div layout="row">
+                <div flex="25">
+                    <b>Duration: </b>
+                    <br> Sep 10 2017 - Jan 7 2018
+                </div>
+                <div flex="25">
+                    <b> Role: </b>
+                    <br> UI/UX Designer
+                    <br>
+                    <br>
+                    <br>
+                    <b>Note:</b>
+                    <br>Individual Coursework
+                </div>
+                <div flex="25">
+                    <b> UX Methods:</b>
+                    <br> Competitive Analysis
+                    <br> Ideation
+                    <br> Storyboard
+                    <br> QOC
+                    <br> Wireframe
+                    <br> Lo-fi & Hi-fi
+                </div>
+                <div flex="25">
+                    <b>Design Tools:</b>
+                    <br>Balsamiq
+                    <br> Sketch
+                    <br> Invision
+                </div>
             </div>
 
             <div class="center-content">
@@ -112,7 +101,7 @@ side nav -->
         </div>
     </div>
 
-    <div class="div-color2" id="problems">
+    <div class="gray-section" id="problems">
         <div class="narrow-container">
             <h1>Problem Description</h1>
             <div>
@@ -127,7 +116,7 @@ side nav -->
                 </p>
                 <h4>Ideal:</h4>
                 <p class="center-content">
-                    <img class="lightense" width="90%" src="img/ef/problem.png" alt="mockup">
+                    <img width="90%" src="img/ef/problem.png" alt="mockup">
                 </p>
 
                 <!-- <h4>Reality:</h4>
@@ -153,293 +142,257 @@ side nav -->
 
         </div>
     </div>
-    <div class="project-main-container div-color1" id="concepts">
-        <h1>Concepts Forming</h1>
-        <h3>Competitive Analysis</h3>
-        My initial intention is to optimize the processes of used-furniture selling and buying. After investigating a number of used-furniture
-        trading platforms both online and offline, I concluded four models of operation.
-        <br>
-        <br>
-        <div class="ui four column grid">
-            <div class="four wide column">
-                <img class="lightense" width="100%" src="img/ef/ca-localmarket.png" alt="mockup">
-                <!-- </div>
-            <div class="five wide column"> -->
-                <h4>Traditional Trading</h4>
+
+    <div class="white-section" id="concepts">
+        <div class="narrow-container">
+            <h1>Concepts Forming</h1>
+            <section>
+                <h2>Competitive Analysis</h2>
+                <p>
+                    My initial intention is to optimize the processes of used-furniture selling and buying. After investigating a number of used-furniture
+                    trading platforms both online and offline, I concluded four models of operation.
+                </p>
                 <br>
-                <b>Examples: Local market</b>
-                <!-- <p>
-                    Sellers bring used-item to a physical place, buyers go, investigate and then take home.
-                </p> -->
                 <br>
-                <i class="plus square outline icon"></i>Investigate in-person, chance for price negotiation
-                <br>
-                <i class="minus square outline icon"></i>Inflexibility in time and space
-            </div>
-            <!-- <div class="sixteen wide column">
-                <div class="ui divider"></div>
-            </div> -->
-            <div class="four wide column">
-                <img class="lightense" width="100%" src="img/ef/ca-craglist.png" alt="mockup">
-                <!-- </div>
-            <div class="five wide column"> -->
-                <h4>Information Synthesis Platform</h4>
-                <b>Examples: Craglist, AABBS, online forums</b>
-                <!-- <p>
-                    Sellers post information of used-item online, leave their contact details and then the buyer get in touch privately. The
-                    online platform only synthesize information.
-                </p> -->
-                <br>
-                <i class="plus square outline icon"></i>Chance for price negotiation
-                <br>
-                <i class="minus square outline icon"></i>Concerns on information reliability, personal information leak
-            </div>
-            <!-- <div class="sixteen wide column">
-                <div class="ui divider"></div>
-            </div> -->
-            <div class="four wide column">
-                <img class="lightense" width="100%" src="img/ef/ca-ebay.png" alt="mockup">
-                <!-- </div>
-            <div class="five wide column"> -->
-                <h4>Online Shopping Platform</h4>
-                <b>Examples: Ebay, Amazon Warehouse</b>
-                <!-- <p>
-                    The platforms not only synthesize information but also offer additional features such as contacting and payment.
-                </p> -->
-                <br>
-                <i class="plus square outline icon"></i>No direct personal information leak
-                <br>
-                <i class="minus square outline icon"></i>Less/no chance for price negotiation
-            </div>
-            <!-- <div class="sixteen wide column">
-                <div class="ui divider"></div>
-            </div> -->
-            <div class="four wide column">
-                <img class="lightense" width="100%" src="img/ef/ca-inspector.png" alt="mockup">
-                <!-- </div>
-            <div class="five wide column"> -->
-                <h4>Through Agency</h4>
-                <br>
-                <b> Examples: Furnishare, Wayfair</b>
-                <!-- <p>
-                    The seller first sell the used item to an agency and the agency sell the furniture.
-                </p> -->
-                <br>
-                <i class="plus square outline icon"></i>Superior information reliability, no concern of information leak
-                <br>
-                <i class="minus square outline icon"></i>Additional payment for the agent
-            </div>
+                <div layout="row">
+                    <div flex="25">
+                        <img width="100%" src="img/ef/ca-localmarket.png" alt="mockup">
+                        <h4>Traditional Trading</h4>
+                        <br>
+                        <b>Examples: Local market</b>
+                        <br>
+                        <i class="plus square outline icon"></i>Investigate in-person, chance for price negotiation
+                        <br>
+                        <i class="minus square outline icon"></i>Inflexibility in time and space
+                    </div>
+
+                    <div flex="25">
+                        <img width="100%" src="img/ef/ca-craglist.png" alt="mockup">
+                        <h4>Information Synthesis Platform</h4>
+                        <b>Examples: Craglist, AABBS, online forums</b>
+                        <br>
+                        <i class="plus square outline icon"></i>Chance for price negotiation
+                        <br>
+                        <i class="minus square outline icon"></i>Concerns on information reliability, personal information leak
+                    </div>
+
+                    <div flex="25">
+                        <img width="100%" src="img/ef/ca-ebay.png" alt="mockup">
+
+                        <h4>Online Shopping Platform</h4>
+                        <b>Examples: Ebay, Amazon Warehouse</b>
+                        <br>
+                        <i class="plus square outline icon"></i>No direct personal information leak
+                        <br>
+                        <i class="minus square outline icon"></i>Less/no chance for price negotiation
+                    </div>
+
+                    <div flex="25">
+                        <img width="100%" src="img/ef/ca-inspector.png" alt="mockup">
+                        <h4>Through Agency</h4>
+                        <br>
+                        <b> Examples: Furnishare, Wayfair</b>
+                        <br>
+                        <i class="plus square outline icon"></i>Superior information reliability, no concern of information leak
+                        <br>
+                        <i class="minus square outline icon"></i>Additional payment for the agent
+                    </div>
+                </div>
+            </section>
+
+            <section>
+                <h2>Preliminary Idea</h2>
+                <p>
+                    Concluded from the preliminary research and personal experiences, the preliminary idea of the design was formed. The graph
+                    below represents the features that could be learnt from competitors (parity), and also indentify space
+                    for improvements (differentiation).
+                </p>
+                <p class="center-content">
+                    <img width="80%" src="img/ef/ca-conclusion.png">
+                </p>
+            </section>
+
+            <section>
+                <h2>Understand users </h2>
+                <p>
+                    I built three personas and one anti persona (the final one) to specify who would be target audiences of the design and who
+                    would be not. In short, my design aims at people who hope to buy relatively cheap uesd-furniture with
+                    less concern on qualities.
+                </p>
+
+                <div class="image-slider-content">
+                    <img class="slides " src="img/ef/ef_persona1.jpg" alt="warrior infomation">
+                    <img class="slides " src="img/ef/ef_persona2.jpg" alt="template warriors">
+                    <img class="slides " src="img/ef/ef_persona3.jpg" alt="editing page">
+                    <img class="slides " src="img/ef/ef_persona4.jpg" alt="warriorslot">
+
+                    <br>
+                    <div layout="row">
+                        <div flex="10"></div>
+                        <div flex="20" class="four-col-img">
+                            <img class=" image-slider w3-opacity w3-hover-opacity-off" src="img/ef/ef_persona1.jpg" alt="persona" ng-mouseover="currentDiv(1)">
+                            <div ng-show="slide==1" class="slider-active"></div>
+                        </div>
+                        <div flex="20" class="four-col-img">
+                            <img class=" image-slider w3-opacity w3-hover-opacity-off" src="img/ef/ef_persona2.jpg" alt="persona" ng-mouseover="currentDiv(2)">
+                            <div ng-show="slide==2" class="slider-active"></div>
+                        </div>
+                        <div flex="20" class="four-col-img">
+                            <img class=" image-slider w3-opacity w3-hover-opacity-off" src="img/ef/ef_persona3.jpg" alt="persona" ng-mouseover="currentDiv(3)">
+                            <div ng-show="slide==3" class="slider-active"></div>
+                        </div>
+                        <div flex="20" class="four-col-img">
+                            <img class=" image-slider w3-opacity w3-hover-opacity-off" src="img/ef/ef_persona4.jpg" alt="anti persona" ng-mouseover="currentDiv(4)">
+                            <div ng-show="slide==4" class="slider-active"></div>
+                        </div>
+                        <div flex="10"></div>
+                    </div>
+                </div>
+            </section>
+
+            <h2>Understand User Workflow </h2>
+            <p> I then analyzed processes that sellers, buyers and angency would go through using EasyFurniture.com to understand
+                the system structure and identify steps for improvement. Each row of sticky nots represents one identity
+                and the branced sticky notes indicate possible alternative of the step above (i.e. multiple choices, unexpected
+                behavior). Possbile errors(in red) are marked out and mediation methods are provided (in the same color with
+                main sticky).
+            </p>
+
+            <img class="w100 " src="img/ef/storymap.jpg" alt="prototype1">
+
         </div>
-
-        <h3>Preliminary Idea</h3>
-        Concluded from the preliminary research and personal experiences, the preliminary idea of the design was formed. The graph
-        below represents the features that could be learnt from competitors (parity), and also indentify space for improvements
-        (differentiation).
-        <p class="center-content">
-            <img class="lightense" width="80%" src="img/ef/ca-conclusion.png">
-        </p>
-
-
-        <!-- <figure>
-            [Figure of competitive analysis]
-        </figure> -->
-
-        <!-- <h3>Ideation (Storyboard)</h3> -->
-        <!-- <p>Initially I ......</p>
-        <img class="w100" src="img/ef/sketch-alternatives.jpg" alt="sketch">
-        <img class="w100" src="img/ef/sketch-alternative2.jpg" alt="sketch"> -->
-
-        <h3>Understand users </h3>
-        <p>
-            I built three personas and one anti persona (the final one) to specify who would be target audiences of the design and who
-            would be not. In short, my design aims at people who hope to buy relatively cheap uesd-furniture with less concern
-            on qualities.
-        </p>
-
-        <div class="image-slider-content">
-            <img class="slides lightense" src="img/ef/ef_persona1.jpg" alt="warrior infomation">
-            <img class="slides lightense" src="img/ef/ef_persona2.jpg" alt="template warriors">
-            <img class="slides lightense" src="img/ef/ef_persona3.jpg" alt="editing page">
-            <img class="slides lightense" src="img/ef/ef_persona4.jpg" alt="warriorslot">
-
-            <br>
-
-            <div class="ui six column grid">
-                <div class="column"></div>
-                <div class="column">
-                    <img class="lightense image-slider w3-opacity w3-hover-opacity-off" src="img/ef/ef_persona1.jpg" alt="persona" ng-mouseover="currentDiv(1)">
-                    <div ng-show="slide==1" class="slider-active"></div>
-                </div>
-                <div class="column">
-                    <img class="lightense image-slider w3-opacity w3-hover-opacity-off" src="img/ef/ef_persona2.jpg" alt="persona" ng-mouseover="currentDiv(2)">
-                    <div ng-show="slide==2" class="slider-active"></div>
-                </div>
-                <div class="column">
-                    <img class="lightense image-slider w3-opacity w3-hover-opacity-off" src="img/ef/ef_persona3.jpg" alt="persona" ng-mouseover="currentDiv(3)">
-                    <div ng-show="slide==3" class="slider-active"></div>
-                </div>
-                <div class="column">
-                    <img class="lightense image-slider w3-opacity w3-hover-opacity-off" src="img/ef/ef_persona4.jpg" alt="anti persona" ng-mouseover="currentDiv(4)">
-                    <div ng-show="slide==4" class="slider-active"></div>
-                </div>
-                <div class="column"></div>
-            </div>
-        </div>
-
-        <h3>Understand User Workflow </h3>
-        <p> I then analyzed processes that sellers, buyers and angency would go through using EasyFurniture.com to understand
-            the system structure and identify steps for improvement. Each row of sticky nots represents one identity and
-            the branced sticky notes indicate possible alternative of the step above (i.e. multiple choices, unexpected behavior).
-            Possbile errors(in red) are marked out and mediation methods are provided (in the same color with main sticky).
-        </p>
-
-        <img class="w100 lightense" src="img/ef/storymap.jpg" alt="prototype1">
-
     </div>
-    <div class="div-color2" id="prototypes">
+
+    <div class="gray-section" id="prototypes">
         <div class="narrow-container">
             <h1>Prototypes</h1>
-            <h3>Rapid Prototype & User Testing</h3>
-            <p>In the first round of prototype, I selected five main features that would be incorporated into the design and
-                used paper, pen, post-it and plastic sheet to quick prototype the interactions. Three students were invited
-                to participate in the usibility testing and feedbacks were offered for modification and improvements. </p>
+            <section>
+                <h2>Rapid Prototype & User Testing</h2>
+                <p>In the first round of prototype, I selected five main features that would be incorporated into the design
+                    and used paper, pen, post-it and plastic sheet to quick prototype the interactions. Three students were
+                    invited to participate in the usibility testing and feedbacks were offered for modification and improvements.
+                </p>
 
-            <img class="lightense" width="100%" src="img/ef/paperprototype.jpg">
+                <img width="100%" src="img/ef/paperprototype.jpg">
+            </section>
 
-            <h3>Design Defense</h3>
-            <p>
-                While there are multiple options for one simple design, I use a design technique
-                <a href="https://drive.google.com/file/d/14vf0TH0qB7HJYyiR9uhvwri2OqN_fCQB/view?usp=sharing" class="underline">Questions, Options and Criteria(QOC)</a> to reason my design.
-            </p>
-            <div class="center-content">
-                <figure>
-                    <img class="lightense" width="100%" src="img/ef/qoc.png"></img>
-                </figure>
-            </div>
-            <br>
-            <h3>Wireframe</h3>
-            <p>
-                After reflecting on the user feedback alongside with self-critisizing through QOC analysis, the wireframes of main features
-                were produced.
-            </p>
-            <div class="ui three column grid">
-                <div class="column">
-                    <img class="lightense" width="100%" src="img/ef/mockup1.png" alt="mockup">
+            <section>
+                <h2>Design Defense</h2>
+                <p>
+                    While there are multiple options for one simple design, I use a design technique
+                    <a href="https://drive.google.com/file/d/14vf0TH0qB7HJYyiR9uhvwri2OqN_fCQB/view?usp=sharing" class="underline">Questions, Options and Criteria(QOC)</a> to reason my design.
+                </p>
+                <div class="center-content">
+                    <figure>
+                        <img width="100%" src="img/ef/qoc.png"></img>
+                    </figure>
                 </div>
-                <div class="column">
-                    <img class="lightense" width="100%" src="img/ef/mockup2.png" alt="mockup">
-                </div>
-                <div class="column">
-                    <img class="lightense" width="100%" src="img/ef/mockup3.png" alt="mockup">
-                </div>
-                <div class="column">
-                    <img class="lightense" width="100%" src="img/ef/mockup4.png" alt="mockup">
-                </div>
-                <div class="column">
-                    <img class="lightense" width="100%" src="img/ef/mockup5.png" alt="mockup">
-                </div>
-                <div class="column">
-                    <img class="lightense" width="100%" src="img/ef/mockup6.png" alt="mockup">
-                </div>
-                <!-- <div class="column">
-                    <img width="100%" src="img/ef/mockup7.png" alt="mockup">
-                </div>
-                <div class="column">
-                    <img width="100%" src="img/ef/mockup8.png" alt="mockup">
-                </div>
-                <div class="column">
-                    <img width="100%" src="img/ef/mockup9.png" alt="mockup">
-                </div>
-                <div class="column">
-                    <img width="100%" src="img/ef/mockup10.png" alt="mockup">
-                </div>
-                <div class="column">
-                    <img width="100%" src="img/ef/mockup11.png" alt="mockup">
-                </div>
-                <div class="column">
-                    <img width="100%" src="img/ef/mockup12.png" alt="mockup">
-                </div> -->
+            </section>
 
-            </div>
+            <section>
+                <h2>Wireframe</h2>
+                <p>
+                    After reflecting on the user feedback alongside with self-critisizing through QOC analysis, the wireframes of main features
+                    were produced.
+                </p>
+                <div layout="row">
+                    <div flex="33" class="four-col-img">
+                        <img width="100%" src="img/ef/mockup1.png" alt="mockup">
+                    </div>
+                    <div flex="33" class="four-col-img">
+                        <img width="100%" src="img/ef/mockup2.png" alt="mockup">
+                    </div>
+                    <div flex="33" class="four-col-img">
+                        <img width="100%" src="img/ef/mockup3.png" alt="mockup">
+                    </div>
+                </div>
+                <div layout="row">
+                    <div flex="33" class="four-col-img">
+                        <img width="100%" src="img/ef/mockup4.png" alt="mockup">
+                    </div>
+                    <div flex="33" class="four-col-img">
+                        <img width="100%" src="img/ef/mockup5.png" alt="mockup">
+                    </div>
+                    <div flex="33" class="four-col-img">
+                        <img width="100%" src="img/ef/mockup6.png" alt="mockup">
+                    </div>
+                </div>
+            </section>
         </div>
     </div>
 
-    <div class="project-main-container div-color1" id="finalDelivery">
-        <h1>Final Deliverable</h1>
-        <p>
+
+    <div class="white-section" id="finalDelivery">
+        <div class="narrow-container">
+            <h1>Final Deliverable</h1>
             <p>
-                The hi-fi prototype consists of all the interfaces that would occur through a journey of a seller. I used Sketch to produce
-                screens and then used InVision to add interactions. See selected screens below.
-                <div class="ui two column grid">
-                    <!-- <div class="column">
-                            <img width="100%" src="img/ef/hifi-1.png" alt="mockup">
+                <p>
+                    The hi-fi prototype consists of all the interfaces that would occur through a journey of a seller. I used Sketch to produce
+                    screens and then used InVision to add interactions. See selected screens below.
+                    <div layout="row" class="climb-showcase">
+                        <div flex="50" class="four-col-img">
+                            <img width="100%" src="img/ef/hifi-3.png" alt="mockup">
                         </div>
-                        <div class="column">
-                            <img width="100%" src="img/ef/hifi-2.png" alt="mockup">
-                        </div> -->
-                    <div class="column">
-                        <img class="lightense" width="100%" src="img/ef/hifi-3.png" alt="mockup">
-                    </div>
-                    <div class="column middle aligned content">
-                        <h4> Search for existing products</h4>
-                        Use item information already existed online, save time and energy from manually input.
-                    </div>
-                    <!-- <div class="column">
-                            <img width="100%" src="img/ef/hifi-4.png" alt="mockup">
-                        </div> -->
-
-                    <div class="column">
-                        <img class="lightense" width="100%" src="img/ef/hifi-5.png" alt="mockup">
-                    </div>
-                    <div class="column middle aligned content">
-                        <h4> Information Review</h4>
-                        Allow users to review item information collected online. Users can modify them later if necessary.
-                    </div>
-                    <div class="column">
-                        <img class="lightense" width="100%" src="img/ef/hifi-6.png" alt="mockup">
-                    </div>
-                    <div class="column middle aligned content">
-                        <h4> Image Modification</h4>
-                        Provide functions such as image cropping, rotation, filtering to allow for simple and easy image editing. It is intended
-                        to improve image quality provided by sellers.
-                    </div>
-                    <!-- <div class="column">
-                            <img width="100%" src="img/ef/hifi-7.png" alt="mockup">
-                        </div> -->
-                    <!-- <div class="column">
-                            <img width="100%" src="img/ef/hifi-8.png" alt="mockup">
+                        <div flex="50" layout="row" class="col-text" layout-align="start center">
+                            <div>
+                                <h4> Search for existing products</h4>
+                                Use item information already existed online, save time and energy from manually input.
+                            </div>
                         </div>
-                        <div class="column middle aligned content">
-                            <h4> Instant Messaging</h4>
-                            Provide instant messaging function to encourage communications between sellers and buyers.
-                        </div> -->
-                </div>
-            </p>
-            <a class="underline" href="https://invis.io/G8EW72AC3#/268600704_login">View the final Deliverable in Invision</a>
-        </p>
+                    </div>
 
-        <br>
 
+                    <div layout="row" class="climb-showcase">
+                        <div flex="50" class="four-col-img">
+                            <img width="100%" src="img/ef/hifi-5.png" alt="mockup">
+                        </div>
+                        <div flex="50" layout="row" class="col-text" layout-align="start center">
+                            <div>
+                                <h4> Information Review</h4>
+                                Allow users to review item information collected online. Users can modify them later if necessary.
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div layout="row" class="climb-showcase">
+                        <div flex="50" class="four-col-img">
+                            <img width="100%" src="img/ef/hifi-6.png" alt="mockup">
+                        </div>
+                        <div flex="50" layout="row" class="col-text" layout-align="start center">
+                            <div>
+                                <h4> Image Modification</h4>
+                                Provide functions such as image cropping, rotation, filtering to allow for simple and easy image editing. It is intended
+                                to improve image quality provided by sellers.
+                            </div>
+                        </div>
+                    </div>
+
+                    <p>
+                        <a class="underline" href="https://invis.io/G8EW72AC3#/268600704_login">View the final Deliverable in Invision</a>
+                    </p>
+        </div>
     </div>
 
-    <div id="reflection" class="div-color2">
+    <div id="reflection" class="gray-section">
         <div class="narrow-container">
             <h1>Reflection</h1>
             <p>
                 <h3>Use visual assets wisely to communicate design rationale and decisions</h3>
-                The project is a course work of the Interaction Design course. It started from user needs identification, to design solutions and finally come to the interactive steps of prototype development and user testing. During the design process, I found visual assets such as personas, user journey map, QOC  not only help me, as a designer, understand
-                customer needs and painpoints but also serve as a tool assist communication with others.               
+                The project is a course work of the Interaction Design course. It started from user needs identification, to design solutions
+                and finally come to the interactive steps of prototype development and user testing. During the design process,
+                I found visual assets such as personas, user journey map, QOC not only help me, as a designer, understand
+                customer needs and painpoints but also serve as a tool assist communication with others.
             </p>
             <!-- <p>
                 <h3>Use design assets as tools rather than mandatory steps</h3>
                Th          
             </p> -->
+        </div>
+    </div>
 
-
-            <br>
-            <br>
-
-
+    <div class="gray-section">
+        <div class="narrow-container">
             <div class="bottom-arrows">
                 <div class="left-arrow">
                     <a href="/climb">
@@ -456,5 +409,4 @@ side nav -->
             </div>
         </div>
     </div>
-</div>
 </div>
