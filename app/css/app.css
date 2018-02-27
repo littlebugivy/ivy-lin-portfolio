@@ -82,6 +82,21 @@ a:hover{
   margin:0px 5px;
 }
 
+.uxconsulting .material-icons{
+  color: #979797;
+  margin:0 5px;
+  font-size: 20px;
+}
+
+.uxconsulting .material-icons.green{
+  color: #80CBC4;
+}
+
+.uxconsulting .material-icons.red{
+  color:#F06292;
+}
+
+
 section{
   margin-bottom:10em;
 }
