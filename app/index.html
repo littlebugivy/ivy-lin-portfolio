@@ -29,68 +29,23 @@
 <body class="desktop only ng-cloak">
   <div class="mobiletext"> To maximize your user experience, please view my portfolio from a laptop. Thanks. </div>
   <div class="opentovisit">
-    <!-- <header class="main-menu project-list"> -->
 
-      <!-- <div flex="20">
-          <a ng-href="/">
-            <img class="main-icon" md-avatar src="img/profile.jpg" width="100" alt="profile-image">
-          </a>
-        </div> -->
-      <!-- <div layout="column" style="font-size:24px; margin:12em 0px">
-        <div layout="row" layout-align="start center">
-          Hi. I'm Ivy Lin.
-          <br>I am a UX designer and a web developer.
-          <br> Welcome to my page.
-          <br>
-        </div>
-        <div layout="row" flex="100" class="down-arrow">
-          <i class="material-icons">arrow_downward</i>
-        </div>
-      </div> -->
+    <div ng-view keep-scroll-pos></div>
 
-
-      <!-- <div class="bottom aligned six wide column">
-          <nav class="ui secondary pointing menu">
-            <div class="right menu">
-              <a ng-href="/about" class="nav-btnn ui right floated item" tabindex="1" id="about">About</a>
-              <a class="nav-btnn ui right floated item" ng-href="/" tabindex="1" id="projects">Projects</a>
-              <a ng-href="https://drive.google.com/file/d/1y9sF5By38tzlVeMxhMF3WPcVJHO78cCI/view?usp=sharing" class="nav-btnn ui right floated item">Resume</a>
-              <a ng-href="/fun" class="nav-btnn ui right floated item" id="fun">Fun</a>
-            </div>
-          </nav>
-        </div> -->
-
-      <!-- <md-nav-bar md-no-ink-bar="disableInkBar" md-selected-nav-item="currentNavItem" nav-bar-aria-label="navigation links">
-        <md-nav-item md-nav-href="/" value="projects" name="p rojects">
-          Projects
-        </md-nav-item>
-        <md-nav-item md-nav-href="/about" name="about">
-          About
-        </md-nav-item>
-
-        <md-nav-item md-nav-href="https://drive.google.com/file/d/1y9sF5By38tzlVeMxhMF3WPcVJHO78cCI/view?usp=sharing" name="resume">
-          Resume
-        </md-nav-item>
-      </md-nav-bar> -->
-  <!-- </div> -->
-  <!-- </header> -->
-
-  <div ng-view keep-scroll-pos></div>
-
-  <footer class="project-list">
-    <div class="social-media">
-      <a href="mailto:ivylin@umich.edu">
-        <img src="img/gmail.png" alt="email" />
-      </a>
-      <a href="https://www.linkedin.com/in/mengdie-lin-719546111/">
-        <img src="img/linkedin.png" alt="linkedin" />
-      </a>
-      <a href="https://github.com/littlebugivy">
-        <img src="img/github.png" alt="github" />
-      </a>
-    </div>
-    Last Update 2018 &copy; Designed & coded by IvyLin
-  </footer>
+    <footer class="project-list">
+      <div class="social-media">
+        <a href="mailto:ivylin@umich.edu">
+          <img src="img/gmail.png" alt="email" />
+        </a>
+        <a href="https://www.linkedin.com/in/mengdie-lin-719546111/">
+          <img src="img/linkedin.png" alt="linkedin" />
+        </a>
+        <a href="https://github.com/littlebugivy">
+          <img src="img/github.png" alt="github" />
+        </a>
+      </div>
+      Last Update 2018 &copy; Designed & coded by IvyLin
+    </footer>
   </div>
 
   <!-- <script src="lib/angular/angular.js"></script> -->
@@ -108,7 +63,7 @@
   <script src="js/angular-carousel.js"></script>
   <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
     crossorigin="anonymous"></script>
-  <!-- <script src="/js/semantic.min.js"></script> -->
+  <script src="js/transition.js"></script>
   <script src="js/zoom.js"></script>
 
 

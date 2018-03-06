@@ -11,7 +11,7 @@ function activate(presentp) {
 
 angular.module('portfolio.controllers', ['ngMaterial']).
   controller('projectListCtrl', ['$window', '$scope', '$location', '$route', '$rootScope', function ($window, $scope, $location, $route, $rootScope) {
-   // activate('projects');
+    // activate('projects');
 
     console.log('here is the project list controller')
     angular.element(document.querySelector(".main-menu")).removeClass("invisible");
@@ -81,8 +81,6 @@ angular.module('portfolio.controllers', ['ngMaterial']).
   }]).
   controller('projectCtrl', ['$window', '$scope', '$location', '$anchorScroll', '$rootScope', '$timeout', function ($window, $scope, $location, $anchorScroll, $rootScope, $timeout) {
     activate('projects');
-    $scope.hideMainMenu = false;
-    $scope.showSideNav = false;
     $scope.caption = "Premiere of Climb!"
     $scope.slide = 1;
     $scope.loading = true;
@@ -95,31 +93,14 @@ angular.module('portfolio.controllers', ['ngMaterial']).
     $timeout(function () {
       $scope.loading = false;
       $scope.$apply();
-      // console.log('ok')
-    }, 0);
+    }, 1000);
 
 
-    // $('img.testimg')
-    //   .visibility({
-    //     type: 'image',
-    //     onLoad: function () {
-    //       console.log('ok')
-    //       $scope.$apply();
-    //     }
-    //   })
-    //   ;
-
-    // angular.element(document.querySelector('html'))
-    //   .visibility({
-    //     onAllLoaded: function () {
-    //       $timeout(function () {
-    //         $scope.loading = false;
-    //         $scope.$apply();
-    //         // console.log('ok')
-    //       }, 1400);
-    //     }
-    //   })
-    //   ;
+    $scope.checkActive = function (id) {
+      console.log('lalala')
+      angular.element(document.querySelector("#" + id)).addClass('active');
+      // angular.element(document.querySelector('.' + "item.overview")).addClass('active');
+    }
 
     $scope.plusDivs = function (n) {
       $scope.showDivs(slideIndex += n);
@@ -191,41 +172,41 @@ angular.module('portfolio.controllers', ['ngMaterial']).
     var lock = 0;
     $scope.showNavTitle = function () {
       $scope.mouseover = true;
-      if (lock === 0) {
-        $('.nav-title')
-          .transition('fade');
-        lock = 1;
-      }
+      // if (lock === 0) {
+      //   $('.nav-title')
+      //     .transition('fade');
+      //   lock = 1;
+      //}
     }
 
     $scope.hideNavTitle = function () {
       $scope.mouseover = false;
-      if (lock === 1) {
-        $('.nav-title')
-          .transition('fade');
-        lock = 0;
-      }
+      // if (lock === 1) {
+      //   $('.nav-title')
+      //     .transition('fade');
+      //   lock = 0;
+      //}
     }
 
-    // shrink nav bar when user scroll down
-    angular.element($window).bind('scroll', function () {
-      // var offset = this.pageYOffset;
-      // var showSideNav = $scope.showSideNav;
-      // var hideMainMenu = $scope.hideMainMenu;
-      // if (offset >= 200) {
-      //   if (hideMainMenu === false) {
-      //     $('.shrink-menu')
-      //       .transition('fade');
-      //     angular.element(document.querySelector(".main-menu")).addClass("invisible");
-      //     $scope.hideMainMenu = true
-      //   }
-      //   if (showSideNav === false) {
-      //     $('.side-menu')
-      //       .transition('fade right');
-      //   }
-      //   $scope.showSideNav = true;
-      // }
-      // $scope.$apply()
-    })
+    // // shrink nav bar when user scroll down
+    // angular.element($window).bind('scroll', function () {
+    //   // var offset = this.pageYOffset;
+    //   // var showSideNav = $scope.showSideNav;
+    //   // var hideMainMenu = $scope.hideMainMenu;
+    //   // if (offset >= 200) {
+    //   //   if (hideMainMenu === false) {
+    //   //     $('.shrink-menu')
+    //   //       .transition('fade');
+    //   //     angular.element(document.querySelector(".main-menu")).addClass("invisible");
+    //   //     $scope.hideMainMenu = true
+    //   //   }
+    //   //   if (showSideNav === false) {
+    //   //     $('.side-menu')
+    //   //       .transition('fade right');
+    //   //   }
+    //   //   $scope.showSideNav = true;
+    //   // }
+    //   // $scope.$apply()
+    // })
   }])
 

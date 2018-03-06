@@ -1,100 +1,81 @@
+<header>
+    <div layout="column" layout-fill>
+        <md-toolbar>
+            <div class="md-toolbar-tools">
+                <div layout="row">
+                    <div class="toolbar-now">
+                        <a ng-href="/">Home</a>
+                    </div>
+
+                    <div class="toolbar-next">
+                        <a ng-href="/easyfurniture">Next: EasyFurniture</a>
+                    </div>
+                </div>
+            </div>
+        </md-toolbar>
+    </div>
+</header>
 <div class="loading" ng-show="loading" layout="row" layout-sm="column" layout-align="space-around">
     <md-progress-circular md-mode="indeterminate"></md-progress-circular>
 </div>
-<!-- 
-<md-nav-bar class="project-navbar" md-no-ink-bar="disableInkBar" md-selected-nav-item="currentNavItem" nav-bar-aria-label="navigation links">
-    <md-nav-item md-nav-href="/" value="projects" name="projects">
-        Projects
-    </md-nav-item>
-    <md-nav-item md-nav-href="/about" name="about">
-        About
-    </md-nav-item>
 
-    <md-nav-item md-nav-href="https://drive.google.com/file/d/1y9sF5By38tzlVeMxhMF3WPcVJHO78cCI/view?usp=sharing" name="resume">
-        Resume
-    </md-nav-item>
-</md-nav-bar> -->
-
-
-<div ng-show="!loading"> 
-    <header>
-        <div layout="column" layout-fill>
-            <md-toolbar>
-                <div class="md-toolbar-tools">
-                    <div layout="row">
-                        <div class="toolbar-now">
-                            <a ng-href="/">Home</a>
-                        </div>
-
-                        <div class="toolbar-next">
-                            <a ng-href="/easyfurniture">Next: EasyFurniture</a>
-                        </div>
-                    </div>
-                </div>
-            </md-toolbar>
-        </div>
-    </header>
-    <!--     
-    <nav ng-show="hideMainMenu" class="ui top fixed borderless menu shrink-menu computer only grid">
-        <div class="item menu-icon">
-            <img ng-click="goToMainPage()" alt='profile' src="img/profile.jpg">
-        </div>
-        <div class="right menu">
-            <a class="ui right floated item" ng-href="/about" tabindex="1">About</a>
-            <a class="ui right floated item" ng-href="/" tabindex="1">Projects</a>
-            <a class="ui right floated item" ng-href="https://drive.google.com/file/d/1y9sF5By38tzlVeMxhMF3WPcVJHO78cCI/view?usp=sharing">Resume</a>
-
-            <a ng-href="/fun" class="nav-btnn ui right floated item" id="fun">Fun</a>
-        </div>
-    </nav>
-
-    <nav ng-show="hideMainMenu" class="ui top fixed borderless menu shrink-menu tablet only grid">
-        <div class="item menu-icon">
-            <img ng-click="goToMainPage()" alt='profile' src="img/profile.jpg">
-        </div>
-        <div class="right menu">
-            <a class="ui right floated item" ng-href="/about">About</a>
-            <a class="ui right floated item" ng-href="/">Projects</a>
-            <a class="ui right floated item" ng-href="https://drive.google.com/file/d/1y9sF5By38tzlVeMxhMF3WPcVJHO78cCI/view?usp=sharing">Resume </a>
-            <a ng-href="/fun" class="ui right floated item">Fun</a>
-        </div>
-    </nav>
-    </header> -->
+<div ng-show="!loading" class="primary-container">
     <!-- 
 side nav -->
-    <div ng-show="showSideNav" class="ui secondary vertical text menu side-menu computer only grid" ng-mouseover="showNavTitle()"
-        ng-mouseleave="hideNavTitle()">
+    <div class="side-menu" ng-mouseover="showNavTitle()" ng-mouseleave="hideNavTitle()">
         <a href="#overview" class="item overview active" du-smooth-scroll du-scrollspy>
-            <i class="circle icon"></i>
-            <span class="nav-title" ng-show="mouseover">Overview</span>
+            <div>
+                <span class="dot"></span>
+                <span class="nav-title" ng-show="mouseover">Overview</span>
+            </div>
         </a>
         <a href="#backintr" class="item overview" du-smooth-scroll du-scrollspy>
-            <i class="circle icon"></i>
-            <span class="nav-title" ng-show="mouseover">Background Introduction</span>
+            <div>
+                <span class="dot"></span>
+                <span class="nav-title" ng-show="mouseover">Background Introduction</span>
+            </div>
         </a>
-        <a href="#neediden" class="item overview" du-smooth-scroll du-scrollspy ng-click="checkActive(this)">
-            <i class="circle icon"></i>
-            <span class="nav-title" ng-show="mouseover">Needs Identification</span>
+        <a href="#neediden" class="item overview" du-smooth-scroll du-scrollspy ng-click="checkActive(neediden)">
+            <div>
+                <span class="dot"></span>
+                <span class="nav-title" ng-show="mouseover">Needs Identification</span>
+            </div>
         </a>
         <a href="#phaseone" class="item overview" du-smooth-scroll du-scrollspy>
-            <i class="circle icon"></i>
-            <span class="nav-title" ng-show="mouseover"> Concepts Generation </span>
+            <div>
+                <span class="dot"></span>
+                <span class="nav-title" ng-show="mouseover"> Concepts Generation </span>
+            </div>
         </a>
         <a href="#usertest" class="item overview" du-smooth-scroll du-scrollspy>
-            <i class="circle icon"></i>
-            <span class="nav-title" ng-show="mouseover"> User Testing - Premiere </span>
+            <div>
+                <span class="dot"></span>
+                <span class="nav-title" ng-show="mouseover"> User Testing - Premiere </span>
+            </div>
         </a>
         <a href="#dataanal" class="item overview" du-smooth-scroll du-scrollspy>
-            <i class="circle icon"></i>
-            <span class="nav-title" ng-show="mouseover"> Data Analysis</span>
+            <div>
+                <span class="dot"></span>
+                <span class="nav-title" ng-show="mouseover"> Data Analysis</span>
+            </div>
         </a>
         <a href="#phasetwo" class="item overview" du-smooth-scroll du-scrollspy>
-            <i class="circle icon"></i>
-            <span class="nav-title" ng-show="mouseover"> Design Refinement</span>
+            <div>
+                <span class="dot"></span>
+                <span class="nav-title" ng-show="mouseover"> Design Refinement</span>
+            </div>
+        </a>
+        <a href="#future" class="item overview" du-smooth-scroll du-scrollspy>
+            <div>
+                <span class="dot"></span>
+                <span class="nav-title" ng-show="mouseover"> Future Direction </span>
+            </div>
         </a>
         <a href="#reflection" class="item overview" du-smooth-scroll du-scrollspy>
-            <i class="circle icon"></i>
-            <span class="nav-title" ap ng-show="mouseover"> Reflection</span>
+            <div>
+                <span class="dot"></span>
+                <span class="nav-title" ap ng-show="mouseover"> Reflection</span>
+            </div>
         </a>
     </div>
 
@@ -117,25 +98,26 @@ side nav -->
                 </div>
                 <div flex="25">
                     <b> Role: </b>
-                    <br> UX Researcher
-                    <br> UI Designer
-                    <br> Full stack developer
-                    <br> Co-authored a
+                    <br> UX Designer
+                    <br> Full stack web developer
+                    <br> Co-authored of a
+                    <br>
                     <a href="https://drive.google.com/file/d/1jM9P67TNZJIjdYFGh7NJsYYAeXN2uaow/view?usp=sharing" class="underline">publication</a>
                 </div>
                 <div flex="25">
                     <b> UX Methods:</b>
-                    <br> Web Prototyping
                     <br> Field Study
                     <br> Ideation
                     <br> Interview
                     <br> Survey
                     <br> Wireframe
+                    <br> Web Prototyping
                     <br> Lo-fi & Hi-fi
                 </div>
                 <div flex="25">
                     <b>Tools:</b>
                     <br> Sketch
+                    <br> Abobe XD
                     <br> AngularJS
                     <br> D3JS
                 </div>
@@ -151,7 +133,7 @@ side nav -->
                 <a href="https://drive.google.com/file/d/1jM9P67TNZJIjdYFGh7NJsYYAeXN2uaow/view?usp=sharing" class="underline">publication</a> which I co-authored and is accepted by CHI conference in 2018.</p>
             <div class="center-content">
                 <figure>
-                    <img width="80%" src="img/climb/overall-process.png" data-action="zoom"></img>
+                    <img width="80%" src="img/climb/overall-process.png"></img>
                 </figure>
                 <figcaption>
                     <i> Design Process</i>
@@ -163,36 +145,65 @@ side nav -->
     <div id="backintr" class="gray-section">
         <div class="narrow-container">
             <h1>Background Introduction</h1>
-            Musicians have continuously been exploring the possibilities of presenting innovative musical experiences to their audiences.
-            One of the pathways that they have gone done is the possibility of integration modern technologies, especially
-            computational technologies, into music performance and production. In this project, Dr. Kallionpää</a>
-            introduced a game-like musical composition, Climb!, with the intention to explore and understand the interaction between
-            computer generated and human-performed piano pieces, in which the interaction may bring new experiences and interpretation
-            of music to the audience.
-            <div class="center-content">
-                <figure>
-                    <img width="100%" src="img/climb/intro.png"></img>
-                </figure>
-                <figcaption>
-                    <i> Premiere of Climb!</i>
-                </figcaption>
-            </div>
-            <br>
-
-
-
             <p>
-                As the name of the composition, Climb!, indicates, the musician goes from basecamp to summit. There are three paths with
-                mulitple events and paths on the way, each of which represents one micro piano composition. The arrowed lines
-                connecting stages are possible destinations of that stage. By performing differently, the musician determines
-                the path, or say, experience that audiences go through, which leads to various versions of performances as
-                a whole. The composition also involves a Disklavier piano, which performs automatically accompanying the
-                musician as pre-defined.
+                Musicians have continuously been exploring the possibilities of presenting innovative musical experiences to their audiences.
+                One of the pathways that they have gone done is the possibility of integrating modern technologies, especially
+                computational technologies, in music performance and production. In this project, Dr Kallionpää</a>
+                introduced a game-like musical composition, Climb!, with the intention to explore and understand the interaction between
+                computer generated and human-performed piano pieces, in which the interaction may bring new experiences and
+                interpretation of music to the audience.
             </p>
 
             <div class="center-content">
                 <figure>
-                    <img width="70%" src="img/climb/Climb-structure.png" data-action="zoom"></img>
+                    <img width="100%" src="img/climb/premiere1.png" data-action="zoom"></img>
+                </figure>
+                <figcaption>
+                    <i> Climb! and Maria</i>
+                </figcaption>
+            </div>
+            <p>
+                The performance adopted a game structure incorporating multiple micro-compositions. Each micro-composition may lead to different
+                destinations depending on how the musician performances. The whole performance is supported by technologies
+                including a Disklavier piano which performs automatically accompanying the musician as pre-defined, a digital
+                music score responding to musician's performance, a centre engine named Muzicodes serves as a conductor connecting
+                and mediating all the components, and a mobile application guiding audience and support their interpretation.
+            </p>
+
+            <div layout="row" class="three-icon-row">
+                <div flex="33" class="center-content">
+                    <img src="https://png.icons8.com/color/96/000000/controller.png">
+                    <div>
+                        <b>Game-like Structure</b>
+                    </div>
+                </div>
+                <div flex="33" class="center-content">
+                    <img src="https://png.icons8.com/color/96/000000/monitor.png">
+                    <div>
+                        <b>Empowered by Technologies</b>
+                    </div>
+                </div>
+                <div flex="33" class="center-content">
+                    <img src="https://png.icons8.com/color/96/000000/recurring-appointment.png">
+                    <div>
+                        <b>Repeated Experience</b>
+                    </div>
+                </div>
+            </div>
+
+            <p>
+                As the name of the composition, Climb!, indicates, the audiences will be presented a tour goes from basecamp to summit. There
+                are three paths with multiple events and paths on the way, each of which represents one micro piano composition.
+                The arrowed lines connecting stages are possible destinations of that stage. By performing differently, the
+                musician determines the path, or say, an experience that audiences go through, which leads to various versions
+                of performances as a whole, which leads to the possibility of repeated performances. During the composition
+                process, Maria uses different narratives for each micro-composition to inspire her and they are incorporated
+                into the mobile application to meet audiences interests.
+            </p>
+
+            <div class="center-content">
+                <figure>
+                    <img width="100%" src="img/climb/Climb-structure.png" data-action="zoom"></img>
                 </figure>
                 <figcaption>
                     <i>The game stucture of Climb!</i>
@@ -212,28 +223,29 @@ side nav -->
                     For example, different stages are undistinguishable from each other and their stories are not presented,
                     which, if being revealed, could very likely raise more interests.
                 </p>
-                <div class="center-content">
-                    <img src="/img/climb/whatsgoingon.png" data-action="zoom">
-                </div>
 
-                <div class="ui error message">
-                    <div class="header">
-                        Therefore, at this stage the user needs are identified as:
+                <div layout="row" class="three-icon-row">
+                    <div flex="33" class="center-content">
+                        <img src="https://png.icons8.com/color/96/000000/smiling-face-with-heart.png">
+                        <div>
+                            <b>Introduce to Audiences</b>
+                        </div>
                     </div>
-                    <ul class="list">
-                        <li>Need a better understanding of the entire performance setting.
-                        </li>
-                        <li>Need a better understanding of the hidden structure of the composition.</li>
-                    </ul>
+                    <div flex="33" class="center-content">
+                        <img src="https://png.icons8.com/color/96/000000/new.png">
+                        <div>
+                            <b>Promote Novel Experience</b>
+                        </div>
+                    </div>
+
+                    <div flex="33" class="center-content">
+                        <img src="https://png.icons8.com/color/96/000000/literature.png">
+                        <div>
+                            <b>Reveal Stories Behand</b>
+                        </div>
+                    </div>
                 </div>
 
-                <!-- <p>
-                Therefore, at this stage the user needs are identified as:
-                <br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1. Need a better understanding of the entire performance
-                setting.
-                <br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2. Need a better understanding of the hidden structure of
-                the composition.
-            </p> -->
             </div>
         </div>
     </div>
@@ -243,13 +255,13 @@ side nav -->
             <p>
                 The assisted tool is developed to be a web-based mobile application. Different from building native mobile applications,
                 a web application allows rapid and flexible iterations, meanwhile, prevent users from downloading. Insipred
-                by the paper programme notes used in traditional music concerts, the first phase of design incorporated a
-                dynamic map. The appreance of the system adopts a mountain look to meet the leitmotiv of the performacne
-                and the background is in dark blue to suit the dim environment during the performance. Each colored dot represent
-                one micro-composition. The orange ones represents the ones have been visited and the red one is the present
-                stage. The white ones indicate possible desitinations of the present stage, they are revealed one by one
-                as the performance progress up the mountain. In each stage, a short narritive will be revealed to further
-                introduce the context.
+                by the paper programme notes used in traditional music concerts and tour guide in museums, the first phase
+                of design incorporated a dynamic map. The appreance of the system adopts a mountain look to meet the leitmotiv
+                of the performacne and the background is in dark blue to suit the dim environment during the performance.
+                Each colored dot represent one micro-composition. The orange ones represents the ones have been visited and
+                the red one is the present stage. The white ones indicate possible desitinations of the present stage, they
+                are revealed one by one as the performance progress up the mountain. In each stage, a short narritive will
+                be revealed to further introduce the context.
             </p>
             <p>
                 One thing worths noting is that the design aims at scaffold understanding and interpretation of the work rather than to unpick
@@ -260,15 +272,19 @@ side nav -->
                     <div layout="row">
                         <div flex="25" class="four-col-img">
                             <img width="100%" src="img/climb/prototype0.png" data-action="zoom">
+                            <div>1</div>
                         </div>
                         <div flex="25" class="four-col-img">
                             <img width="100%" src="img/climb/prototype3.png" data-action="zoom">
+                            <div>2</div>
                         </div>
                         <div flex="25" class="four-col-img">
                             <img width="100%" src="img/climb/stages.png" data-action="zoom">
+                            <div>3</div>
                         </div>
                         <div flex="25" class="four-col-img">
                             <img width="100%" src="img/climb/prototype-phase1.gif" data-action="zoom">
+                            <div>4</div>
                         </div>
                     </div>
                     <div class="ut-arrow1">
@@ -293,7 +309,7 @@ side nav -->
                 in music.
             </p>
             <div class="image-slider-content center-content">
-                <img class="slides " src="img/climb/premiere1.png" alt="premiere" data-action="zoom">
+                <img class="slides " src="img/climb/intro.png" alt="premiere" data-action="zoom">
                 <img class="slides " src="img/climb/premiere5.png" alt="mobile app" data-action="zoom">
                 <img class="slides " src="img/climb/premiere6.png" alt="Disklavier" data-action="zoom">
                 <img class="slides " src="img/climb/premiere2.png" alt="Disklavier self-play" data-action="zoom">
@@ -305,20 +321,20 @@ side nav -->
                 <div layout="row">
                     <div flex="10"></div>
                     <div flex="20" class="four-col-img">
-                        <img class=" image-slider w3-opacity w3-hover-opacity-off" src="img/climb/premiere1.png" alt="Premiere of Climb!" ng-mouseover="currentDiv(1)" >
+                        <img class=" image-slider w3-opacity w3-hover-opacity-off" src="img/climb/intro.png" alt="Premiere of Climb!" ng-mouseover="currentDiv(1)">
                         <div ng-show="slide==1" class="slider-active"></div>
                     </div>
                     <div flex="20" class="four-col-img">
-                        <img class=" image-slider w3-opacity w3-hover-opacity-off" src="img/climb/premiere5.png" alt="Mobile app for Climb!" ng-mouseover="currentDiv(2)" >
+                        <img class=" image-slider w3-opacity w3-hover-opacity-off" src="img/climb/premiere5.png" alt="Mobile app for Climb!" ng-mouseover="currentDiv(2)">
                         <div ng-show="slide==2" class="slider-active"></div>
                     </div>
                     <div flex="20" class="four-col-img">
-                        <img class=" image-slider w3-opacity w3-hover-opacity-off" src="img/climb/premiere6.png" alt="Disklavier piano" ng-mouseover="currentDiv(3)" >
+                        <img class=" image-slider w3-opacity w3-hover-opacity-off" src="img/climb/premiere6.png" alt="Disklavier piano" ng-mouseover="currentDiv(3)">
                         <div ng-show="slide==3" class="slider-active"></div>
                     </div>
                     <div flex="20" class="four-col-img">
                         <img class=" image-slider w3-opacity w3-hover-opacity-off" src="img/climb/premiere2.png" alt="Disklavier piano autoplay"
-                            ng-mouseover="currentDiv(4)" >
+                            ng-mouseover="currentDiv(4)">
                         <div ng-show="slide==4" class="slider-active"></div>
                     </div>
                     <div flex="10"></div>
@@ -344,34 +360,37 @@ side nav -->
     <div id="dataanal" class="gray-section">
         <div class="narrow-container">
             <h1>Data Analysis</h1>
-            <p> From questionnaires 34/41 (83%) people used the app during the first performance and 29/39 (74%) during the second.
+            <p> From questionnaires 83% (34/41) people used the app during the first performance and 74% (29/39) during the second.
                 The app was seen as useful and an enhancement as far as it went, although there were many suggestions for
                 how it might be extended. </p>
+            <div layout="row" class="three-icon-row">
+                <div flex="33" class="center-content">
+                    <img src="https://png.icons8.com/color/96/000000/conference-call.png">
+                    <div>
+                        <b>41 Application Users</b>
+                    </div>
+                </div>
+                <div flex="33" class="center-content">
+                    <img src="https://png.icons8.com/color/96/000000/survey.png">
+                    <div>
+                        <b>34+29 Questionnaires</b>
+                    </div>
+                </div>
+
+                <div flex="33" class="center-content">
+                    <img src="https://png.icons8.com/color/96/000000/thinking-male.png">
+                    <div>
+                        <b>6 Interviews</b>
+                    </div>
+                </div>
+            </div>
+
+            Here we presented several quotes collected from our audiences in the premiere. After reflecting on analysis results and further
+            discussions with Dr. Kallionpää, more needs are revealed regarding to the mobile application.
             <div class="center-content">
                 <img width="100%" src="img/climb/climb-quotes.png" data-action="zoom">
             </div>
 
-            After reflecting on analysis results and further discussions with Dr. Kallionpää, more needs are revealed regarding to the
-            mobile application.
-            <div class="ui success message">
-                <div class="header">
-                    New functions are designed to meet needs:
-                </div>
-                <ul class="list">
-                    <li>Incorporate introduction about the performance and allows customization to meet different interests</li>
-                    <li>Allow to compare and contrast performances to suit the repetitive nature of the composition</li>
-                </ul>
-            </div>
-
-            <!-- <p>
-                After reflecting on analysis results and further discussions with Dr. Kallionpää, more needs are revealed regarding to the
-                mobile application:
-                <br> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;1. Incorporate introduction about the performance
-                and allows customization to meet different interests
-                <br> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;2. Allow to compare and contrast performances to
-                suit the repetitive nature of the composition
-                <br> To meet these needs, the second phase of design was designed and developed.
-            </p> -->
         </div>
     </div>
 
@@ -443,42 +462,59 @@ side nav -->
                     <img width="100%" ng-src="img/climb/compare2.png" data-action="zoom">
                 </div>
             </div>
-
-
-
-            <!-- 
-            <div class="four wide column">
-                <img width="100%" ng-mouseover="climbReplace(3)" ng-mouseleave="reset()" ng-src={{journey}}>
-                <figcaption>
-                    <i>Narrative Summary</i>
-                </figcaption>
-            </div>
-            <div class="four wide column">
-                <img width="100%" ng-mouseover="climbReplace(4)" ng-mouseleave="reset()" ng-src="{{compare}}" ng-onload="loadingComplete()">
-                <figcaption>
-                    <i>Performance Compare and Contrast</i>
-                </figcaption>
-            </div> -->
-
-            <!-- The second phase of design was incorporated in the second performance in London in Augest after I finished the development
-                and left the lab, therefore I didn't got the chance to participate in the user study on second phase. :( -->
         </div>
     </div>
-</div>
 
+    <div id="future" class="gray-section">
+        <div class="narrow-container">
+            <h1>Future Direction</h1>
+            <p>In the future, we may further engage audiences in the performance by allowing them to vote for destinations or
+                give live feedback on musician's which may lead to souvenirs. Additionally, by Feb 2018, Climb! has been
+                performed by three musicians in four venues in Nottingham and London, UK. It is heading in Finland in June
+                and the team is planning on a world tour later.
+            </p>
 
-<div id="reflection" class="gray-section">
-    <div class="narrow-container">
-        <h1>Reflection</h1>
-        <p>
-            <h3>Designing innovative technology needs careful considerations from many perspectives. </h3>
-            Firstly, audiences could get confused easily since they have never used this kind of performance assistance before. Secondly,
-            since few experiment like this has been done before, the success of the experiment relies greatly on a comprehensive
-            consideration on almost all the pespectives. For instance, in the user testing stage, we figured using mobile
-            phones as the device supporting our software, distractions could occur easily and constantly. Also, since the
-            performance involves multiple under-development technologies, hence support from engineers might be expected.
-        </p>
-        <!-- <p> The app was seen as useful and an enhancement as far as it went, although there were many suggestions for how
+            <div layout="row" class="three-icon-row">
+                <div flex="33" class="center-content">
+                    <img src="https://png.icons8.com/color/96/000000/joystick.png">
+                    <div>
+                        <b>Interactive</b>
+                    </div>
+                </div>
+                <div flex="33" class="center-content">
+                    <a href="http://music-mrl.nott.ac.uk/1/archive/explore/Climb">
+                        <img src="https://png.icons8.com/color/96/000000/archive.png">
+                    </a>
+                    <div>
+                        <b>
+                            <a href="http://music-mrl.nott.ac.uk/1/archive/explore/Climb">Archive</a>
+                        </b>
+
+                    </div>
+                </div>
+
+                <div flex="33" class="center-content">
+                    <img src="https://png.icons8.com/color/96/000000/globe.png">
+                    <div>
+                        <b>World Tour</b>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="reflection" class="white-section">
+        <div class="narrow-container">
+            <h1>Reflection</h1>
+            <p>
+                <h3>Designing innovative technology needs careful considerations from many perspectives. </h3>
+                Firstly, audiences could get confused easily since they have never used this kind of performance assistance before. Secondly,
+                since few experiment like this has been done before, the success of the experiment relies greatly on a comprehensive
+                consideration on almost all the pespectives. For instance, in the user testing stage, we figured using mobile
+                phones as the device supporting our software, distractions could occur easily and constantly. Also, since
+                the performance involves multiple under-development technologies, hence support from engineers might be expected.
+            </p>
+            <!-- <p> The app was seen as useful and an enhancement as far as it went, although there were many suggestions for how
                 it might be extended. Future directions would be:</p>
             <p>
                 <b>Interactive</b>
@@ -509,38 +545,24 @@ side nav -->
                 members of the team for feedback. Specifically for the composer, I ensured the design meets her intention
                 of composing this unique performance.
             </p> -->
-    </div>
+        </div>
 
-    <div class="gray-section">
-        <div class="narrow-container">
-            <!-- <div class="ui grid">
-                    <div class="left floated one wide column">
-                        <a href="/">
-                            <img class="arrow" src="img/left-arrow.png" alt="left arrow"> Home
-                        </a>
-                    </div>
-                    <div class="one wide column">
-                        Home
-                    </div>
-                    <div class="right floated column">
-                        <a href="/easyfurniture">
-                            <img class="arrow" src="img/right-arrow.png" alt="right arrow">Easy Furniture
-                        </a>
-                    </div>
-                </div> -->
-            <div class="left-arrow">
-                <a href="/">
-                    <img class="arrow" src="img/left-arrow.png" alt="left arrow">
-                    <div class="bottom-text">Home</div>
-                </a>
-            </div>
-            <div class="right-arrow">
-                <a href="/easyfurniture">
-                    <div>
-                        <img class="arrow" src="img/right-arrow.png" alt="right arrow">
-                    </div>
-                    <div class="bottom-text">Easy Furniture</div>
-                </a>
+        <div class="white-section">
+            <div class="narrow-container">
+                <div class="left-arrow">
+                    <a href="/">
+                        <img class="arrow" src="img/left-arrow.png" alt="left arrow">
+                        <div class="bottom-text">Home</div>
+                    </a>
+                </div>
+                <div class="right-arrow">
+                    <a href="/easyfurniture">
+                        <div>
+                            <img class="arrow" src="img/right-arrow.png" alt="right arrow">
+                        </div>
+                        <div class="bottom-text">Easy Furniture</div>
+                    </a>
+                </div>
             </div>
         </div>
     </div>

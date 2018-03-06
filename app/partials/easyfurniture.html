@@ -1,51 +1,66 @@
+<header>
+    <div layout="column" layout-fill>
+        <md-toolbar>
+            <div class="md-toolbar-tools" style="background-color:#004D40">
+                <div layout="row">
+                    <div class="toolbar-now">
+                        <a ng-href="/climb">Last: Climb</a>
+                    </div>
+
+                    <div class="toolbar-next">
+                        <a ng-href="/uxconsulting">Next: UX Consulting</a>
+                    </div>
+                </div>
+            </div>
+        </md-toolbar>
+    </div>
+</header>
+
 <div class="loading" ng-show="loading" layout="row" layout-sm="column" layout-align="space-around">
     <md-progress-circular md-mode="indeterminate"></md-progress-circular>
 </div>
 
-<div ng-show="!loading">
-    <header>
-        <div layout="column" layout-fill>
-            <md-toolbar>
-                <div class="md-toolbar-tools" style="background-color:#004D40">
-                    <div layout="row">
-                        <div class="toolbar-now">
-                            <a ng-href="/climb">Last: Climb</a>
-                        </div>
-
-                        <div class="toolbar-next">
-                            <a ng-href="/uxconsulting">Next: UX Consulting</a>
-                        </div>
-                    </div>
-                </div>
-            </md-toolbar>
-        </div>
-    </header>
-
+<div ng-show="!loading" class="primary-container">
     <!-- 
 side nav -->
-    <!-- <div ng-show="showSideNav" class="ui secondary vertical text menu side-menu computer only grid" ng-mouseover="showNavTitle()"
-        ng-mouseleave="hideNavTitle()">
+    <div class="side-menu" ng-mouseover="showNavTitle()" ng-mouseleave="hideNavTitle()">
         <a href="#overview" class="item overview active" du-smooth-scroll du-scrollspy>
-            <i class="circle icon"></i>
-            <span class="nav-title" ng-show="mouseover">Overview</span>
+            <div>
+                <span class="dot"></span>
+                <span class="nav-title" ng-show="mouseover">Overview</span>
+            </div>
         </a>
-        <a href="#problems" class="item overview active" du-smooth-scroll du-scrollspy>
-            <i class="circle icon"></i>
-            <span class="nav-title" ng-show="mouseover">Problem Description</span>
+        <a href="#problems" class="item overview" du-smooth-scroll du-scrollspy>
+            <div>
+                <span class="dot"></span>
+                <span class="nav-title" ng-show="mouseover">Problem Description</span>
         </a>
         <a href="#concepts" class="item overview" du-smooth-scroll du-scrollspy>
-            <i class="circle icon"></i>
-            <span class="nav-title" ng-show="mouseover">Concepts Forming</span>
+            <div>
+                <span class="dot"></span>
+                <span class="nav-title" ng-show="mouseover">Concepts Forming</span>
+            </div>
         </a>
         <a href="#prototypes" class="item overview" du-smooth-scroll du-scrollspy ng-click="checkActive(this)">
-            <i class="circle icon"></i>
-            <span class="nav-title" ng-show="mouseover">Prototypes</span>
+            <div>
+                <span class="dot"></span>
+                <span class="nav-title" ng-show="mouseover">Prototypes</span>
+            </div>
         </a>
         <a href="#finalDelivery" class="item overview" du-smooth-scroll du-scrollspy>
-            <i class="circle icon"></i>
-            <span class="nav-title" ng-show="mouseover"> Final Deliverable</span>
+            <div>
+                <span class="dot"></span>
+                <span class="nav-title" ng-show="mouseover"> Final Deliverable</span>
+            </div>
         </a>
-    </div> -->
+        <a href="#reflection" class="item overview" du-smooth-scroll du-scrollspy>
+            <div>
+                <span class="dot"></span>
+                <span class="nav-title" ng-show="mouseover">Reflection</span>
+            </div>
+        </a>
+        </div>
+    </div>
 
     <div class="project-name-container" style="background-color:#486A32">
         <figure style="margin-top:5%;">
@@ -55,7 +70,6 @@ side nav -->
             <div class="project-intro">Facilitate local second-hand furniture trading</div>
         </figcaption>
     </div>
-
     <div id='overview' class="white-section">
         <div class="narrow-container">
             <h1> Overview </h1>
@@ -99,312 +113,342 @@ side nav -->
                 </figcaption>
             </div>
         </div>
-    </div>
 
-    <div class="gray-section" id="problems">
-        <div class="narrow-container">
-            <h1>Problem Description</h1>
-            <div>
-                <p>
-                    As an international student who firstly arrived at the USA, the first big challenge occured to me was not adapting to different
-                    weather, language or culture, but was the fact that there was no furniture in my apartment.
-                </p>
-                <p>
-                    Buying a set of brand new furniture is not cost-effective particularly for people like me who regard the place as a temporary
-                    residency (i.e. short-term study/work), hence used-furniture becomes an ideal alternative. However, buying
-                    fine-quality furniture for an apartment effectively is more difficult than I expected.
-                </p>
-                <h4>Ideal:</h4>
-                <p class="center-content">
-                    <img width="90%" src="img/ef/problem.png" alt="mockup" data-action="zoom">
-                </p>
 
-                <!-- <h4>Reality:</h4>
-                <div class="ui grid three column">
-                    <div class="column">
-                            <img width="90%" src="img/ef/problem.png" alt="mockup">
+        <div class="gray-section" id="problems">
+            <div class="narrow-container">
+                <h1>Problem Description</h1>
+                <div>
+                    <p>
+                        As an international student who firstly arrived at the USA, the first big challenge occured to me was not adapting to different
+                        weather, language or culture, but was the fact that there was no furniture in my apartment.
+                    </p>
+                    <p>
+                        Buying a set of brand new furniture is not cost-effective particularly for people like me who regard the place as a temporary
+                        residency (i.e. short-term study/work), hence used-furniture becomes an ideal alternative. However,
+                        buying fine-quality furniture for an apartment effectively is more difficult than I expected.
+                    </p>
+                    <p>
+                        The intention of designing EasyFurniture is to connect local used-furniture sellers and buyers in a more effcient way.
+                    </p>
+
+                    <h4>Ideal</h4>
+                    <p class="center-content three-icon-row">
+                        <img width="90%" src="img/ef/problem.png" alt="mockup" data-action="zoom">
+                    </p>
+
+                    <md-divider></md-divider>
+
+                    <h4>Reality</h4>
+                    <div layout="row" class="three-icon-row">
+                        <div flex="33" class="center-content">
+                            <img src="https://png.icons8.com/color/96/000000/question-mark.png">
+                            <div>
+                                <b>Inadequate Product Information</b>
+                            </div>
                         </div>
-                </div> -->
-                <p>
-                    The intention of designing EasyFurniture is to connect local used-furniture sellers and buyers in a more effcient way.
-                </p>
-
-                <!-- Besides, dealing with furniture after
-                    finishing a short-term stay is also a headache, as it causes a huge waste to throw them away, or another bill to move them around.
-                </p>
-                <p>
-                    Easy Furniture aims at connecting local second-hand furniture sellers and buyers in a more efficient way. -->
-
-                <!-- From a seller's perspective, the design <span class="highlight">minimizes manual input</span> by allowing searching for existing product information online, and <span class="highlight">facilitates the construction of item profile</span> by providing proper tips and recommendations. Furthermore, the system <span class="hightlight">supports instant conversations</span> to encourage inquiry from buyers, with the goal to ultimately increase the chance of selling.   -->
-                </p>
-
-            </div>
-
-        </div>
-    </div>
-
-    <div class="white-section" id="concepts">
-        <div class="narrow-container">
-            <h1>Concepts Forming</h1>
-            <section>
-                <h2>Competitive Analysis</h2>
-                <p>
-                    My initial intention is to optimize the processes of used-furniture selling and buying. After investigating a number of used-furniture
-                    trading platforms both online and offline, I concluded four models of operation.
-                </p>
-                <br>
-                <br>
-                <div layout="row">
-                    <div flex="25">
-                        <img width="100%" src="img/ef/ca-localmarket.png" alt="mockup" data-action="zoom">
-                        <h4>Traditional Trading</h4>
-                        <br>
-                        <b>Examples: Local market</b>
-                        <br>
-                        <i class="plus square outline icon"></i>Investigate in-person, chance for price negotiation
-                        <br>
-                        <i class="minus square outline icon"></i>Inflexibility in time and space
-                    </div>
-
-                    <div flex="25">
-                        <img width="100%" src="img/ef/ca-craglist.png" alt="mockup" data-action="zoom">
-                        <h4>Information Synthesis Platform</h4>
-                        <b>Examples: Craglist, AABBS, online forums</b>
-                        <br>
-                        <i class="plus square outline icon"></i>Chance for price negotiation
-                        <br>
-                        <i class="minus square outline icon"></i>Concerns on information reliability, personal information leak
-                    </div>
-
-                    <div flex="25">
-                        <img width="100%" src="img/ef/ca-ebay.png" alt="mockup" data-action="zoom">
-
-                        <h4>Online Shopping Platform</h4>
-                        <b>Examples: Ebay, Amazon Warehouse</b>
-                        <br>
-                        <i class="plus square outline icon"></i>No direct personal information leak
-                        <br>
-                        <i class="minus square outline icon"></i>Less/no chance for price negotiation
-                    </div>
-
-                    <div flex="25">
-                        <img width="100%" src="img/ef/ca-inspector.png" alt="mockup" data-action="zoom">
-                        <h4>Through Agency</h4>
-                        <br>
-                        <b> Examples: Furnishare, Wayfair</b>
-                        <br>
-                        <i class="plus square outline icon"></i>Superior information reliability, no concern of information leak
-                        <br>
-                        <i class="minus square outline icon"></i>Additional payment for the agent
+                        <div flex="33" class="center-content">
+                            <img src="https://png.icons8.com/color/96/000000/us-dollar.png">
+                            <div>
+                                <b>Inconvenience Price Negotiation</b>
+                            </div>
+                        </div>
+                        <div flex="33" class="center-content">
+                            <img src="https://png.icons8.com/color/96/000000/question.png">
+                            <div>
+                                <b>Miscommunication</b>
+                            </div>
+                        </div>
                     </div>
                 </div>
-            </section>
+            </div>
+        </div>
 
-            <section>
-                <h2>Preliminary Idea</h2>
-                <p>
-                    Concluded from the preliminary research and personal experiences, the preliminary idea of the design was formed. The graph
-                    below represents the features that could be learnt from competitors (parity), and also indentify space
-                    for improvements (differentiation).
-                </p>
-                <p class="center-content">
-                    <img width="80%" src="img/ef/ca-conclusion.png" data-action="zoom">
-                </p>
-            </section>
-
-            <section>
-                <h2>Understand users </h2>
-                <p>
-                    I built three personas and one anti persona (the final one) to specify who would be target audiences of the design and who
-                    would be not. In short, my design aims at people who hope to buy relatively cheap uesd-furniture with
-                    less concern on qualities.
-                </p>
-
-                <div class="image-slider-content">
-                    <img class="slides " src="img/ef/ef_persona1.jpg" alt="warrior infomation" data-action="zoom">
-                    <img class="slides " src="img/ef/ef_persona2.jpg" alt="template warriors" data-action="zoom">
-                    <img class="slides " src="img/ef/ef_persona3.jpg" alt="editing page" data-action="zoom">
-                    <img class="slides " src="img/ef/ef_persona4.jpg" alt="warriorslot" data-action="zoom">
-
+        <div class="white-section" id="concepts">
+            <div class="narrow-container">
+                <h1>Concepts Forming</h1>
+                <section>
+                    <h2>Competitive Analysis</h2>
+                    <p>
+                        My initial intention is to optimize the processes of used-furniture selling and buying. After investigating a number of used-furniture
+                        trading platforms both online and offline, I concluded four models of operation.
+                    </p>
+                    <br>
                     <br>
                     <div layout="row">
-                        <div flex="10"></div>
-                        <div flex="20" class="four-col-img">
-                            <img class=" image-slider w3-opacity w3-hover-opacity-off" src="img/ef/ef_persona1.jpg" alt="persona" ng-mouseover="currentDiv(1)">
-                            <div ng-show="slide==1" class="slider-active"></div>
+                        <div flex="25">
+                            <img width="100%" src="img/ef/ca-localmarket.png" alt="mockup" data-action="zoom">
+                            <h4>Traditional Trading</h4>
+                            <br>
+                            <b>Examples: Local market</b>
+                            <br>
+                            <i class="plus square outline icon"></i>Investigate in-person, chance for price negotiation
+                            <br>
+                            <i class="minus square outline icon"></i>Inflexibility in time and space
                         </div>
-                        <div flex="20" class="four-col-img">
-                            <img class=" image-slider w3-opacity w3-hover-opacity-off" src="img/ef/ef_persona2.jpg" alt="persona" ng-mouseover="currentDiv(2)">
-                            <div ng-show="slide==2" class="slider-active"></div>
+
+                        <div flex="25">
+                            <img width="100%" src="img/ef/ca-craglist.png" alt="mockup" data-action="zoom">
+                            <h4>Information Synthesis Platform</h4>
+                            <b>Examples: Craglist, AABBS, online forums</b>
+                            <br>
+                            <i class="plus square outline icon"></i>Chance for price negotiation
+                            <br>
+                            <i class="minus square outline icon"></i>Concerns on information reliability, personal information leak
                         </div>
-                        <div flex="20" class="four-col-img">
-                            <img class=" image-slider w3-opacity w3-hover-opacity-off" src="img/ef/ef_persona3.jpg" alt="persona" ng-mouseover="currentDiv(3)">
-                            <div ng-show="slide==3" class="slider-active"></div>
+
+                        <div flex="25">
+                            <img width="100%" src="img/ef/ca-ebay.png" alt="mockup" data-action="zoom">
+
+                            <h4>Online Shopping Platform</h4>
+                            <b>Examples: Ebay, Amazon Warehouse</b>
+                            <br>
+                            <i class="plus square outline icon"></i>No direct personal information leak
+                            <br>
+                            <i class="minus square outline icon"></i>Less/no chance for price negotiation
                         </div>
-                        <div flex="20" class="four-col-img">
-                            <img class=" image-slider w3-opacity w3-hover-opacity-off" src="img/ef/ef_persona4.jpg" alt="anti persona" ng-mouseover="currentDiv(4)">
-                            <div ng-show="slide==4" class="slider-active"></div>
+
+                        <div flex="25">
+                            <img width="100%" src="img/ef/ca-inspector.png" alt="mockup" data-action="zoom">
+                            <h4>Through Agency</h4>
+                            <br>
+                            <b> Examples: Furnishare, Wayfair</b>
+                            <br>
+                            <i class="plus square outline icon"></i>Superior information reliability, no concern of information leak
+                            <br>
+                            <i class="minus square outline icon"></i>Additional payment for the agent
                         </div>
-                        <div flex="10"></div>
                     </div>
-                </div>
-            </section>
+                </section>
 
-            <h2>Understand User Workflow </h2>
-            <p> I then analyzed processes that sellers, buyers and angency would go through using EasyFurniture.com to understand
-                the system structure and identify steps for improvement. Each row of sticky nots represents one identity
-                and the branced sticky notes indicate possible alternative of the step above (i.e. multiple choices, unexpected
-                behavior). Possbile errors(in red) are marked out and mediation methods are provided (in the same color with
-                main sticky).
-            </p>
+                <section>
+                    <h2>Preliminary Idea</h2>
+                    <p>
+                        Concluded from the preliminary research and personal experiences, the preliminary idea of the design was formed. The graph
+                        below represents the features that could be learnt from competitors (parity), and also indentify
+                        space for improvements (differentiation).
+                    </p>
+                    <div layout="row" class="three-icon-row">
+                        <div flex="33" class="center-content">
+                            <img src="https://png.icons8.com/color/96/000000/easy-to-find.png">
+                            <div>
+                                <b>Simplify Information Entry Process</b>
+                            </div>
+                        </div>
+                        <div flex="33" class="center-content">
+                            <img src="https://png.icons8.com/color/96/000000/collaboration.png">
+                            <div>
+                                <b>Faciliate Communication Between Sellers and Buyers</b>
+                            </div>
+                        </div>
 
-            <img class="w100 " src="img/ef/storymap.jpg" alt="prototype1" data-action="zoom">
+                        <div flex="33" class="center-content">
+                            <img src="https://png.icons8.com/color/96/000000/calendar.png">
+                            <div>
+                                <b>Incorporate Calender to Support Easy Schedule</b>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- <p class="center-content">
+                        <img width="80%" src="img/ef/ca-conclusion.png" data-action="zoom">
+                    </p> -->
+                </section>
 
+                <section>
+                    <h2>Understand users </h2>
+                    <p>
+                        I built three personas and one anti persona (the final one) to specify who would be target audiences of the design and who
+                        would be not. In short, my design aims at people who hope to buy relatively cheap uesd-furniture
+                        with less concern on qualities.
+                    </p>
+
+                    <div class="image-slider-content">
+                        <img class="slides " src="img/ef/ef_persona1.jpg" alt="warrior infomation" data-action="zoom">
+                        <img class="slides " src="img/ef/ef_persona2.jpg" alt="template warriors" data-action="zoom">
+                        <img class="slides " src="img/ef/ef_persona3.jpg" alt="editing page" data-action="zoom">
+                        <img class="slides " src="img/ef/ef_persona4.jpg" alt="warriorslot" data-action="zoom">
+
+                        <br>
+                        <div layout="row">
+                            <div flex="10"></div>
+                            <div flex="20" class="four-col-img">
+                                <img class=" image-slider w3-opacity w3-hover-opacity-off" src="img/ef/ef_persona1.jpg" alt="persona" ng-mouseover="currentDiv(1)">
+                                <div ng-show="slide==1" class="slider-active"></div>
+                            </div>
+                            <div flex="20" class="four-col-img">
+                                <img class=" image-slider w3-opacity w3-hover-opacity-off" src="img/ef/ef_persona2.jpg" alt="persona" ng-mouseover="currentDiv(2)">
+                                <div ng-show="slide==2" class="slider-active"></div>
+                            </div>
+                            <div flex="20" class="four-col-img">
+                                <img class=" image-slider w3-opacity w3-hover-opacity-off" src="img/ef/ef_persona3.jpg" alt="persona" ng-mouseover="currentDiv(3)">
+                                <div ng-show="slide==3" class="slider-active"></div>
+                            </div>
+                            <div flex="20" class="four-col-img">
+                                <img class=" image-slider w3-opacity w3-hover-opacity-off" src="img/ef/ef_persona4.jpg" alt="anti persona" ng-mouseover="currentDiv(4)">
+                                <div ng-show="slide==4" class="slider-active"></div>
+                            </div>
+                            <div flex="10"></div>
+                        </div>
+                    </div>
+                </section>
+
+                <h2>Understand User Workflow </h2>
+                <p> To narrow down the scope, I decided to focus on the seller interface since it will be interesting consider
+                    a primary reason causing difficulty in second-hand furniture trading lies on them. Most of the current
+                    design does not encourage them to enter adequate information for selling local products.
+                </p>
+                <!-- <p> I then analyzed processes that sellers, buyers and angency would go through using EasyFurniture.com to understand
+                    the system structure and identify steps for improvement. Each row of sticky nots represents one identity
+                    and the branced sticky notes indicate possible alternative of the step above (i.e. multiple choices,
+                    unexpected behavior). Possbile errors(in red) are marked out and mediation methods are provided (in the
+                    same color with main sticky).
+                </p> -->
+
+                <img class="w100 " src="img/ef/storymap.png" alt="prototype1" data-action="zoom">
+
+            </div>
         </div>
-    </div>
 
-    <div class="gray-section" id="prototypes">
-        <div class="narrow-container">
-            <h1>Prototypes</h1>
-            <section>
-                <h2>Rapid Prototype & User Testing</h2>
-                <p>In the first round of prototype, I selected five main features that would be incorporated into the design
-                    and used paper, pen, post-it and plastic sheet to quick prototype the interactions. Three students were
-                    invited to participate in the usibility testing and feedbacks were offered for modification and improvements.
-                </p>
+        <div class="gray-section" id="prototypes">
+            <div class="narrow-container">
+                <h1>Prototypes</h1>
+                <section>
+                    <h2>Rapid Prototype & User Testing</h2>
+                    <p>In the first round of prototype, I selected five main features that would be incorporated into the design
+                        and used paper, pen, post-it and plastic sheet to quick prototype the interactions. Three students
+                        were invited to participate in the usibility testing and feedbacks were offered for modification
+                        and improvements.
+                    </p>
 
-                <img width="100%" src="img/ef/paperprototype.jpg" data-action="zoom">
-            </section>
+                    <img width="100%" src="img/ef/paperprototype.jpg" data-action="zoom">
+                </section>
 
-            <section>
-                <h2>Design Defense</h2>
-                <p>
-                    While there are multiple options for one simple design, I use a design technique
-                    <a href="https://drive.google.com/file/d/14vf0TH0qB7HJYyiR9uhvwri2OqN_fCQB/view?usp=sharing" class="underline">Questions, Options and Criteria(QOC)</a> to reason my design.
-                </p>
-                <div class="center-content">
-                    <figure>
-                        <img width="80%" src="img/ef/qoc.png" data-action="zoom"></img>
-                    </figure>
-                </div>
-            </section>
+                <section>
+                    <h2>Design Defense</h2>
+                    <p>
+                        While there are multiple options for one simple design, I use a design technique
+                        <a href="https://drive.google.com/file/d/14vf0TH0qB7HJYyiR9uhvwri2OqN_fCQB/view?usp=sharing" class="underline">Questions, Options and Criteria(QOC)</a> to reason my design.
+                    </p>
+                    <div class="center-content">
+                        <figure>
+                            <img width="80%" src="img/ef/qoc.png" data-action="zoom"></img>
+                        </figure>
+                    </div>
+                </section>
 
-            <section>
-                <h2>Wireframe</h2>
-                <p>
-                    After reflecting on the user feedback alongside with self-critisizing through QOC analysis, the wireframes of main features
-                    were produced.
-                </p>
-                <div layout="row">
-                    <div flex="33" class="four-col-img">
-                        <img width="100%" src="img/ef/mockup1.png" alt="mockup" data-action="zoom">
+                <section>
+                    <h2>Wireframe</h2>
+                    <p>
+                        After reflecting on the user feedback alongside with self-critisizing through QOC analysis, the wireframes of main features
+                        were produced.
+                    </p>
+                    <div layout="row">
+                        <div flex="33" class="four-col-img">
+                            <img width="100%" src="img/ef/mockup1.png" alt="mockup" data-action="zoom">
+                        </div>
+                        <div flex="33" class="four-col-img">
+                            <img width="100%" src="img/ef/mockup2.png" alt="mockup" data-action="zoom">
+                        </div>
+                        <div flex="33" class="four-col-img">
+                            <img width="100%" src="img/ef/mockup3.png" alt="mockup" data-action="zoom">
+                        </div>
                     </div>
-                    <div flex="33" class="four-col-img">
-                        <img width="100%" src="img/ef/mockup2.png" alt="mockup" data-action="zoom">
+                    <div layout="row">
+                        <div flex="33" class="four-col-img">
+                            <img width="100%" src="img/ef/mockup4.png" alt="mockup" data-action="zoom">
+                        </div>
+                        <div flex="33" class="four-col-img">
+                            <img width="100%" src="img/ef/mockup5.png" alt="mockup" data-action="zoom">
+                        </div>
+                        <div flex="33" class="four-col-img">
+                            <img width="100%" src="img/ef/mockup6.png" alt="mockup" data-action="zoom">
+                        </div>
                     </div>
-                    <div flex="33" class="four-col-img">
-                        <img width="100%" src="img/ef/mockup3.png" alt="mockup" data-action="zoom">
-                    </div>
-                </div>
-                <div layout="row">
-                    <div flex="33" class="four-col-img">
-                        <img width="100%" src="img/ef/mockup4.png" alt="mockup" data-action="zoom">
-                    </div>
-                    <div flex="33" class="four-col-img">
-                        <img width="100%" src="img/ef/mockup5.png" alt="mockup" data-action="zoom">
-                    </div>
-                    <div flex="33" class="four-col-img">
-                        <img width="100%" src="img/ef/mockup6.png" alt="mockup" data-action="zoom">
-                    </div>
-                </div>
-            </section>
+                </section>
+            </div>
         </div>
-    </div>
 
 
-    <div class="white-section" id="finalDelivery">
-        <div class="narrow-container">
-            <h1>Final Deliverable</h1>
-            <p>
+        <div class="white-section" id="finalDelivery">
+            <div class="narrow-container">
+                <h1>Final Deliverable</h1>
                 <p>
                     The hi-fi prototype consists of all the interfaces that would occur through a journey of a seller. I used Sketch to produce
                     screens and then used InVision to add interactions. See selected screens below.
-                    <div layout="row" class="climb-showcase">
-                        <div flex="50" class="four-col-img">
-                            <img width="100%" src="img/ef/hifi-3.png" alt="mockup" data-action="zoom">
-                        </div>
-                        <div flex="50" layout="row" class="col-text" layout-align="start center">
-                            <div>
-                                <h4> Search for existing products</h4>
-                                Use item information already existed online, save time and energy from manually input.
-                            </div>
+                </p>
+                <div layout="row" class="climb-showcase">
+                    <div flex="50" class="four-col-img">
+                        <img width="100%" src="img/ef/hifi-3.png" alt="mockup" data-action="zoom">
+                    </div>
+                    <div flex="50" layout="row" class="col-text" layout-align="start center">
+                        <div>
+                            <h4> Search for existing products</h4>
+                            Use item information already existed online, save time and energy from manually input.
                         </div>
                     </div>
-
-
-                    <div layout="row" class="climb-showcase">
-                        <div flex="50" class="four-col-img">
-                            <img width="100%" src="img/ef/hifi-5.png" alt="mockup" data-action="zoom">
-                        </div>
-                        <div flex="50" layout="row" class="col-text" layout-align="start center">
-                            <div>
-                                <h4> Information Review</h4>
-                                Allow users to review item information collected online. Users can modify them later if necessary.
-                            </div>
-                        </div>
-                    </div>
-
-
-                    <div layout="row" class="climb-showcase">
-                        <div flex="50" class="four-col-img">
-                            <img width="100%" src="img/ef/hifi-6.png" alt="mockup" data-action="zoom">
-                        </div>
-                        <div flex="50" layout="row" class="col-text" layout-align="start center">
-                            <div>
-                                <h4> Image Modification</h4>
-                                Provide functions such as image cropping, rotation, filtering to allow for simple and easy image editing. It is intended
-                                to improve image quality provided by sellers.
-                            </div>
-                        </div>
-                    </div>
-
-                    <p>
-                        <a class="underline" href="https://invis.io/G8EW72AC3#/268600704_login">View the final Deliverable in Invision</a>
-                    </p>
-        </div>
-    </div>
-
-    <div id="reflection" class="gray-section">
-        <div class="narrow-container">
-            <h1>Reflection</h1>
-            <p>
-                <h3>Use visual assets wisely to communicate design rationale and decisions</h3>
-                The project is a course work of the Interaction Design course. It started from user needs identification, to design solutions
-                and finally come to the interactive steps of prototype development and user testing. During the design process,
-                I found visual assets such as personas, user journey map, QOC not only help me, as a designer, understand
-                customer needs and painpoints but also serve as a tool assist communication with others.
-            </p>
-            <!-- <p>
-                <h3>Use design assets as tools rather than mandatory steps</h3>
-               Th          
-            </p> -->
-        </div>
-    </div>
-
-    <div class="gray-section">
-        <div class="narrow-container">
-            <div class="bottom-arrows">
-                <div class="left-arrow">
-                    <a href="/climb">
-                        <img class="arrow" src="img/left-arrow.png" alt="left arrow">
-                    </a>
-                    <div class="bottom-text">Mobile App for Climb!</div>
                 </div>
-                <div class="right-arrow">
-                    <a href="/uxconsulting">
-                        <img class="arrow" src="img/right-arrow.png" alt="right arrow">
-                    </a>
-                    <div class="bottom-text">Guest Experience Consulting</div>
+
+
+                <div layout="row" class="climb-showcase">
+                    <div flex="50" class="four-col-img">
+                        <img width="100%" src="img/ef/hifi-5.png" alt="mockup" data-action="zoom">
+                    </div>
+                    <div flex="50" layout="row" class="col-text" layout-align="start center">
+                        <div>
+                            <h4> Information Review</h4>
+                            Allow users to review item information collected online. Users can modify them later if necessary.
+                        </div>
+                    </div>
+                </div>
+
+
+                <div layout="row" class="climb-showcase">
+                    <div flex="50" class="four-col-img">
+                        <img width="100%" src="img/ef/hifi-6.png" alt="mockup" data-action="zoom">
+                    </div>
+                    <div flex="50" layout="row" class="col-text" layout-align="start center">
+                        <div>
+                            <h4> Image Modification</h4>
+                            Provide functions such as image cropping, rotation, filtering to allow for simple and easy image editing. It is intended
+                            to improve image quality provided by sellers.
+                        </div>
+                    </div>
+                </div>
+
+                <p>
+                    <a class="underline" href="https://invis.io/G8EW72AC3#/268600704_login">View the final Deliverable in Invision</a>
+                </p>
+            </div>
+        </div>
+
+        <div id="reflection" class="gray-section">
+            <div class="narrow-container">
+                <h1>Reflection</h1>
+                <p>
+                    <h3>Use visual assets wisely to communicate design rationale and decisions</h3>
+                    The project is a course work of the Interaction Design course. It started from user needs identification, to design solutions
+                    and finally come to the interactive steps of prototype development and user testing. During the design
+                    process, I found visual assets such as personas, user journey map, QOC not only help me, as a designer,
+                    understand customer needs and painpoints but also serve as a tool assist communication with others.
+                </p>
+            </div>
+        </div>
+
+        <div class="white-section">
+            <div class="narrow-container">
+                <div class="bottom-arrows">
+                    <div class="left-arrow">
+                        <a href="/climb">
+                            <img class="arrow" src="img/left-arrow.png" alt="left arrow">
+                        </a>
+                        <div class="bottom-text">Mobile App for Climb!</div>
+                    </div>
+                    <div class="right-arrow">
+                        <a href="/uxconsulting">
+                            <img class="arrow" src="img/right-arrow.png" alt="right arrow">
+                        </a>
+                        <div class="bottom-text">Guest Experience Consulting</div>
+                    </div>
                 </div>
             </div>
         </div>
