@@ -1,51 +1,60 @@
+<header>
+  <div layout="column" layout-fill>
+    <md-toolbar>
+      <div class="md-toolbar-tools" style="background-color:#4E342E">
+        <div layout="row">
+          <div class="toolbar-now">
+            <a ng-href="/uxconsulting">Last: UX Consulting</a>
+          </div>
+
+          <div class="toolbar-next">
+            <a ng-href="/">Home</a>
+          </div>
+        </div>
+      </div>
+    </md-toolbar>
+  </div>
+</header>
+
 <div class="loading" ng-show="loading" layout="row" layout-sm="column" layout-align="space-around">
   <md-progress-circular md-mode="indeterminate"></md-progress-circular>
 </div>
 
-<div ng-show="!loading">
-  <header>
-    <div layout="column" layout-fill>
-      <md-toolbar>
-        <div class="md-toolbar-tools" style="background-color:#4E342E">
-          <div layout="row">
-            <div class="toolbar-now">
-              <a ng-href="/uxconsulting">Last: UX Consulting</a>
-            </div>
-
-            <div class="toolbar-next">
-              <a ng-href="/">Home</a>
-            </div>
-          </div>
-        </div>
-      </md-toolbar>
-    </div>
-  </header>
-
+<div ng-show="!loading" class="primary-container">
   <!-- 
 side nav -->
-  <!-- <div ng-show="showSideNav" class="ui secondary vertical text menu side-menu computer only grid" ng-mouseover="showNavTitle()"
-    ng-mouseleave="hideNavTitle()">
+  <div class="side-menu" ng-mouseover="showNavTitle()" ng-mouseleave="hideNavTitle()">
     <a href="#overview" class="item overview active" du-smooth-scroll du-scrollspy>
-      <i class="circle icon"></i>
-      <span class="nav-title" ng-show="mouseover">Overview</span>
+      <div>
+        <span class="dot"></span>
+        <span class="nav-title" ng-show="mouseover">Overview</span>
+      </div>
     </a>
     <a href="#probdesp" class="item overview active" du-smooth-scroll du-scrollspy>
-      <i class="circle icon"></i>
-      <span class="nav-title" ng-show="mouseover">Problem Description</span>
+      <div>
+        <span class="dot"></span>
+        <span class="nav-title" ng-show="mouseover">Problem Description</span>
+      </div>
     </a>
-    <a href="#concepts" class="item overview active" du-smooth-scroll du-scrollspy>
-      <i class="circle icon"></i>
-      <span class="nav-title" ng-show="mouseover">Concepts Forming</span>
+    <a href="#concepts" class="item overview" du-smooth-scroll du-scrollspy>
+      <div>
+        <span class="dot"></span>
+        <span class="nav-title" ng-show="mouseover">Concepts Forming</span>
+      </div>
     </a>
-    <a href="#prototypes" class="item overview" du-smooth-scroll du-scrollspy ng-click="checkActive(this)">
-      <i class="circle icon"></i>
-      <span class="nav-title" ng-show="mouseover">Prototypes</span>
+    <a href="#prototypes" class="item overview" du-smooth-scroll du-scrollspy>
+      <div>
+        <span class="dot"></span>
+        <span class="nav-title" ng-show="mouseover">Prototypes</span>
+      </div>
     </a>
     <a href="#finaprod" class="item overview" du-smooth-scroll du-scrollspy>
-      <i class="circle icon"></i>
-      <span class="nav-title" ng-show="mouseover">Final Product</span>
+      <div>
+        <span class="dot"></span>
+        <span class="nav-title" ng-show="mouseover">Final Product</span>
+      </div>
     </a>
-  </div> -->
+  </div>
 
 
   <div class="project-name-container" style="background-color:#371A02">

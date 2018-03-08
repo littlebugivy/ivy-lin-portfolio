@@ -96,11 +96,11 @@ angular.module('portfolio.controllers', ['ngMaterial']).
     }, 1000);
 
 
-    $scope.checkActive = function (id) {
-      console.log('lalala')
-      angular.element(document.querySelector("#" + id)).addClass('active');
-      // angular.element(document.querySelector('.' + "item.overview")).addClass('active');
-    }
+    // $scope.checkActive = function (id) {
+    //   console.log('lalala')
+    //   angular.element(document.querySelector("#" + id)).addClass('active');
+    //   // angular.element(document.querySelector('.' + "item.overview")).addClass('active');
+    // }
 
     $scope.plusDivs = function (n) {
       $scope.showDivs(slideIndex += n);
