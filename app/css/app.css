@@ -10,6 +10,14 @@ body{
   display: none;
 }
 
+.avatar_container{
+  margin: 2em 0em;
+}
+
+.avatar_container .layout-column{
+  margin: 0em 1em 2em 1em;
+}
+
 .icon_gray{
   color:#757575;
 }
@@ -541,7 +549,6 @@ footer>div>a>img:hover{
 }
 
 
-
 .text-align-justify {
 	text-align: justify;
 }
@@ -594,7 +601,6 @@ figcaption{
   width:25em;
   right:8%;
 }
-
 
 .ut-arrow{
   display: inline-block;

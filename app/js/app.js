@@ -26,7 +26,6 @@ angular.module('portfolio', [
     $routeProvider.when('/uxconsulting', { templateUrl: 'partials/ux-consulting.html', controller: 'projectCtrl' });
     $routeProvider.when('/fun', { templateUrl: 'partials/fun.html', controller: 'funCtrl' });
     $routeProvider.otherwise({ redirectTo: '/error', templateUrl: 'partials/error.html', controller: 'errorCtrl' });
-
     $locationProvider.html5Mode(true);
     $httpProvider.defaults.headers.common["X-Requested-With"] = 'XMLHttpRequest';
 

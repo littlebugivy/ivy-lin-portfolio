@@ -38,6 +38,4 @@ angular.module('portfolio.directives', []).
         });
       }
     });
-
-
   }]);
